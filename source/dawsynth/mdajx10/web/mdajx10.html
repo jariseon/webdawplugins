@@ -1,0 +1,214 @@
+<polymer-element name="dawsynth-mdajx10" attributes="host">
+<template>		
+<flip-card id="flipper" axis="y">
+	<div id="synthpanel" class="front">
+		<section id="osc">
+			<div class="caption"><div>OSC</div><div>OSC2</div></div>
+			<daw-knob2 id="octave" label="octave"></daw-knob2>
+			<daw-knob2 id="osctune" label="pitch"></daw-knob2>
+			<daw-knob2 id="oscmix" label="mix"></daw-knob2>
+			<daw-knob2 id="tune" label="tune"></daw-knob2>
+			<daw-knob2 id="oscfine" label="detune"></daw-knob2>
+			<daw-knob2 id="noise" label="noise"></daw-knob2>
+		</section>
+		<section id="lpf">
+			<div class="caption"><div>LPF</div></div>
+			<daw-knob2 id="ffreq" class="lpf" label="freq"></daw-knob2>
+			<daw-knob2 id="feg" class="lpf" label="eg"></daw-knob2>
+			<daw-knob2 id="fres" class="lpf" label="res"></daw-knob2>
+			<daw-knob2 id="fdyn" class="lpf" label="dyn"></daw-knob2>
+		</section>
+		<div id="eglink"></div>
+		<section id="eg">
+			<div class="caption"><div>EG</div></div>
+			<daw-knob2 id="fatt" class="lpf" label="attack"></daw-knob2>
+			<daw-knob2 id="fdec" class="lpf" label="decay"></daw-knob2>
+			<daw-knob2 id="fsus" class="lpf" label="sustain"></daw-knob2>
+			<daw-knob2 id="frel" class="lpf" label="release"></daw-knob2>
+			<daw-knob2 id="aatt" class="amp" label="attack"></daw-knob2>
+			<daw-knob2 id="adec" class="amp" label="decay"></daw-knob2>
+			<daw-knob2 id="asus" class="amp" label="sustain"></daw-knob2>
+			<daw-knob2 id="arel" class="amp" label="release"></daw-knob2>
+		</section>
+		<section id="glide">
+			<div class="caption"><div>GLIDE</div></div>
+			<daw-knob2 id="gmode" label="mode"></daw-knob2>
+			<daw-knob2 id="gbend" label="bend"></daw-knob2>
+			<daw-knob2 id="grate" label="rate"></daw-knob2>
+		</section>
+		<section id="lfo">
+			<div class="caption"><div>LFO</div></div>
+			<daw-knob2 id="lforate" label="rate"></daw-knob2>
+			<daw-knob2 id="lfoosc" label="osc"></daw-knob2>
+			<daw-knob2 id="lfolpf" class="lpf" label="lpf"></daw-knob2>
+		</section>
+		<section id="disp"> <!-- #8292a4 -->
+			<div id="watermark">JX10</div>
+			<daw-toggle2 id="spectswitch" x="163" y="10" value="0"></daw-toggle2>
+			<canvas id="spect"></canvas>
+		</section>
+	</div>
+	<div class="back">
+		<dawplug-specs id="specs"></dawplug-specs>
+	</div>
+</flip-card>
+<link rel="stylesheet" href="mdajx10.css">
+<!-- this gives 404, but need it for path -->
+<script id="getpath" src="dummy.js"></script>
+</template>
+
+<script src="mdajx10.js"></script>
+<script>
+(function () {
+	var analyzer,spect,cctx,dpr,spectw,specth,spectkhzstep,stepsize,magscaler;
+	var specton = 0;
+	Polymer("dawsynth-mdajx10",
+	{
+		domReady: function ()
+		{
+			this.$.specs.model = this.specs;
+			var widgets = this.$.synthpanel.querySelectorAll("daw-knob2");
+			for (var i=0; i<widgets.length; i++)
+				widgets[i].addEventListener("change", this);
+			this.$.spectswitch.addEventListener("change", this);
+			
+			// -- init spectrum display
+			spect = this.$.spect;
+			cctx = spect.getContext("2d");
+			var w = this.$.disp.offsetWidth;
+			var h = this.$.disp.offsetHeight;
+			dpr = window.devicePixelRatio || 1;
+			cctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+			spectw = w * dpr;
+			specth = h * dpr;
+			spect.style.width  = w;
+			spect.style.height = h;
+			spect.width  = spectw;
+			spect.height = specth;
+			spectkhzstep = spectw / 22;
+			stepsize = 1024 / spectw;
+			magscaler = specth;
+			this.$.watermark.style.width = w;
+			this.$.watermark.style.height = "100%";
+			this.$.watermark.style.lineHeight = h + "px";
+		},
+		
+		// -- implementation
+		init: function(host)
+		{
+			window.addEventListener('pluginready', this.onpluginReady, false);
+			var path = this.$.getpath.src;
+			path = path.slice(0, path.lastIndexOf("dummy.js"));
+			this.synth = new MDAJX10(host, path);
+			this.synth.gui = this;
+			this.path = path;
+			this.map = ["oscmix","osctune","oscfine","gmode","grate","gbend",
+				"ffreq","fres","feg","lfolpf","fdyn","fatt","fdec","fsus","frel",
+				"aatt","adec","asus","arel","lforate","lfoosc","noise","octave","tune"];
+		},
+		exit: function ()
+		{
+			this.synth.disconnect();
+			this.synth.host.disposePlugin(this.synth, this.path + "mdajx10.nmf");
+		},
+		flip: function () { this.$.flipper.flip(); },
+		
+		setPatch: function(i)
+		{
+			var patch = this.synth.bank[i];
+			if (patch) for (var p=1; p<patch.length; p++)
+			{
+				var value = patch[p];
+				var id = this.map[p-1];
+				var widget = this.$[id];
+				widget.value = value;
+			}
+		},
+		handleEvent: function(e)
+		{
+			if (e.detail.key == "spectswitch")
+			{
+				if (e.detail.value) { specton = 1; drawspect(); }
+				else { specton = 0; };
+			}
+			else
+			{
+				var ikey = this.map.indexOf(e.detail.key);
+				this.synth.setParam(ikey, e.detail.value);
+			}
+		},
+		onpluginReady: function(e)
+		{
+			var actx = synth.host.actx;
+			analyzer = actx.createAnalyser();
+			analyzer.maxDecibels = 0;
+			analyzer.minDecibels = -80;
+			synth.connect(analyzer);			
+			drawspect();
+		},
+		
+		specs: {
+			name: "JX10",
+			description: "simple virtual analog synth",
+			type: "subtractive",
+			oscs: "2 saw + noise",
+			mod: "",
+			alias: null,
+			filters: "LPF",
+			egs: "2 (ADSR -> amp,cutoff)",
+			lfos: "1 (sin -> pitch,pw,cutoff)",
+			fx: null,
+			orig: {
+				format: "VST",
+				version: "1.1",
+				author: "mda (Paul Kellett)",
+				date: "1998-2008",
+				website: "http://mda.smartelectronix.com",
+				sources: "http://sourceforge.net/projects/mda-vst/",
+				license: "GPL2/MIT"
+				},
+			web: {
+				format: "PNaCl",
+				version: "0.2",
+				author: "Jari Kleimola",
+				date: "2014",
+				weight: "347 kB",
+				// website: "https://mediatech.aalto.fi/publications/webservices/dawplugins/",
+				sources: "https://github.com/jariseon/webdawplugins",
+				},
+			patches: null
+		}
+ 	});
+	
+	function drawspect()
+	{
+		cctx.clearRect(0, 0, spect.width, specth);
+		var x = 1;
+		for (var i=0; i<spectw; i+=spectkhzstep)
+		{
+			cctx.fillStyle = (x++ % 5 == 0) ? "#8292a4" : "#35475d";
+			cctx.fillRect(i|0, 0, 1, specth);
+		}
+		
+		if (specton == 1) requestAnimationFrame(drawspect);
+		else return;
+		
+		var fft = new Uint8Array(analyzer.frequencyBinCount);
+		analyzer.getByteFrequencyData(fft);
+		var minDb = analyzer.minDecibels;
+		var maxDb = analyzer.maxDecibels;
+		magscaler = 1.5 / 256;
+
+		cctx.beginPath();
+		for (var i=0,x=0; i < fft.length; i+=stepsize)
+		{
+			var y = specth * (1 - fft[i|0] * magscaler);
+			cctx.moveTo(x, specth);
+			cctx.lineTo(x++, y);
+		}
+		cctx.strokeStyle = "#8292a4";
+		cctx.stroke();
+	}
+})();
+</script>
+</polymer-element>

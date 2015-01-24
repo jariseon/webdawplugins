@@ -1,0 +1,94 @@
+<polymer-element name="dawplug-specs" attributes="model">
+<template>
+	<div id="specs">
+		<ul id="speclist">
+			<li>
+				<div id="name">{{m.name}}</div>
+				<div id="desc">{{m.description}}</div>
+				<div id="format">{{m.orig.format}} v{{m.orig.version}} /
+					{{m.web.format}} w{{m.web.version}}
+				</div>
+				</li>
+			<li><b>Type</b> - {{m.type}}</li>
+			<li><b>Oscillators</b> - {{m.oscs}} {{aliasing()}}</li>
+			<li><b>AR Modulation</b> - {{m.mod}}</li>
+			<li id="filters"><b>Filters</b> -</li>
+			<li><b>Envelopes</b> - {{m.egs}}</li>
+			<li><b>LFOs</b> - {{m.lfos}}</li>
+			<li id="fx"><b>Effects</b> -</li>
+			<li>
+				<div class="links">
+					<b>Original</b> - 
+					<a href="{{m.orig.website}}" target="_blank">website</a> | 
+					<a href="{{m.orig.sources}}" target="_blank">sources</a> ({{m.orig.license}})
+					<br/>author: <i>{{m.orig.author}}</i>, {{m.orig.date}}
+				</div></li>
+			</li>
+			<li>
+				<div class="links">
+					<b>Web Port</b> - 
+					<!-- a href="{{m.web.website}}" target="_blank">website</a --> 
+					<a href="{{m.web.sources}}" target="_blank">sources</a>
+					<br/>porting: <i>{{m.web.author}}</i>, {{m.web.date}}
+					<br/>weight: {{m.web.weight}}
+				</div></li>
+			</li>
+		</ul>
+	</div>
+<style>
+	:host { display:block; background:#eee; }
+	#specs { margin:0 auto; background:#eee;
+		border:1px solid #e3e3e3; border-radius:0px; cursor:default; }
+	#speclist { color:#444; line-height:14px; max-width:242px; }
+	#speclist { margin:12px; padding:0; list-style:none; display:block; }
+	#speclist { font-family: helvetica,tahoma,arial,sans-serif; font-size:12px; }
+	#speclist li { border-bottom:1px solid #bebebe; border-top:1px solid #ededed;
+		padding:5px 0; }
+	#name { padding-top:0; padding-bottom:2px; font-weight:bold; font-size:14px; }
+	b { font-weight:bold; }
+	a, a:visited { color:#444; text-decoration:none; width:40px; }
+	a:hover { color:firebrick; }
+	#speclist li:first-of-type div { line-height:13px; }
+	#speclist li:first-of-type { padding-bottom:6px; }
+	#speclist li:last-of-type { border-bottom:none; }
+	.links a { display:inline-block; }
+	.links { line-height:14px; padding:2px 0 2px 0; }
+	.boxed { border:1px solid #222; border-radius:2px; width:14px; 
+		display:inline-block; text-align:center; margin-right:3px; line-height:14px; }
+	.boxed:hover { background-color:#222; color:#eee; }
+</style>
+</template>
+<script>
+	Polymer("dawplug-specs",
+	{
+		model: {}, modelChanged: function ()
+		{
+			this.m = this.model;
+			this.$.filters.innerHTML = "<b>Filters</b> - " + this.filtering();
+			this.$.fx.innerHTML = "<b>Effects</b> - " + this.effects();
+			
+			if (this.model.patches)
+			{
+				var patchlist = document.createElement("li");
+				patchlist.innerHTML = "<b>Patches</b> - "
+				for (var i=0; i<this.model.patches.length; i++)
+				{
+					var a = document.createElement("a");
+					a.href = this.model.patches[i];
+					a.className = "boxed";
+					a.target = "_blank";
+					a.innerText = String.fromCharCode(0x41 + i) + " ";
+					patchlist.appendChild(a);
+				}
+				this.appendItem(patchlist);
+			}
+		},
+		m: {},
+		aliasing: function () { return (this.m.alias ? this.m.alias : ""); },
+		filtering: function () { return (this.m.filters ? this.m.filters : ""); },
+		effects: function () { return (this.m.fx ? this.m.fx : ""); },
+		
+		appendItem: function (li) { this.$.speclist.appendChild(li); }
+	});
+</script>
+</polymer-element>

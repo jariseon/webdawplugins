@@ -1,0 +1,572 @@
+<polymer-element name="dawsynth-dexed" attributes="host">
+<template>
+<flip-card id="flipper" axis="y">
+	<div id="synthpanel" class="front">
+		
+		<!-- operators -->
+		<template repeat="{{o in _ops}}">
+		<div id={{"op"+o}} class="operator">
+			<img src="gui/OperatorEditor_287x218.png" draggable="false">
+			<div class="opnum" style="left:242px; top:8px;">{{o}}</div>
+			<div id={{"khzDisplay"+o}} class="khzdisplay" style="left:15px; top:10px;"></div>
+			<canvas id={{"egDisplay"+o}} class="egdisplay" style="left:16px; top:83px;"></canvas>
+			<daw-knob id={{"opDetune"+o}} x="6" y="24" min="-7" max="7"></daw-knob>
+			<daw-knob id={{"opCoarse"+o}} x="43" y="24" max="31"></daw-knob>
+			<daw-knob id={{"opFine"+o}} x="78" y="24"></daw-knob>
+			<daw-toggle id={{"opMode"+o}} x="146" y="19"></daw-toggle>
+			<daw-toggle id={{"opModeindA"+o}} class="indicator" x="127" y="24" interactive="false"></daw-toggle>
+			<daw-toggle id={{"opModeindB"+o}} class="indicator" x="198" y="24" interactive="false"></daw-toggle>
+			<daw-knob id={{"egl1"+o}} x="5" y="128"></daw-knob>
+			<daw-knob id={{"egl2"+o}} x="33" y="128"></daw-knob>
+			<daw-knob id={{"egl3"+o}} x="61" y="128"></daw-knob>
+			<daw-knob id={{"egl4"+o}} x="89" y="128"></daw-knob>
+			<daw-knob id={{"egr1"+o}} x="5" y="169"></daw-knob>
+			<daw-knob id={{"egr2"+o}} x="33" y="169"></daw-knob>
+			<daw-knob id={{"egr3"+o}} x="61" y="169"></daw-knob>
+			<daw-knob id={{"egr4"+o}} x="89" y="169"></daw-knob>
+			<daw-knob id={{"ampModSens"+o}} x="140" y="76" max="3"></daw-knob>
+			<daw-knob id={{"keyVelSens"+o}} x="204" y="76" max="7"></daw-knob>
+			<daw-knob id={{"opLevel"+o}} x="245" y="76"></daw-knob>
+			<daw-knob id={{"sclLeftLevel"+o}} x="131" y="115"></daw-knob>
+			<daw-knob id={{"sclRateScaling"+o}} x="186" y="179" max="7"></daw-knob>
+			<daw-knob id={{"sclRightLevel"+o}} x="241" y="115"></daw-knob>
+			<daw-slider id={{"sclLvlBrkPt"+o}} x="172" y="130"></daw-slider>
+			<daw-toggle id={{"kbdLeftCurve"+o}} class="keyscaling" x="128" y="170" states="6"></daw-toggle>
+			<daw-toggle id={{"kbdRightCurve"+o}} class="keyscaling" x="240" y="170" states="6"></daw-toggle>
+		</div>
+		</template>		
+				
+		<!-- globals -->
+		<div id="globals">
+			<img id="globals" src="gui/GlobalEditor_864x144.png" draggable="false">
+			
+			<!-- div id="lcdDisplay" style="left:6px; top:87px;"></div -->
+			<daw-knob id="fxcutoff" x="234" y="9" max="1"></daw-knob>
+			<daw-knob id="fxreso" x="278" y="9" max="1"></daw-knob>
+			<daw-knob id="output" x="157" y="60" max="1"></daw-knob>
+			<daw-knob id="transpose" x="202" y="60" max="48"></daw-knob>
+			<daw-toggle id="monomode" x="249" y="65"></daw-toggle>
+			<daw-toggle id="monomodeind" class="indicator" x="300" y="70" interactive="false"></daw-toggle>
+			
+			<canvas id="algoDisplay" style="left:331px; top:23px;"></canvas>
+			<daw-knob id="feedback" x="502" y="81" max="7"></daw-knob>
+			<daw-knob id="algorithm" x="502" y="22" max="31"></daw-knob>
+			<div id="algoid" style="left:500px; top:11px;"></div>
+			
+			<daw-toggle id="lfowave" x="583" y="8"></daw-toggle>
+			<daw-knob id="lfospeed" x="564" y="50"></daw-knob>
+			<daw-knob id="lfodelay" x="603" y="50"></daw-knob>
+			<daw-knob id="lfopm" x="646" y="50"></daw-knob>
+			<daw-knob id="lfoam" x="686" y="50"></daw-knob>
+			<daw-toggle id="lfokeysync" x="565" y="96"></daw-toggle>
+			<daw-toggle id="lfokeysyncind" class="indicator" x="619" y="102" interactive="false"></daw-toggle>
+			<daw-knob id="pmodsens" x="666" y="5" max="7"></daw-knob>
+			<daw-toggle id="keysync" x="650" y="96"></daw-toggle>
+			<daw-toggle id="keysyncind" class="indicator" x="705" y="102" interactive="false"></daw-toggle>
+			
+			<canvas id="pegDisplay" class="egdisplay" style="left:751px; top:10px;"></canvas>
+			<daw-knob id="peglevel1" x="739" y="57"></daw-knob>
+			<daw-knob id="peglevel2" x="767" y="57"></daw-knob>
+			<daw-knob id="peglevel3" x="795" y="57"></daw-knob>
+			<daw-knob id="peglevel4" x="823" y="57"></daw-knob>
+			<daw-knob id="pegrate1" x="739" y="96"></daw-knob>
+			<daw-knob id="pegrate2" x="767" y="96"></daw-knob>
+			<daw-knob id="pegrate3" x="795" y="96"></daw-knob>
+			<daw-knob id="pegrate4" x="823" y="96"></daw-knob>
+		</div>
+	</div>
+	<div class="back">
+		<dawplug-specs id="specs"></dawplug-specs>
+	</div>
+</flip-card>
+	<style>
+		:host { display:inline-block; transform-origin:top left; position:relative; }
+		#synthpanel { min-width:869px; max-width:869px; width:869px; }
+		
+		daw-knob { position:absolute; background-image:url(gui/Knob_34x34.png);
+			content:"min:0;max:99;stepsize:1;states:48;";  width:34px; height:34px; }
+		daw-toggle { background-image:url(gui/Switch_48x26.png); height:26px; }
+		daw-slider { background-image:url(gui/Slider_26x26.png); width:60px;
+			content:"dir:horizontal;max:99;thumbsize:24;"; }
+		.indicator { background-image:url(gui/Light_14x14.png); height:14px; }
+		.egdisplay { position:absolute; width:94px; height:30px; background:rgb(0,0,0); }
+		
+		.operator { position:relative; float:left; margin:0 1px 1px 0;}
+		#op3 { display:block; }
+		.opnum { position:absolute; color:white; font-family:sans-serif; font-size:30px;
+			width:30px; height:30px; line-height:30px; text-align:center; }
+		.khzdisplay { position:absolute; color:white; font-family:sans-serif; font-size:10px;
+			width:95px; height:10px; line-height:10px; text-align:center; }
+		.keyscaling { background-image:url(gui/Scaling_36_26.png); height:26px; }
+		
+		#globals { position:relative; clear:both; }
+		#algodisplay { position:absolute; width:152px; height:98px; background:transparent; }
+		#algoid { position:absolute; color:#ccc; font-family:sans-serif; font-size:10px; 
+			width:34px; height:10px; line-height:10px; text-align:center; }
+		#lcddisplay { position:absolute; width:140px; height:13px; border:1px solid gold; }
+		#lfowave { background-image:url(gui/LFO_36_26.png); height:26px; }
+		
+		#flipper { position:relative; }
+		.front { background:transparent; }
+		.back { position:absolute; top:0; background:#fff; width:100%; height:100%; }
+		#specs { width:242px; height:582px; display:block; }
+	</style>
+	</template>
+	
+	<script src="dexed.js"></script>
+	<script>
+	Polymer("dawsynth-dexed",
+	{
+		_ops: [1,2,3,4,5,6],
+		monomode: 0,
+		lfowave: 0,
+		domReady: function()
+		{
+			var self = this;
+			["daw-knob","daw-slider","daw-toggle"].forEach(function (nodename)
+			{
+				var widgets = self.$.synthpanel.querySelectorAll(nodename);
+				for (var i=0; i<widgets.length; i++)
+					widgets[i].addEventListener("change", self);
+			});
+			
+			this.map = [ "fxcutoff","fxreso","output",
+				"algorithm","feedback","keysync",
+				"lfospeed","lfodelay","lfopm","lfoam","lfokeysync","lfowave",
+				"transpose","pmodsens",
+				"pegrate1","pegrate2","pegrate3","pegrate4",
+				"peglevel1","peglevel2","peglevel3","peglevel4"];	// 21
+			var operids = ["egr1","egr2","egr3","egr4","egl1","egl2","egl3","egl4",
+				"opLevel","opMode","opCoarse","opFine","opDetune",	// 34
+				"sclLvlBrkPt","sclLeftLevel","sclRightLevel",
+				"kbdLeftCurve","kbdRightCurve","sclRateScaling",
+				"ampModSens","keyVelSens"];
+
+			var dpr = window.devicePixelRatio || 1;
+			var c = this.$.egDisplay1;
+			var w = c.offsetWidth;
+			var h = c.offsetHeight;
+			for (var i=1; i<=6; i++)
+			{
+				var opmap = operids.slice(0);
+				for (var j=0; j<opmap.length; j++)
+					opmap[j] = opmap[j] + i;
+				this.map = this.map.concat(opmap);
+				
+				c = this.$["egDisplay" + i];
+				var ctx = c.getContext("2d");
+				ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+				c.width  = w * dpr;
+				c.height = h * dpr;
+			}
+			[this.$.pegDisplay,this.$.algoDisplay].forEach(function (c) {
+				var ctx = c.getContext("2d");
+				ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+				var w = c.offsetWidth;
+				var h = c.offsetHeight;
+				c.width  = w * dpr;
+				c.height = h * dpr;
+			});
+			this.cw = w * dpr;
+			this.ch = h * dpr;
+			
+			this.map.push("monomode");
+			this.map.push("lfowave");
+			this.$.specs.model = this.specs;			
+		},
+		
+		init: function(host)
+		{
+			this.path = this.$.globals.src;
+			this.path = this.path.slice(0, this.path.lastIndexOf("gui/GlobalEditor_864x144.png"));
+			this.synth = new Dexed(host, this.path);
+			this.synth.gui = this;
+		},
+		exit: function ()
+		{
+			this.synth.disconnect();
+			this.synth.host.disposePlugin(this.synth, this.path + "dexed.nmf");
+		},
+		flip: function () { this.$.flipper.flip(); },
+		
+		setPatch: function(i)
+		{
+			if (i < 0 || i > 31) return;
+			var start = i*128;
+			var patch = this.synth.bank.subarray(start, start+128);
+			var params = unpack(patch);
+
+			for (var i=0; i<params.length; i++)
+			{
+				var id = this.map[i];
+				var widget = this.$[id];
+				if (widget)
+				{
+					var value = params[i];
+					if (id.indexOf("egr") == 0 || id.indexOf("pegr") == 0)
+						value = 99 - value;
+					widget.value = value;
+				}
+			}
+			
+			this.params = params;
+			for (var op=1; op<=6; op++)
+			{
+				var canvas  = this.$["egDisplay"  + op];
+				var i = 22 + (op-1) * 21;
+				this.paintEG(canvas, i);
+				this.setFreq(op);
+				this.setIndicator("opMode" + op, params[31 + 21*(op-1)]);				
+			}
+			this.paintEG(this.$.pegDisplay, 14);
+			this.paintAlgorithm(this.params[3]);
+			this.$.algoid.innerText = this.params[3] + 1;
+			
+			this.$.lfowave.value = this.lfowave;
+			this.$.monomode.value = this.monomode;
+			this.setIndicator("monomode", this.monomode);			
+			this.setIndicator("lfokeysync", params[10]);
+			this.setIndicator("keysync", params[5]);
+		},
+		
+		handleEvent: function(e)
+		{
+			var key = e.detail.key;
+			var value = e.detail.value;
+			var pname = key.slice(0,-1);
+			
+			var ieg = key.indexOf("eg");
+			if (ieg == 0 || ieg == 1)
+				value = this.setEG(ieg, key, value);
+			else if (key == "algorithm")
+			{
+				this.paintAlgorithm(value);
+				this.$.algoid.innerText = value + 1;
+			}
+			else
+			{
+				var ifreq = ["opCoarse","opFine","opDetune"].indexOf(pname);
+				if (ifreq >= 0)
+				{
+					var op = key[key.length-1];
+					this.params[32 + ifreq + (op-1) * 21] = value;
+					this.setFreq(op);
+				}
+				else this.setIndicator(key, value);
+			}
+			
+			if (e.detail.norm) value = e.detail.norm;
+			var ikey = this.map.indexOf(key);
+			this.synth.setParam(ikey, value);
+		},
+
+		setEG: function (pitchEG, key, value)
+		{
+			if (pitchEG)
+			{
+				var canvas = this.$.pegDisplay;
+				var i = 14;
+				var p = parseInt(key[key.length-1]) - 1;
+			}
+			else
+			{
+				var op = parseInt(key[key.length-1]);
+				var canvas = this.$["egDisplay" + op];
+				var i = 22 + (op-1) * 21;
+				var p = parseInt(key[key.length-2]) - 1;
+			}
+			var r = (key.indexOf("r") > 0) ? 0 : 4;
+			if (r == 0) value = 99 - value;
+			this.params[i+r+p] = value;
+			this.paintEG(canvas,i);
+			return value;
+		},
+
+		setIndicator: function (key, value)
+		{
+			if (key.indexOf("opMode") == 0)
+			{
+				var op = key[key.length-1];
+				var a = value ? 0 : 1;
+				var b = value ? 1 : 0;
+				this.$["opModeindA" + op].value = a;
+				this.$["opModeindB" + op].value = b;
+			}
+			else
+			{
+				switch (key)
+				{
+					case "monomode":
+					case "lfokeysync":
+					case "keysync":
+						var indicator = this.$[key + "ind"];
+						break;
+				}
+				if (indicator) indicator.value = value;
+			}
+		},
+		
+		paintEG: function (canvas,i)
+		{
+			var ctx = canvas.getContext("2d");
+			var x = 2;
+			var w = canvas.width;
+			var h = canvas.height;
+			ctx.clearRect(0, 0, w, h);
+			ctx.beginPath();
+
+			w -= 4; h -= 2;
+			ctx.moveTo(x,h);
+
+			for (var p=0; p<4; p++)
+			{
+				x += (99-this.params[i+p])/99 * w/4;
+				if (p == 3) x = w;
+				var y = h * (1 - this.params[i+p+4]/99);
+				ctx.lineTo(x,y);
+				if (p == 2)
+				{
+					var sx = w - (99-this.params[i+3])/99 * w/4;
+					ctx.lineTo(sx,y);
+				}
+			}
+			ctx.lineTo(w,h);
+			ctx.lineTo(2,h);
+			
+			ctx.lineWidth = 1;
+			ctx.strokeStyle = "#51a097";
+			ctx.fillStyle = "#51a097";
+			ctx.stroke();
+			ctx.fill();
+		},
+
+		paintAlgorithm: function (ialg)
+		{
+			function line(ctx, x1,y1,x2,y2)
+			{
+				ctx.beginPath();
+				ctx.moveTo(x1,y1);
+				ctx.lineTo(x2,y2);
+				ctx.stroke();
+			}
+			
+			var canvas = this.$.algoDisplay;
+			var ctx = canvas.getContext("2d");
+			var a = algorithms[ialg];
+			
+			var w = canvas.width;
+			var h = canvas.height;
+			ctx.clearRect(0, 0, w, h);
+			ctx.fillStyle = "white";
+			ctx.lineWidth = 5;
+			ctx.strokeStyle = "rgb(77,159,151)";
+			ctx.textAlign = "center";
+			ctx.textBaseline = "middle";
+			ctx.font = "15pt sans-serif";
+			
+			for (var i=1; i<=6; i++)
+			{
+				var op = a[6-i];
+				var x = op[0] * 50 + 30;
+				var y = op[1] * 42 + 37;
+				ctx.fillText(i+"", x,y);
+
+				switch (op[2]) {
+					case 0:
+						line(ctx, x, y+12, x, y+21+8);
+						break;
+					case 1:
+						line(ctx, x, y+12, x, y+18+4);
+						line(ctx, x-1, y+17+4, x+26+26, y+17+4);
+						break;
+					case 2:
+						line(ctx, x,  y+12, x, y+19+4);
+						break;
+					case 6:
+						line(ctx, x, y+12, x, y+18+4);
+						line(ctx, x-2, y+18+4, x+102, y+18+4);
+						break;
+					case 7:
+						line(ctx, x,  y+12, x, y+18+4);
+						line(ctx, x-25-25, y+18+4, x+2, y+18+4);
+						break; }
+				
+				switch (op[3]) {
+					case 1:
+						line(ctx, x, y-16, x, y-6-16);
+						line(ctx, x, y-4-16, x+20+4, y-4-16);
+						line(ctx, x+19+4, y-6-16, x+19+4, y+19);
+						line(ctx, x, y+18, x+20+4, y+18);
+						break;
+					case 2: // ALGO 4
+						line(ctx, x, y-16, x, y-6-16);
+						line(ctx, x, y-4-16, x+20+4, y-4-16);
+						line(ctx, x+19+4, y-6-16, x+19+4, y+19+41);
+						line(ctx, x, y+18+41, x+20+4, y+18+41);
+						break;
+					case 3: // ALGO 6
+						line(ctx, x, y-16, x, y-6-16);
+						line(ctx, x, y-4-16, x+20+4, y-4-16);
+						line(ctx, x+19+4, y-6-16, x+19+4, y+19+41);
+						line(ctx, x, y+18+41, x+20+4, y+18+41);
+						break;
+					case 4:
+						line(ctx, x, y-16, x, y-6-16);
+						line(ctx, x, y-4-16, x-20-4, y-4-16);
+						line(ctx, x-19-4, y-6-16, x-19-4, y+19);
+						line(ctx, x, y+18, x-20-4, y+18);
+						break; }
+			}
+		},
+		
+		// freq display
+		setFreq: function (op)
+		{
+			var i = 22 + (parseInt(op)-1) * 21;
+			var text;
+			var freq = this.params[i+10];
+			var fine = this.params[i+11];
+			if (this.params[i+9] == 0)
+			{
+				if (freq == 0) freq = 0.5;
+				text = (freq + (fine/100)).toFixed(2);
+			}
+			else
+			{
+				freq = Math.pow(10, freq & 3);
+				freq = freq + ((freq*10) * (fine/100));
+				text = (freq|0) + " Hz";
+			}
+			var det = this.params[i+12];
+			if (det > 0) text += " +" + det;
+			else if (det < 0) text += " " + det;
+			
+			var div = this.$["khzDisplay" + op];
+			div.innerHTML = text;
+		},
+		
+		specs: {
+			name: "Dexed",
+			description: "Yamaha DX7 emulation",
+			type: "abstract (PM)",
+			oscs: "6 sin",
+			mod: "pm + am",
+			alias: null,
+			filters: null,
+			egs: "7 (4 segments)",
+			lfos: "1 (sin,tri,squ,saw,rand)",
+			fx: null,
+			orig: {
+				format: "Juce",
+				version: "0.8.0",
+				author: "Digital Surburban (Pascal Gauthier) + Raph Levien",
+				date: "2014",
+				website: "http://le-son666.com/asb2m10/",
+				sources: "https://github.com/asb2m10/dexed",
+				license: "GPL2"
+				},
+			web: {
+				format: "PNaCl",
+				version: "0.1",
+				author: "Jari Kleimola",
+				date: "2014-15",
+				weight: "441 kB",
+				// website: "https://mediatech.aalto.fi/publications/webservices/dawplugins/",
+				sources: "https://github.com/jariseon/webdawplugins",
+				},
+			patches: [
+				"http://homepages.abdn.ac.uk/mth192/pages/html/dx7.html"],
+		}
+	});
+
+	function clamp(v,min,max)
+	{
+		if (v < min) v = min;
+		if (v > max) v = max;
+		return v;
+	}
+	
+	// unpack sysex patch 'p' into a parameter array 'm', and return 'm'
+	// see http://homepages.abdn.ac.uk/mth192/pages/dx7/sysex-format.txt
+	function unpack(p)
+	{
+		var m = new Array(148);
+
+		// -- operators
+		for (var op = 6; op > 0; op--)
+		{
+			var a = (op-1) * 21 + 22;
+			var b = (6-op) * 17;
+			for (var i=0; i<8; i++)
+				m[a+i] = clamp(p[b+i], 0,99);				// eg
+			m[a+13] = clamp(p[b+8],  0,99);				// keyscale breakpoint
+			m[a+14] = clamp(p[b+9],  0,99);				// keyscale left depth
+			m[a+15] = clamp(p[b+10], 0,99);				// keyscale rite depth
+			m[a+16] = clamp(p[b+11] & 3, 0,3);					// keyscale left curve
+			m[a+17] = clamp((p[b+11] >> 2) & 3, 0,3);			// keyscale rite curve
+			m[a+18] = clamp(p[b+12] & 7, 0,7);					// osc rate scale
+			m[a+12] = clamp((p[b+12] >> 3) & 15, 0,14) - 7;	// detune
+			m[a+19] = clamp(p[b+13] & 3, 0,3);					// am sens
+			m[a+20] = clamp((p[b+13] >> 2) & 7, 0,7);			// key velocity sens
+			m[a+8]  = clamp(p[b+14], 0,99);						// op level
+			m[a+9]  = clamp(p[b+15] & 1, 0,1);					// op mode
+			m[a+10] = clamp((p[b+15] >> 1) & 0x1F, 0,31);	// freq coarse
+			m[a+11] = clamp(p[b+16], 0,99);						// freq fine
+		}
+
+		// -- globals
+		var b = 102;
+		for (var i=0; i<8; i++)
+			m[14+i] = clamp(p[b+i], 0,99);				// pitch eg
+		m[3] = clamp(p[b+8], 0,31);						// algorithm
+		m[4] = clamp(p[b+9] & 7, 0,7);					// feedback
+		m[5] = clamp((p[b+9] >> 3) & 1, 0,1);			// key sync
+		m[6] = clamp(p[b+10], 0,99);						// lfo speed
+		m[7] = clamp(p[b+11], 0,99);						// lfo delay
+		m[8] = clamp(p[b+12], 0,99);						// lfo pm depth
+		m[9] = clamp(p[b+13], 0,99);						// lfo am depth
+		m[10] = clamp(p[b+14] & 1, 0,1);					// lfo key sync
+		m[11] = clamp((p[b+14] >> 1) & 7, 0,5);		// lfo wave
+		m[13] = clamp((p[b+14] >> 5) & 7, 0,7);		// lfo wave
+		m[12] = clamp(p[b+15], 0,48);						// transpose
+		
+		return m;
+	}
+
+	var algorithms = [
+		[[3, 0, 0, 1],[3, 1, 0, 0],[3, 3, 7, 0],[3, 2, 0, 0],[2, 2, 0, 0],[2, 3, 1, 0]],
+		[[3, 0, 0, 0],[3, 1, 0, 0],[3, 2, 0, 0],[3, 3, 2, 0],[2, 2, 0, 1],[2, 3, 1, 0]],
+		[[3, 1, 0, 1],[3, 2, 0, 0],[3, 3, 2, 0],[2, 1, 0, 0],[2, 2, 0, 0],[2, 3, 1, 0]],
+		[[3, 1, 0, 2],[3, 2, 0, 0],[3, 3, 2, 0],[2, 1, 0, 0],[2, 2, 0, 0],[2, 3, 1, 0]],
+		[[4, 2, 0, 1],[4, 3, 2, 0],[3, 2, 0, 0],[3, 3, 1, 0],[2, 2, 0, 0],[2, 3, 1, 0]],
+		[[4, 2, 0, 3],[4, 3, 2, 0],[3, 2, 0, 0],[3, 3, 1, 0],[2, 2, 0, 0],[2, 3, 1, 0]],
+		[[4, 1, 0, 1],[4, 2, 7, 0],[3, 2, 0, 0],[3, 3, 2, 0],[2, 2, 0, 0],[2, 3, 1, 0]],
+		[[4, 1, 0, 0],[4, 2, 7, 0],[3, 2, 0, 4],[3, 3, 2, 0],[2, 2, 0, 0],[2, 3, 1, 0]],
+		[[4, 1, 0, 0],[4, 2, 7, 0],[3, 2, 0, 0],[3, 3, 2, 0],[2, 2, 0, 1],[2, 3, 1, 0]],
+		[[2, 2, 0, 0],[1, 2, 1, 0],[2, 3, 1, 0],[3, 1, 0, 1],[3, 2, 0, 0],[3, 3, 2, 0]],
+		[[2, 2, 0, 1],[1, 2, 1, 0],[2, 3, 1, 0],[3, 1, 0, 0],[3, 2, 0, 0],[3, 3, 2, 0]],
+		[[3, 2, 7, 0],[2, 2, 0, 0],[1, 2, 1, 0],[2, 3, 6, 0],[4, 2, 0, 1],[4, 3, 2, 0]],
+		[[3, 2, 7, 1],[2, 2, 0, 0],[1, 2, 1, 0],[2, 3, 6, 0],[4, 2, 0, 0],[4, 3, 2, 0]],
+		[[3, 1, 0, 1],[2, 1, 1, 0],[3, 2, 0, 0],[3, 3, 2, 0],[2, 2, 0, 0],[2, 3, 1, 0]],
+		[[3, 1, 0, 0],[2, 1, 1, 0],[3, 2, 0, 0],[3, 3, 2, 0],[2, 2, 0, 4],[2, 3, 1, 0]],
+		[[4, 1, 0, 1],[4, 2, 7, 0],[3, 1, 0, 0],[3, 2, 0, 0],[2, 2, 1, 0],[3, 3, 0, 0]],
+		[[4, 1, 0, 0],[4, 2, 7, 0],[3, 1, 0, 0],[3, 2, 0, 0],[2, 2, 1, 4],[3, 3, 0, 0]],
+		[[4, 0, 0, 0],[4, 1, 0, 0],[4, 2, 7, 0],[3, 2, 0, 4],[2, 2, 1, 0],[3, 3, 0, 0]],
+		[[3, 2, 0, 1],[4, 3, 2, 0],[3, 3, 1, 0],[2, 1, 0, 0],[2, 2, 0, 0],[2, 3, 1, 0]],
+		[[4, 2, 0, 0],[3, 2, 1, 0],[4, 3, 2, 0],[1, 2, 0, 1],[2, 3, 6, 0],[1, 3, 1, 0]],
+		[[3, 2, 0, 0],[4, 3, 2, 0],[3, 3, 1, 0],[1, 2, 0, 1],[2, 3, 1, 0],[1, 3, 1, 0]],
+		[[3, 2, 0, 1],[4, 3, 2, 0],[3, 3, 1, 0],[2, 3, 1, 0],[1, 2, 0, 0],[1, 3, 1, 0]],
+		[[3, 2, 0, 1],[4, 3, 2, 0],[3, 3, 1, 0],[2, 2, 0, 0],[2, 3, 1, 0],[1, 3, 1, 0]],
+		[[3, 2, 0, 1],[4, 3, 2, 0],[3, 3, 1, 0],[2, 3, 1, 0],[1, 3, 1, 0],[0, 3, 1, 0]],
+		[[3, 2, 0, 1],[4, 3, 2, 0],[3, 3, 1, 0],[2, 3, 1, 0],[1, 3, 1, 0],[0, 3, 1, 0]],
+		[[4, 2, 0, 1],[3, 2, 1, 0],[4, 3, 2, 0],[2, 2, 0, 0],[2, 3, 6, 0],[1, 3, 1, 0]],
+		[[4, 2, 0, 0],[3, 2, 1, 0],[4, 3, 2, 0],[2, 2, 0, 1],[2, 3, 6, 0],[1, 3, 1, 0]],
+		[[4, 3, 2, 0],[3, 1, 0, 1],[3, 2, 0, 0],[3, 3, 1, 0],[2, 2, 0, 0],[2, 3, 1, 0]],
+		[[4, 2, 0, 1],[4, 3, 2, 0],[3, 2, 0, 0],[3, 3, 1, 0],[2, 3, 1, 0],[1, 3, 1, 0]],
+		[[4, 3, 2, 0],[3, 1, 0, 1],[3, 2, 0, 0],[3, 3, 1, 0],[2, 3, 1, 0],[1, 3, 1, 0]],
+		[[4, 2, 0, 1],[4, 3, 2, 0],[3, 3, 1, 0],[2, 3, 1, 0],[1, 3, 1, 0],[0, 3, 1, 0]],
+		[[5, 3, 2, 1],[4, 3, 1, 0],[3, 3, 1, 0],[2, 3, 1, 0],[1, 3, 1, 0],[0, 3, 1, 0]]
+	];
+
+	</script>
+</polymer-element>

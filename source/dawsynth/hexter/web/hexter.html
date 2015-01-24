@@ -1,0 +1,90 @@
+<polymer-element name="dawsynth-hexter" attributes="host">
+<template>
+	<flip-card id="flipper" axis="y">
+		<div class="front">
+			<img src="tools.svg">
+			<p>ui under construction</p>
+		</div>
+		<div class="back">
+			<dawplug-specs id="specs"></dawplug-specs>
+		</div>
+	</flip-card>
+	<style>
+		:host { display:inline-block; transform-origin:top left; }
+		#flipper { height:434px; position:relative; }
+		.front { background:#444; display:inline-block; height:434px; }
+		.back { position:absolute; top:0; background:#444; width:100%; height:100%; }
+		#specs { display:inline-block; }
+		img { display:block; margin: 0 auto; transform:scale(0.2); margin-top:-320px; }
+		p { color:#777; font-size:24px; text-align:center; margin:0; margin-top:-400px; }
+	</style>
+	<!-- this gives 404, but need it for path extraction -->
+	<script id="getpath" src="dummy.js"></script>
+</template>
+
+<script src="hexter.js"></script>
+<script>
+(function () {
+	Polymer("dawsynth-hexter",
+	{
+		ready: function ()
+		{
+			this.$.specs.model = this.specs;
+		},
+		init: function(host, pagewidth, scale)
+		{
+			this.path = this.$.getpath.src;
+			this.path = this.path.slice(0, this.path.lastIndexOf("dummy.js"));
+			this.synth = new Hexter(host, this.path);
+			this.synth.gui = this;
+			if (scale)
+			{
+				this.$.specs.style.transform = "scale(" + 1/scale + ")";
+				this.$.specs.style.transformOrigin = "top left";
+			}
+		},
+		exit: function ()
+		{
+			this.synth.disconnect();
+			this.synth.host.disposePlugin(this.synth, this.path + "hexter.nmf");
+		},
+		
+		setPatch: function(i) { },
+		flip: function () { this.$.flipper.flip(); },
+		
+		specs: {
+			name: "Hexter",
+			description: "Yamaha DX7 emulation",
+			type: "abstract (PM)",
+			oscs: "6 sin",
+			mod: "pm + am",
+			alias: null,
+			filters: null,
+			egs: "7 (4 segments)",
+			lfos: "1 (sin,tri,squ,saw,rand)",
+			fx: null,
+			orig: {
+				format: "DSSI",
+				version: "1.0.3",
+				author: "Sean Bolton",
+				date: "2004-14",
+				website: "http://dssi.sourceforge.net/hexter.html",
+				sources: "http://sourceforge.net/projects/dssi/files/hexter",
+				license: "GPL2"
+				},
+			web: {
+				format: "PNaCl",
+				version: "0.2",
+				author: "Jari Kleimola",
+				date: "2014",
+				weight: "440 kB",
+				// website: "https://mediatech.aalto.fi/publications/webservices/dawplugins/",
+				sources: "https://github.com/jariseon/webdawplugins",
+				},
+			patches: [
+				"http://homepages.abdn.ac.uk/mth192/pages/html/dx7.html"],
+		}
+ 	});
+})();
+</script>
+</polymer-element>

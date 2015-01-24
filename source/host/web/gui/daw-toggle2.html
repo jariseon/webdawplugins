@@ -1,0 +1,31 @@
+<polymer-element name="daw-toggle2" attributes="x y value">
+<template>
+	<div id="elem"></div>
+	<style>
+		:host { display:inline; position:absolute; }
+		#elem { border:1px solid #8292a4; position:absolute; width:15px; height:15px; }
+		.toggleon { background-color:#8292a4; opacity:0.4; }
+		.toggleoff { background-color:none; }
+	</style>
+</template>
+<script>
+	Polymer("daw-toggle2", {
+		x:0, y:0,
+		value: 0, valueChanged: function ()
+		{
+			this.fire("change", { key:this.id, value: this.value });
+			this.$.elem.className = this.value ? "toggleon" : "toggleoff";		
+		},
+		attached: function ()
+		{
+			var self = this;
+			this.$.elem.style.left = this.x;
+			this.$.elem.style.top = this.y;
+			this.$.elem.addEventListener("click", function ()
+			{
+				self.value = self.value ? 0 : 1;
+			}, false);
+		}
+	});
+</script>
+</polymer-element>

@@ -1,0 +1,1 @@
+copy VST2 SDK here

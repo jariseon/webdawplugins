@@ -1,0 +1,138 @@
+<polymer-element name="daw-knob2" attributes="x y r label min max value">
+<template>
+	<svg id="elem"><g>
+		<circle id="back" cx={{r+3}} cy={{r+3}} r={{r}}></circle>
+		<rect id="labelbox" x=0 y={{2*r+8}} width="46" height="17" rx="5" ry="5"></rect>
+		<text id="label" x={{r+3}} y={{2*r+20}}>{{label}}</text>
+		<path id="arctrack"></path>
+		<path id="arc"></path>
+		<text id="value" x={{r+3}} y={{r+8}}>0</text>
+	</g></svg>
+	<style>
+		:host { display:inline-block; }
+		path,text,circle { cursor:default; pointer-events:none; }
+		text { font-family:gill sans,sans-serif; font-size:8pt; font-weight:100; text-anchor:middle; }
+		path { fill:none; }
+		#back { fill:transparent; pointer-events:all; }
+		#arc { stroke:#fac63a; stroke-width:3; }
+		#label { fill:#bababa; }
+		#value { fill:#35475d; }
+	</style>
+</template>
+<script>
+(function () {
+	var a1,arclen,prevpos=0,d=20,dragging=false;
+	var backColor="#35475d",foreColor="#bababa";
+	Polymer("daw-knob2",
+	{
+		x:0, y:0, r:0,
+		min: 0, max: 1,
+		label: "label",
+		value:0, valueChanged: function ()
+		{
+			var value = ((this.value*100)|0)/100;
+			if (dragging)
+				this.fire("change", { key:this.id, value:parseFloat(value) });
+			
+			var a2 = this.value * arclen + a1;
+			var path = this.arcpath(a1, a2);
+			this.$.arc.setAttribute("d", path);
+
+			var text = value + "";
+			this.$.value.style.fill = this.value == 0 ? backColor : foreColor;
+			if (text.length == 1 && this.value > 0) text += ".00";
+			if (text.length == 3) text += "0";
+			this.$.value.textContent = text;
+		},
+		ready: function()
+		{
+			a1 = 180 + d;
+			arclen = 360 - 2*d;
+			this.$.back.addEventListener("mousedown", this, true);
+		},
+		attached: function ()
+		{
+			// -- CSS attributes using the "content" trick
+			var style = getComputedStyle(this);
+			var s = style.getPropertyValue("content").trim();
+			s = s.slice(1,-1);						// strip string delimiters
+			s = s.replace(/( |\\|\9|)/g,'');		// strip whitespace and linebreaks
+			var tokens = s.split(";");
+			for (var i=0; i<tokens.length; i++)
+			{
+				var keyvalue = tokens[i].split(":");
+				if (keyvalue.length == 2)
+				{
+					var key = keyvalue[0];
+					var val = keyvalue[1];
+					if (val.indexOf(";") == (val.length-1))
+						val = val.slice(0,-1);
+					switch (key)
+					{
+						case "r": this.r = parseInt(val); break;
+						case "arc-color": this.$.arc.style.stroke = val; break;
+					}
+				}
+			}
+
+			this.$.elem.style.left = (this.x-this.r) + "px";
+			this.$.elem.style.top = (this.y-this.r) + "px";
+			this.$.elem.style.width = (2*this.r + 6) + "px";
+			this.$.elem.style.height = (2*this.r + 25) + "px";
+			
+			backColor = style.getPropertyValue("background-color").trim();
+			foreColor = style.getPropertyValue("color").trim();
+			this.style.backgroundColor = "transparent";
+			this.$.labelbox.style.fill = backColor;
+			this.$.arctrack.style.stroke = backColor;
+			
+			var path = this.arcpath(a1, 180-d+360);
+			this.$.arctrack.setAttribute("d", path);
+		},
+		handleEvent: function(e)
+		{
+			if (e.type == "mousedown")
+			{
+				dragging = true;
+				prevpos = e.clientY;
+				window.addEventListener("mousemove", this, false);
+				window.addEventListener("mouseup", this, false);
+			}
+			else if (e.type == "mousemove")
+			{
+				var value = this.value + (prevpos - e.clientY) / 100;
+				if (value < this.min) value = this.min;
+				if (value > this.max) value = this.max;
+				if (value != this.value) this.value = value;
+				prevpos = e.clientY;
+			}
+			else
+			{
+				window.removeEventListener("mousemove", this, false);
+				window.removeEventListener("mouseup", this, false);
+				dragging = false;
+			}
+		},
+		arcpath: function (angle1, angle2)
+		{
+			var self = this;
+			function polar2XY(angle)
+			{
+				var rad = (angle-90) * Math.PI / 180.0;
+				return {
+					x: self.r+3 + (self.r * Math.cos(rad)),
+					y: self.r+3 + (self.r * Math.sin(rad))
+				};
+			}
+			var start = polar2XY(angle1);
+			var end	 = polar2XY(angle2);
+			var bigarc = angle2 - angle1 <= 180 ? 0 : 1;
+			return [ "M", start.x, start.y, 
+						"A", this.r, this.r, 0, bigarc, 1, end.x, end.y
+					// "L", x,y,
+			].join(" ");
+		}
+ });
+})();
+</script>
+</polymer-element>
