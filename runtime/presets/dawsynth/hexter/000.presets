@@ -1,0 +1,5 @@
+{ "name": "dx7", "root": "", "items":
+[
+	"rom1a.syx","rom1b.syx","rom2a.syx","rom2b.syx","rom3a.syx","rom3b.syx","rom4a.syx","rom4b.syx"
+]
+}

@@ -1,0 +1,107 @@
+<polymer-element name="daw-drawbar" attributes="x y min max dir image thumbsize value">
+	<template>
+		<div id="elem" style="overflow:hidden;">
+			<img id="image" draggable="false">
+		</div>
+	</template>
+	<script>
+	(function () {
+		var dragging = false, prevpos = 0, stepsize = 0, isvertical = true;
+
+		Polymer("daw-drawbar",
+		{
+			x: 0, xChanged: function () { this.style.left = this.x + "px"; },
+			y: 0, yChanged: function () { this.style.top = this.y + "px"; },
+			min: 0,
+			max: 1,
+			image: "", imageChanged: function () { this.$.image.src = this.image; },
+			dir: "vertical", dirChanged: function () { isvertical = (this.dir == "vertical"); },
+			thumbsize: 1,
+			value: 0, valueChanged: function ()
+			{
+				if (this.value < this.min) this.value = 0;
+				else if (this.value > this.max) this.value = this.max;
+				else
+				{
+					var pos = this.value * stepsize;
+					this.$.image.style.transform = "translateY(" + (-pos) + "px)";
+					if (dragging)
+						this.fire("change", { key:this.id, value:this.value });
+				}
+			},
+			created: function ()
+			{
+				this.style.position = "absolute";
+				this.addEventListener("mousedown", this, true);
+			},
+			attached: function ()
+			{
+				// -- custom CSS attributes
+				var style = getComputedStyle(this);
+				var s = style.getPropertyValue("content").trim();
+				s = s.slice(1,-1);						// strip string delimiters
+				s = s.replace(/( |\\|\n|\r)/g,'');	// strip whitespace and linebreaks
+				var tokens = s.split(";");
+				for (var i=0; i<tokens.length; i++)
+				{
+					var keyvalue = tokens[i].split(":");
+					if (keyvalue.length == 2)
+					{
+						var key = keyvalue[0];
+						var val = keyvalue[1];
+						if (val.indexOf(";") == (val.length-1))
+							val = val.slice(0,-1);
+						switch (key)
+						{
+							case "min": this.min = val; break;
+							case "max": this.max = val; break;
+							case "dir": this.dir = val; break;
+							case "thumbsize": this.thumbsize = val; break;
+						}
+					}
+					var img = style.getPropertyValue("background-image");
+					if (img.indexOf("url(") == 0) img = img.slice(4,-1);
+					if (img != "none")
+					{
+						this.image = img;
+						this.style.backgroundImage = "none";
+					}
+				}
+				var range = Math.abs(this.max) + Math.abs(this.min);
+				stepsize = Math.round((this.clientHeight - this.thumbsize) / range);
+			},
+			handleEvent: function (e)
+			{
+				if (e.type == "mousedown")
+				{
+					dragging = true;
+					prevpos = isvertical ? e.clientY : e.clientX;
+					window.addEventListener("mousemove", this, false);
+					window.addEventListener("mouseup", this, false);
+					e.preventDefault();
+				}
+				else if (e.type == "mousemove")
+				{
+					var dpos = isvertical ? prevpos - e.clientY : prevpos - e.clientX;
+					if (Math.abs(dpos) > stepsize)
+					{
+						var dd = (dpos / stepsize) | 0;
+						var value = this.value + dd;
+						if (value < this.min) value = this.min;
+						else if (value > this.max) value = this.max;
+						if (value != this.value) this.value = value;
+						prevpos = isvertical ? e.clientY : e.clientX;
+						prevpos -= dd % stepsize;
+					}
+				}
+				else
+				{
+					window.removeEventListener("mousemove", this, false);
+					window.removeEventListener("mouseup", this, false);
+					dragging = false;
+				}
+			}				
+		});
+	})();
+	</script>
+</polymer-element>

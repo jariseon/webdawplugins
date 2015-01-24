@@ -1,0 +1,51 @@
+<polymer-element name="daw-toggle" attributes="x y states interactive value">
+<template>
+	<div id="elem" style="overflow:hidden;">
+		<img id="image" draggable="false">
+	</div>
+</template>
+<script>
+	Polymer("daw-toggle", {
+		// -- public attributes
+		x: 0, xChanged: function () { this.style.left = this.x + "px"; },
+		y: 0, yChanged: function () { this.style.top = this.y + "px"; },
+		value: 0, valueChanged: function ()
+		{
+			var value = this.value;
+			if (0 < value && value < 1)
+				value = Math.round(this.value * this.states) % this.states;
+			var dy = value * -parseInt(this.$.elem.style.height);
+			this.$.image.style.transform = "translateY(" + dy + "px)";
+			if (this.interacting)
+			{
+				this.fire("change", { key:this.id, value:this.value });
+				this.interacting = false;
+			}
+		},
+		states: 2,
+		interactive: true,
+		
+		// -- lifecycle
+		created: function ()
+		{
+			this.style.position = "absolute";
+			this.addEventListener("click", function()
+			{
+				if (!this.interactive) return;
+				this.interacting = true;
+				if (this.value < 1 && this.states == 2) this.value = 1;
+				else this.value = (this.value + 1) % this.states;
+			}, true);
+		},
+		attached: function ()
+		{
+			var style = getComputedStyle(this);
+			this.$.elem.style.height = style.getPropertyValue("height");
+			var img = style.getPropertyValue("background-image");
+			if (img.indexOf("url(") == 0) img = img.slice(4,-1);
+			this.$.image.src = img;
+			this.style.backgroundImage = "none";
+		}
+	});
+</script>
+</polymer-element>

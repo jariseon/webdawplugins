@@ -1,0 +1,12 @@
+{
+  "program": {
+    "portable": {
+      "pnacl-translate": {
+        "url": "azr3.pexe"
+      },
+      "pnacl-debug": {
+        "url": "azr3_unstripped.bc"
+      }
+    }
+  }
+}

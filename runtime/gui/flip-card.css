@@ -1,0 +1,15 @@
+:host { display: block; perspective: 2700px; }
+
+::content .front, ::content .back {
+          transform-style: preserve-3d;
+          backface-visibility: hidden;
+          transition: all 1.5s ease-in-out; }
+
+::content .front { transform: rotateY(0); opacity:1; }
+::content .back  { transform: rotateY(180deg); opacity:0; }
+::content .front.flipped { transform: rotateY(-180deg); opacity:0; }
+::content .back.flipped { transform: rotateY(0); opacity:1; }
+
+:host([axis="x"]) ::content .back { transform: rotateX(-180deg); }
+:host([axis="x"]) ::content .front.flipped { transform: rotateX(180deg); }
+:host([axis="x"]) ::content .back.flipped { transform: rotateX(0); }

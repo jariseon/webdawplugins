@@ -1,0 +1,412 @@
+<link rel="import" href="midiarp-grid.html">
+<link rel="import" href="wak-bundle.html">
+
+<polymer-element name="midi-arp" attributes="min max value">
+<template>
+	<div id="elem">
+		<div id="toprow">
+			<div id="knobs">
+				<wak-bundle value="{{global.tempo}}" label="tempo" min="60" max="180"></wak-bundle>
+				<wak-bundle value="{{pattern.time.swing}}" label="swing" min="0" max="100"></wak-bundle>
+				<wak-bundle value="0" label="gate" min="-100" max="100" id="gate"></wak-bundle>
+				<wak-bundle value="{{pattern.pitch.octrange}}" label="oct range" min="1" max="5"></wak-bundle>
+				<wak-bundle value="{{pattern.length}}" label="length" min="1" max="16" id="length"></wak-bundle>
+			</div>
+
+			<div id="buttons">
+				<ul id="checklist" class="clist">
+					<li>
+						<input type="checkbox" on-change="{{onHold}}">
+						<div class="label right">hold</div></li>
+					<li>
+						<input type="checkbox" on-change="{{onReverse}}">
+						<div class="label">reverse</div></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div id="row1" class="row">
+		<ul class="clist">
+			<li id="gridmode">
+				<select value="{{mode}}">
+					<option>transpose</option>
+					<option>order</option>
+					<option>voices</option>
+					<option>duration</option>
+					<option>velocity</option>
+				</select>
+			</li>
+		</ul>
+		</div>
+		
+		<div id="row2" class="row">
+		<ul class="clist">
+			<li><div class="label">rate</div>
+				<select on-change="{{onrate}}">
+					<option>1/1</option>
+					<option>1/2</option>
+					<option>1/4</option>
+					<option selected>1/8</option>
+					<option>1/16</option>
+					<option>1/32</option>
+					<option>1/64</option>
+				</select></li>
+			<li><div class="label">scan</div>
+				<select value="{{pattern.scan}}">
+					<option>ramp</option>
+					<option>triangle</option>
+					<option>triangle2</option>
+					<option>random</option>
+				</select></li>
+			<li><div class="label">sort</div>
+				<select value="{{pattern.sortby}}" on-change="{{updateSort}}">
+					<option>pitch</option>
+					<option>time</option>
+					<option>velocity</option>
+					<option>channel</option>
+				</select>
+			</li>
+		</ul>
+		</div>
+		<midiarp-grid id="grid" pattern="{{pattern}}"></midiarp-grid>
+	</div>
+	<style>
+		#elem { width:100%; background:#eee; -webkit-user-select:none; display:inline-block; }
+		#elem { font-family:sans-serif; font-size:12px; color:black; padding-bottom:9px; padding-right:5px; }
+		#elem { width:457px; min-width:457px; max-width:457px; }
+		div { cursor:default; }
+		
+		#toprow { width:100%; }
+		#knobs { position:relative; padding-top:5px; display:inline-block; }
+		wak-bundle { float:left; }
+		#buttons { width:75px; height:84px; display:inline-block; border-left:1px solid #222; }
+		#checklist { padding-left:3px; }
+		
+		.row { padding:5px; display:inline-block; margin-top:10px; }
+		#row1 { background:#24364f; margin-left:10px; float:left; height:19px; }
+		ul.clist { list-style:none; font-size: 9pt; padding:0; margin:0; }
+		ul.clist li { display:block; float:left; padding-right:10px; }
+		ul.clist li div.right { float:left; line-height:20px; margin-left:3px; }
+		ul.clist li input { float:left; }
+		li div.label { vertical-align: middle; line-height:19px; float:left; margin-right:3px; }
+		#gridmode { padding-right:0; }
+
+		midiarp-grid { margin:0 15px 0 10px; display:block; }
+	</style>
+</template>
+
+<script>
+(function () {
+	var division = [1,2,4,8,16,32,64];
+	var sortby = ["pitch","time","velocity","channel"];
+
+	Polymer("midi-arp",
+	{
+		global: { tempo:60, rate:8 },
+		pattern: {
+			length:16, sortby:"pitch", reverse:false, scan:"ramp",
+			pitch:{ octrange:1, order:[], transpose:[], voices:[] },
+			time: { gate:0, swing:50, active:[], duration:[] },
+			dynamics: { velocity:[] },
+			_hold: false
+			},
+		patternChanged: function () { this.$.grid.pattern = pattern; },
+		mode:"transpose", modeChanged: function () { this.$.grid.mode = this.mode; },
+		onrate: function (e) { this.global.rate = division[e.target.selectedIndex]; },
+		timemode: 0, phi:0,		// todo
+		playing: false,
+		prevstep: 0,
+		curstep: 0,
+		curoct: 0,
+		timer: 0,
+		notelist: {},
+		pendingNotes: [],
+		ready: function ()
+		{
+			this.initModel();
+		},
+		domReady: function ()
+		{
+			this.$.grid.mode = "transpose";
+			this.$.gate.addEventListener("change", this.ongate.bind(this));
+			this.$.length.addEventListener("change", this.onlength.bind(this));
+		},
+		initModel: function ()
+		{
+			var maxsteps = 16;
+			var pattern = this.pattern;
+			for (var i=0; i<maxsteps; i++)
+			{
+				pattern.pitch.transpose.push(0);
+				pattern.pitch.order.push(0);
+				pattern.pitch.voices.push([]);
+				pattern.time.active.push(1);
+				pattern.time.duration.push(0);
+				pattern.dynamics.velocity.push(0);
+			}
+			this.pattern = pattern;
+			this.notelist = new NoteList(pattern);
+		},
+		
+		add: function(key, velocity, channel, onset)
+		{
+			this.notelist.add(new Note(key, velocity, onset, channel), true);
+			if (this.notelist.notes.length == 1)
+				this.reset();
+		},
+		remove: function(key)
+		{
+			this.notelist.remove(key, true);
+		},
+		
+		reset: function ()
+		{
+			clearTimeout(this.timer);
+			this.curstep = 0;
+			if (this.playing) this.tick();
+		},
+		toggleplay: function ()
+		{
+			clearTimeout(this.timer);
+			for (var i=0; i<this.pendingNotes.length; i++)
+			{
+				var pending = this.pendingNotes[i];
+				clearTimeout(pending.timer);
+				this.onmidi([0x80, pending.n, 100]);
+			}
+			
+			this.playing = !this.playing;
+			if (this.playing)
+				this.tick();
+		},
+		tick: function ()
+		{
+			if (!this.playing) return;
+			var steplen = 4 / this.global.rate * 60000 / this.global.tempo;
+			var index = this.stepshaper(this.curstep);
+			if (index >= 0)
+				this.renderStep(index,steplen);
+			this.$.grid.update(this.curstep);
+
+			var len = steplen * this.pattern.time.duration[this.curstep];
+			var swing = 2 * steplen * (this.pattern.time.swing - 50) / 100;
+			if (this.curstep & 1) steplen -= swing;
+			else steplen += swing;
+			steplen += len;
+			this.curstep = ++this.curstep % this.pattern.length;
+			this.timer = setTimeout(this.tick.bind(this), steplen);
+		},
+		stepshaper: function (step)
+		{
+			// -- overrides
+			if (this.pattern.pitch.order[step])
+			switch (this.pattern.pitch.order[step])
+			{
+				case 1: return this.prevstep;
+				case 2: return 0;
+				case 3: return (Math.random() * this.notelist.length) | 0;
+				case 4: return 0;
+				case 5: return this.notelist.getLength() - 1;
+			}
+
+			switch (this.pattern.scan)
+			{
+				case "ramp": step = step; break;
+				case "triangle":
+					var L = this.notelist.length;
+					var M = 2*L - 2;
+					var p = (M != 0) ? step % M : step;
+					if (p >= L) p = M - p;
+					step = p;
+					break;
+				case "triangle2":
+					var L = this.notelist.length;
+					var M = 2*L;
+					var p = step % M;
+					if (p >= L) p = M - p - 1;
+					step = p;
+					break;
+				case "random":
+					step = (Math.random() * this.notelist.length) | 0;
+					break;
+				default: return;
+			}
+			this.prevstep = step;
+			return step;					
+		},
+		renderStep: function (step,steplen)
+		{
+			var phase;
+			switch (this.timemode)
+			{
+				case 0: phase = step; break;
+				case 1: phase = this.phi++; break;
+				default: return;
+			}
+
+			var notes = this.notelist.getNote(phase);
+			if (!notes) return;
+			
+			this.pendingNotes = [];
+			for (var i=0; i<notes.length; i++)
+			{
+			var note = notes[i];
+			var n = note.n;
+
+			// -- transpose
+			n += this.pattern.pitch.transpose[this.curstep];
+
+			// -- octave range
+			if (this.pattern.pitch.octrange > 1)
+			{
+				n += this.curoct * 12;		
+				if (this.curstep == (this.pattern.length - 1)) this.curoct = 0;
+				else
+				{
+					var L = this.notelist.getLength();
+					var s = this.curstep % L;
+					if (s == L-1)
+					{
+						this.curoct++;
+						if (this.curoct >= this.pattern.pitch.octrange)
+							this.curoct = 0;
+					}
+				}
+			}
+
+			var tied = (this.pattern.pitch.order[this.curstep] == 2);
+			if (this.pattern.time.active[step] && !tied)
+			{
+				var vel = note.v + this.pattern.dynamics.velocity[this.curstep];
+				if (vel < 1) vel = 1; else if (vel > 127) vel = 127;
+				var dur = this.getDuration(this.curstep,steplen);
+				if (this.onmidi)
+				{
+					this.onmidi([0x90, n, vel]);
+					var t = setTimeout(function (self, num, velo) { 
+						self.onmidi([0x80, num, velo]); }, dur, this, n, vel);
+					this.pendingNotes.push({ note:n, timer:t });
+				}
+			}
+			}
+		},
+		getDuration: function (step,steplen)
+		{
+			var dur = steplen * (0.5 * this.pattern.time.gate + 0.5);
+			var ties = 0;
+			for (var i=1; i<=this.pattern.length; i++)
+			{
+				var order = this.pattern.pitch.order[(step+i) % this.pattern.length];
+				if (order != 2) break;
+				else ties++;
+			}
+			if (ties >= this.pattern.length) ties = 0;
+			dur += ties * steplen;
+			return dur;
+		},
+		
+		onHold: function (e)
+		{
+			this.pattern._hold = e.target.checked;
+			if (!this.pattern.hold)
+			{
+				var func = this.onmidi ? this.noteOff.bind(this) : null;
+				this.notelist.reset(func);
+			}
+		},
+		noteOff: function (note) { this.onmidi([0x80, note.n, note.v]); },
+		
+		onlength: function () { this.$.grid.updateLength(true); },
+		// onlengthend: function () { this.$.grid.updateLength(true); },
+		onReverse: function () { this.pattern.reverse = !this.pattern.reverse; this.updateSort(); },
+		updateSort: function () {
+			this.notelist.sort(this.pattern.sortby, this.pattern.reverse); },
+		ongate: function (e) { this.pattern.time.gate = e.target.value / 100; }
+	});
+	
+	Note = function(number,velocity,channel,onset)
+	{
+		this.n = number || 60;
+		this.v = velocity || 64;
+		this.t = onset || Date.now();
+		this.c = channel || 0;
+	}
+
+	NoteList = function(pattern)
+	{
+		this.notes = [];
+		this.length = 0;
+		var sortby = "pitch";
+		var reverse = false;
+
+		this.add = function(note, sort)
+		{
+			this.notes.push(note);
+			this.length = this.notes.length;
+			if (sort) this.sort(sortby, reverse);
+		}
+		this.remove = function(key, sort)
+		{
+			if (pattern._hold) return;
+			for (var i=this.notes.length-1; i >= 0; i--)
+				if (this.notes[i].n == key)
+					this.notes.splice(i,1);
+		}
+		this.reset = function (func)
+		{
+			if (func) this.notes.forEach(func);
+			this.notes = [];
+		}
+			
+		this.sort = function(by, reverse)
+		{
+			reverse = (reverse == undefined) ? false : reverse;
+			sortby = by;
+			if (by == "pitch") var f = "n";
+			else if (by == "time") var f = "t";
+			else if (by == "velocity") var f = "v";
+			else if (by == "channel") var f = "c";
+			else return;
+
+			// sort only those within current pattern.length
+			// (this might not be a good idea for live note input)
+			var notes = this.notes.slice(0, pattern.length);
+			notes.sort(function (a,b) { var d = a[f] - b[f]; return reverse ? -d : d; });
+			notes = notes.concat(this.notes.slice(pattern.length));
+			this.notes = notes;
+		}
+
+		this.getNote = function (i)
+		{
+			if (this.notes.length == 0) return null;
+			var notes = [];
+			if (pattern.pitch.order[i] == 6) notes = this.notes.slice();
+			else if (pattern.pitch.voices[i].length > 0)
+			{
+				var voices = pattern.pitch.voices[i];
+				for (var i=0; i<voices.length; i++)
+				{
+					var voice = voices[i] - 1;
+					if (voice < this.notes.length)
+						notes.push(this.notes[voice]);
+				}
+			}
+			else notes = [this.notes[i % this.notes.length]];
+			return notes;
+		}
+
+		this.getLength = function ()
+		{
+			var L = this.notes.length;
+			if (pattern.scan == "triangle")
+			{
+				if (L > 1) L += L - 2;
+			}
+			else if (pattern.scan == "triangle2")
+				L += L;
+			return L;
+		}
+	}
+})();
+</script>
+</polymer-element>

@@ -1,0 +1,1303 @@
+# These patches are in the public domain.  See the included file
+# COPYING-patches for more information.
+#
+# WhySynth patch
+WhySynth patch format 0 begin
+name X:%20strings
+comment Imported%20Xsynth-DSSI%20patch
+oscY 1 1 0 0 -0.0527969 0 0 0 0 0 0 0 0 0.7 0
+oscY 2 1 0 0 0.0527218 0 0 0 0 0 0 0 0 0.7 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 2 0 11.4258 18 0.291444 0.194795 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.1 0 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 0 0.396419 1 3 0.001 1 2 0.0012528 1 0 3.26843 0 0 0 0 0
+egY 1 1 0 0.522 1 3 0.1 1 0 0.0012528 1 0 2.349 0 0 0 0 0
+egY 2 1 0 0.001044 1 3 0.1 1 0 0.0012528 1 0 0.002349 0 0 0 0 0
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name X2:%20strings
+comment Imported%20Xsynth-DSSI%20patch
+oscY 1 1 0 0 -0.0603371 0 0 0 0 0 0 0 0 0.7 0
+oscY 2 1 0 0 0.0401298 0 0 0 0 0 0 0 0 0.7 0
+oscY 3 1 0 0 -0.0374974 0 0 0 0 0 0 0 0 0 0.7
+oscY 4 1 0 0 0.0572314 0 0 0 0 0 0 0 0 0 0.7
+vcfY 1 2 0 11.4258 18 0.220795 0.128501 0
+vcfY 2 2 1 11.4258 18 0.144626 0.265056 0
+mix 0 0.5 0 0.5 0.71 0.201712 0.71 0.820088
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.1 0 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 0 0.522 1 3 0.001 1 0 0.0012528 1 0 2.349 0 0 0 0 0
+egY 1 1 0 0.522 1 3 0.1 1 0 0.0012528 1 0 2.349 0 0 0 0 0
+egY 2 1 0 0.001044 1 3 0.1 1 0 0.0012528 1 0 0.002349 0 0 0 0 0
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name X:%20Quick%20Strings
+comment Imported%20Xsynth-DSSI%20patch
+oscY 1 1 1 0 -0.0359948 0 0 0 0 0 0 0 0 0.7 0
+oscY 2 2 0 0 0.0359716 0 0 0 0 0 0 0 0 0.7 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 3 0 8.33333 19 0.143184 0 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.533199 0 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 0 0.0818036 1 3 0.001 1 2 0.0012528 1 0 2.349 0.291445 0 0 0 0
+egY 1 1 0 0.195799 1 3 0.1 1 0 0.0012528 1 0 2.349 0.291445 0 0 0 0
+egY 2 1 0 0.036306 1 3 0.1 1 0 0.0012528 1 0 0.878256 0.401611 0 0 8 0.0350456
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name X2:%20Quick%20Strings
+comment Imported%20Xsynth-DSSI%20patch
+oscY 1 1 1 0 -0.0659948 0 0 0 0 0 0 0 0 0.7 0
+oscY 2 2 0 0 0.0459716 0 0 0 0 0 0 0 0 0.7 0
+oscY 3 1 1 0 -0.0459948 0 0 0 0 0 0 0 0 0 0.7
+oscY 4 2 0 0 0.0659716 0 0 0 0 0 0 0 0 0 0.7
+vcfY 1 2 0 7.73333 19 0.137194 0 0
+vcfY 2 2 1 7.23333 19 0.143184 0 0
+mix 0 0.5 0 0.5 0.71 0.10775 0.71 0.882372
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.533199 0 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 0 0.195799 1 3 0.001 1 0 0.0012528 1 0 2.349 0.233156 0 0 0 0
+egY 1 1 0 0.195799 1 3 0.1 1 0 0.0012528 1 0 2.349 0.233156 0 0 0 0
+egY 2 1 0 0.036306 1 3 0.1 1 0 0.0012528 1 0 0.878256 0.321289 0 0 8 0.0350456
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name X:%20A-ha
+comment Imported%20Xsynth-DSSI%20patch
+oscY 1 1 0 0 0 0 0 0 0 0 0 0 0 0.658 0
+oscY 2 1 0 12 0.0239606 0 0 0 0 0 0 0 0 0.742 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 11 19 0.62 0.19 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.6296
+effects 0 0 0 0 0 0 0 0
+glide 1
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.18197 0 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 0 0.00181426 1 3 0.001 1 2 0.137368 0.950281 0 1.77955 0 0 0 0 0
+egY 1 1 0 0.00181426 1 3 0.1 1 0 0.137368 0.65 0 1.77955 0 0 0 0 0
+egY 2 1 0 0.00137626 1 3 0.1 1 0 0.023872 0.59 0 0.709668 0 0 0 0 0
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name X:%20A-ha%20VS
+comment Imported%20Xsynth-DSSI%20patch
+oscY 1 1 0 0 0 0 0 0 0 0 0 0 0 0.658 0
+oscY 2 1 3 12 0.0239606 0 0 0 0.0859207 0 0 0 0 0.742 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 4.91945 19 0.458112 0.19 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.682958
+effects 0 0 0 0 0 0 0 0
+glide 1
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.18197 0 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 0 0.00181426 1 3 0.001 1 2 0.137368 0.950281 0 1.83014 0.234944 0 0 0 0
+egY 1 1 0 0.00181426 1 3 0.1 1 0 0.137368 0.65 0 1.83014 0.234944 0 0 0 0
+egY 2 1 0 0.00137626 1 3 0.1 1 0 0.023872 0.59 0 0.709668 0.774276 0 0 0 0
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name X:%20Brass
+comment Imported%20Xsynth-DSSI%20patch
+oscY 1 1 0 0 -0.0359948 0 0 0 0 0 0 0 0 0.616 0
+oscY 2 1 0 0 0.0359716 0 0 0 0 0 0 0 0 0.784 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 2 0 0 19 0.29 0.45 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.530111
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 2.51189 0 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 0 0.00125517 1 3 0.001 1 2 2.45647 0.953779 0 1.22984 0 0 0 0 0
+egY 1 1 0 0.00125517 1 3 0.1 1 0 2.45647 0.67 0 1.22984 0 0 0 0 0
+egY 2 1 0 0.114474 1 3 0.1 1 0 0.314774 0.73 0 3.40435 0 0 0 8 0.05
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name X2:%20Brass
+comment Imported%20Xsynth-DSSI%20patch
+oscY 1 1 0 0 -0.0659949 0 0 0 0 0 0 0 0 0.616 0
+oscY 2 1 0 0 0.0459716 0 0 0 0 0 0 0 0 0.784 0
+oscY 3 1 0 0 -0.0459948 0 0 0 0 0 0 0 0 0 0.616
+oscY 4 1 0 0 0.0659716 0 0 0 0 0 0 0 0 0 0.784
+vcfY 1 2 0 0 19 0.239284 0.469889 0
+vcfY 2 2 1 0 19 0.29 0.45 0
+mix 0 0.5 0 0.5 0.71 0.166667 0.71 0.791445
+volume 0.530111
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 2.51189 0 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 0 0.00125517 1 3 0.001 1 0 2.45647 0.953779 0 1.22984 0 0 0 0 0
+egY 1 1 0 0.00125517 1 3 0.1 1 0 2.45647 0.67 0 1.22984 0 0 0 0 0
+egY 2 1 0 0.114474 1 3 0.1 1 0 0.314774 0.73 0 3.40435 0 0 0 8 0.05
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name X:%20Xylophone
+comment Imported%20Xsynth-DSSI%20patch
+oscY 1 2 0 0 0 0 0 0 0 0 0 0 0 0.7 0
+oscY 2 2 0 24 0 0 0 0 0 0 0 0 0 0.7 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 0 19 0.587299 0.933 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.49
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.1 0 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 0 0.00150904 1 3 0.001 1 2 0.455564 0 0 0.854182 0 0 0 0 0
+egY 1 1 0 0.00150904 1 3 0.1 1 0 0.455564 0 0 0.854182 0 0 0 0 0
+egY 2 1 0 0.00114472 1 3 0.1 1 0 4.47429 0 0 10.213 0 0 0 0 0
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name X:%20Shimmer%20Pad
+comment Imported%20Xsynth-DSSI%20patch
+oscY 1 1 3 0 0 0 0 0 0.0682776 0 0 0 0 0.78268 0
+oscY 2 1 3 0 0.0119411 0 0 0 0.08875 0 0 0 0 0.61732 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 3 0 4.91945 19 0.747412 0.375222 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.84622
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.70426 0 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 0 0.295441 1 3 0.001 1 2 0.0012528 1 0 2.30255 0.333333 0 0 0 0
+egY 1 1 0 0.484583 1 3 0.1 1 0 0.0012528 1 0 1.43878 0.333333 0 0 0 0
+egY 2 1 0 0.195799 1 3 0.1 1 0 0.0012528 1 0 1.39029 0.774276 0 0 8 0.193056
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name X2:%20Shimmer%20Pad
+comment Imported%20Xsynth-DSSI%20patch
+oscY 1 1 3 0 -0.03 0 0 0 0.0727919 0 0 10 -0.0653409 0.78268 0
+oscY 2 1 3 0 0.0219411 0 0 0 0.08875 0 0 12 -0.0548167 0.61732 0
+oscY 3 1 3 0 -0.01 0 0 0 0.0622776 0 0 14 -0.0455452 0 0.78268
+oscY 4 1 3 0 0.0419411 0 0 0 0.09675 0 0 16 -0.0562055 0 0.61732
+vcfY 1 3 0 4.91945 19 0.599898 0.618435 0
+vcfY 2 3 1 4.76945 19 0.58757 0.635071 0.368379
+mix 0 0.5 0 0.5 0.71 0 0.71 1
+volume 0.84622
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.70426 0 0 0 0
+lfoY m 0.651774 0 5.31908 0 0
+mlfo 90 0.20673
+egY o 1 0 0.231985 1 3 0.000999999 1 0 0.0012528 1 0 1.43878 0.266666 0 0 0 0
+egY 1 1 0 0.484583 1 3 0.1 1 0 0.0012528 1 0 1.43878 0.266666 0 0 0 0
+egY 2 1 0 0.195799 1 3 0.1 1 0 0.0012528 1 0 1.39029 0.624566 0 0 8 0.162751
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name X:%20Sun%20Dog
+comment Imported%20Xsynth-DSSI%20patch
+oscY 1 1 1 0 -0.0239938 0 0 0 0 0 0 0 0 0.7 0
+oscY 2 1 2 0 0.0240471 0 0 0 0.598389 0 0 0 0 0.7 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 3 0 0 19 0.5 0.431722 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.663001
+effects 0 0 0 0 0 0 0 0
+glide 0.0539244
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.382727 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 0 0.00617905 1 3 0.001 1 2 0.005815 1 0 0.878256 0 0 0 0 0
+egY 1 1 0 0.00617905 1 3 0.1 1 0 0.005815 1 0 0.878256 0 0 0 0 0
+egY 2 1 0 0.0028128 1 3 0.1 1 0 0.0012528 1 0 0.938391 0 0 0 0 0
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name X2:%20Sun%20Dog
+comment Imported%20Xsynth-DSSI%20patch
+oscY 1 1 1 0 -0.0539938 0 0 0 0 0 0 0 0 0.7 0
+oscY 2 1 2 0 0.0340471 0 0 0 0.598389 0 0 0 0 0.7 0
+oscY 3 1 1 0 -0.0339938 0 0 0 0 0 0 0 0 0 0.7
+oscY 4 1 2 0 0.0540471 0 0 0 0.598389 0 0 0 0 0 0.7
+vcfY 1 3 0 0 19 0.5 0.431722 0
+vcfY 2 3 1 0 19 0.5 0.431722 0
+mix 0 0.5 0 0.5 0.71 0.25 0.71 0.75
+volume 0.663001
+effects 0 0 0 0 0 0 0 0
+glide 0.0539244
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.382727 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 0 0.00617905 1 3 0.001 1 0 0.005815 1 0 0.878256 0 0 0 0 0
+egY 1 1 0 0.00617905 1 3 0.1 1 0 0.005815 1 0 0.878256 0 0 0 0 0
+egY 2 1 0 0.0028128 1 3 0.1 1 0 0.0012528 1 0 0.938391 0 0 0 0 0
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name X:%20Organ%202
+comment Imported%20Xsynth-DSSI%20patch
+oscY 1 2 0 0 0 0 0 0 0 0 0 0 0 0.826 0
+oscY 2 1 2 12 0.0239606 0 0 0 0.5 0 0 0 0 0.574 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 2 0 6.5 7 0.00854879 0.03 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.51
+effects 0 0 0 0 0 0 0 0
+glide 1
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 6.62217 0 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 0 0.00218123 1 3 0.001 1 2 0.0012528 1 0 0.0178184 0 0 0 0 0
+egY 1 1 0 0.00218123 1 3 0.1 1 0 0.0012528 1 0 0.0178184 0 0 0 0 0
+egY 2 1 0 0.00165462 1 3 0.1 1 0 0.0012528 1 0 0.0148211 0 0 0 0 0
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name X2:%20Organ%202
+comment Imported%20Xsynth-DSSI%20patch
+oscY 1 2 0 0 -0.03 0 0 0 0 0 0 0 0 0.826 0
+oscY 2 1 2 12 0.0339606 0 0 0 0.5 0 0 0 0 0.574 0
+oscY 3 2 0 0 -0.01 0 0 0 0 0 0 0 0 0 0.826
+oscY 4 1 2 12 0.0539606 0 0 0 0.5 0 0 0 0 0 0.574
+vcfY 1 2 0 6.5 9 0.0187692 0.03 0
+vcfY 2 2 1 6.5 11 0.0304669 0.03 0
+mix 0 0.5 0 0.5 0.71 0.136555 0.71 0.865727
+volume 0.51
+effects 0 0 0 0 0 0 0 0
+glide 1
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 6.62217 0 0 0 0
+lfoY m 6.49111 0 0 0 0
+mlfo 140.046 0
+egY o 1 0 0.00218122 1 3 0.001 1 0 0.0012528 1 0 0.0178184 0 0 0 0 0
+egY 1 1 0 0.00218122 1 3 0.1 1 0 0.0012528 1 0 0.0178184 0 0 0 0 0
+egY 2 1 0 0.00165462 1 3 0.1 1 0 0.0012528 1 0 0.0148211 0 0 0 0 0
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name X:%20French%20Horn
+comment Imported%20Xsynth-DSSI%20patch
+oscY 1 1 2 0 0 0 0 0 0.21 0 0 0 0 0.616 0
+oscY 2 1 0 0 0 0 0 0 0 0 0 0 0 0.784 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 2 0 0 19 0.25 0.6 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.7
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 3.98107 0 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 0 0.00239164 1 3 0.001 1 2 5.50378 0 0 1.65423 0 0 0 0 0
+egY 1 1 0 0.00239164 1 3 0.1 1 0 2.45647 0 0 1.65423 0 0 0 0 0
+egY 2 1 0 1.044 1 3 0.1 1 0 1.84177 0 0 2.83012 0 0 0 8 0.132723
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name X:%20plucked
+comment Imported%20Xsynth-DSSI%20patch
+oscY 1 1 0 0 -0.0527969 0 0 0 0 0 0 0 0 0.7 0
+oscY 2 1 0 0 0.0527218 0 0 0 0 0 0 0 0 0.7 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 2 0 10.9326 0 0 0.696777 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.509221
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.1 0 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 0 0.00782198 1 3 0.001 1 2 0.632727 0 0 1.09256 0 0 0 0 0
+egY 1 1 0 0.00782198 1 3 0.1 1 0 0.632727 0 0 1.09256 0 0 0 0 0
+egY 2 1 0 0.001044 1 3 0.1 1 0 0.0012528 1 0 0.002349 0 0 0 0 0
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name X:%20bell
+comment Imported%20Xsynth-DSSI%20patch
+oscY 1 1 3 0 0 0 0 0 0.5 0 0 0 0 0.7 0
+oscY 2 1 3 24 0 0 0 0 0.5 0 0 0 0 0.7 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 2 0 15.4926 0 0 0.901609 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.505
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.1 0 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 0 0.001044 1 3 0.001 1 2 2.45647 0 0 1.65423 0 0 0 0 0
+egY 1 1 0 0.001044 1 3 0.1 1 0 2.45647 0 0 1.65423 0 0 0 0 0
+egY 2 1 0 0.001044 1 3 0.1 1 0 0.0012528 1 0 0.002349 0 0 0 0 0
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name X:%20bell%20VS
+comment Imported%20Xsynth-DSSI%20patch
+oscY 1 1 3 0 0 0 0 0 0.5 0 0 0 0 0.7 0
+oscY 2 1 3 24 0 0 0 0 0.5 0 0 0 0 0.7 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 2 0 3.325 19 0.40161 0.833333 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5155
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.1 0 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 0 0.001044 1 3 0.001 1 2 2.45647 0 0 1.65423 0.314095 0 0 0 0
+egY 1 1 0 0.001044 1 3 0.1 1 0 2.45647 0 0 1.65423 0.314095 0 0 0 0
+egY 2 1 0 0.001044 1 3 0.1 1 0 0.0012528 1 0 23.49 0.708555 0 0 0 0
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name X:%20sync_bass
+comment Imported%20Xsynth-DSSI%20patch
+oscY 1 1 2 0 0 0 0 0 0.5 0 0 0 0 0.7 0
+oscY 2 1 0 12 0.149708 18 0.275399 1 0 0 0 0 0 0.7 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 2 0 1e-06 18 1 0.691519 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.1 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 0 0.001044 1 3 0.001 1 2 2.72348 0 0 2.13545 0 0 0 0 0
+egY 1 1 0 0.001044 1 3 0.1 1 0 2.72348 0 0 2.13545 0 0 0 0 0
+egY 2 1 0 0.001044 1 3 0.1 1 0 0.0012528 1 0 0.002349 0 0 0 0 0
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name X:%20sync_sweep
+comment Imported%20Xsynth-DSSI%20patch
+oscY 1 1 0 0 0 0 0 0 0 0 0 0 0 0.7 0
+oscY 2 1 0 0 0 19 1 1 0 0 0 0 0 0.7 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 2 0 50 0 0 0.0501253 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.531011
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.1 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 0 0.0421818 1 3 0.001 1 2 0.0012528 1 0 2.83012 0 0 0 0 0
+egY 1 1 0 0.0421818 1 3 0.1 1 0 0.0012528 1 0 2.83012 0 0 0 0 0
+egY 2 1 0 4.01538 1 3 0.1 1 0 0.0012528 1 0 9.7875 0 0 0 0 0
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name X2:%20sync_sweep
+comment Imported%20Xsynth-DSSI%20patch
+oscY 1 1 0 0 0 0 0 0 0 0 0 0 0 0.7 0
+oscY 2 1 0 0 0 19 1 1 0 0 0 0 0 0.7 0
+oscY 3 1 0 0 0 0 0 0 0 0 0 0 0 0 0.7
+oscY 4 1 0 1 0.123646 19 1 1 0 0 0 0 0 0 0.7
+vcfY 1 2 0 50 0 0.62941 0.0501253 0
+vcfY 2 2 1 50 0 0.645165 0.0501253 0
+mix 0 0.271484 0 0.708555 0.787097 0.25 0.738379 0.75
+volume 0.531011
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.1 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 0 0.0421818 1 3 0.001 1 0 0.0012528 1 0 2.83012 0 0 0 0 0
+egY 1 1 0 0.0421818 1 3 0.1 1 0 0.0012528 1 0 2.83012 0 0 0 0 0
+egY 2 1 0 4.01538 1 3 0.1 1 0 0.0012528 1 0 9.7875 0 0 0 0 0
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name X:%20Gramma's%20Organ
+comment Imported%20Xsynth-DSSI%20patch
+oscY 1 1 3 0 0 0 0 0 0.5 0 0 0 0 0.798 0
+oscY 2 1 3 12 0 7 0.003 0 0.5 0 0 0 0 0.602 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 2 0 15 0 0 0.05 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.640712
+effects 0 0 0 0 0 0 0 0
+glide 1
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 7.58577 0 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 0 0.00218123 1 3 0.001 1 2 0.0012528 1 0 0.0178184 0 0 0 0 0
+egY 1 1 0 0.00218123 1 3 0.1 1 0 0.0012528 1 0 0.0178184 0 0 0 0 0
+egY 2 1 0 0.00165462 1 3 0.1 1 0 0.0012528 1 0 0.0148211 0 0 0 0 0
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name X:%20Long%20Portamento
+comment Imported%20Xsynth-DSSI%20patch
+oscY 1 1 3 0 0 0 0 0 0.5 0 0 0 0 0.7 0
+oscY 2 1 0 8 0.390994 7 0.714795 1 0 0 0 0 0 0.7 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 2 0 10 0 0 0.68 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.002509
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.1 0 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 0 0.0060076 1 3 0.001 1 2 0.0012528 1 0 0.854182 0 0 0 0 0
+egY 1 1 0 0.0060076 1 3 0.1 1 0 0.0012528 1 0 0.854182 0 0 0 0 0
+egY 2 1 0 0.00198929 1 3 0.1 1 0 0.378489 0 0 0.709668 0 0 0 0 0
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name X:%20Owww!
+comment Imported%20Xsynth-DSSI%20patch
+oscY 1 1 3 0 0 0 0 0 0.5 0 0 0 0 0.715621 0
+oscY 2 1 0 6 0.0620319 18 0.295167 1 0 0 0 0 0 0.684379 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 2 0 1e-06 19 1 0.752586 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.36
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.247489 0 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 0 0.001044 1 3 0.001 1 2 0.858082 0.985942 0 1.35 0 0 0 0 0
+egY 1 1 0 0.001044 1 3 0.1 1 0 0.858082 0.885319 0 1.35 0 0 0 0 0
+egY 2 1 0 0.001044 1 3 0.1 1 0 1.76451 0 0 2.30294 0 0 0 0 0
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name X:%20Tube%20Growl
+comment Imported%20Xsynth-DSSI%20patch
+oscY 1 1 0 0 0 0 0 0 0 0 0 0 0 0.7 0
+oscY 2 1 2 10 0.361363 19 1 1 0.5 0 0 0 0 0.7 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 2 0 1e-06 18 0.349624 0.798286 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.3325
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.1 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 0 0.0085658 1 3 0.001 1 2 0.0012528 1 0 4.05 0 0 0 0 0
+egY 1 1 0 0.0085658 1 3 0.1 1 0 0.0012528 1 0 4.05 0 0 0 0 0
+egY 2 1 0 4.97143 1 3 0.1 1 0 5.69455 0.631621 0 9.7875 0 0 0 0 0
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name X2:%20Tube%20Growl
+comment Imported%20Xsynth-DSSI%20patch
+oscY 1 1 0 0 -0.00671157 0 0 0 0 0 0 0 0 0.7 0
+oscY 2 1 2 13 0.361363 19 1 1 0.5 7 0.143814 0 0 0.7 0
+oscY 3 1 0 0 0.0155939 0 0 0 0 0 0 0 0 0 0.7
+oscY 4 1 2 11 0.352893 19 1 1 0.319207 8 0.265056 0 0 0 0.7
+vcfY 1 2 0 1e-06 18 0.349624 0.754029 0
+vcfY 2 2 1 1e-06 18 0.349624 0.798286 0
+mix 0 0.5 0 0.5 0.71 0.303222 0.71 0.701712
+volume 0.3325
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.172416 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 0 0.0085658 1 3 0.001 1 0 0.0012528 1 0 4.05 0 0 0 0 0
+egY 1 1 0 0.0085658 1 3 0.1 1 0 0.0012528 1 0 4.05 0 0 0 0 0
+egY 2 1 0 4.97143 1 3 0.1 1 0 5.69455 0.631621 0 9.7875 0 0 0 0 0
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name X:%20squelchy_bass
+comment Imported%20Xsynth-DSSI%20patch
+oscY 1 1 0 0 0 0 0 0 0 0 0 0 0 0.7 0
+oscY 2 1 0 0 0 18 0.154198 1 0 0 0 0 0 0.7 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 2 0 1e-06 18 1 0.833333 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.45
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.1 0 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 0 0.001044 1 3 0.001 1 2 2.72348 0 0 2.349 0 0 0 0 0
+egY 1 1 0 0.001044 1 3 0.1 1 0 2.72348 0 0 2.349 0 0 0 8 0.800101
+egY 2 1 0 0.001044 1 3 0.1 1 0 2.32 0 0 5.10652 0 0 0 0 0
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name X:%20reso_sweep
+comment Imported%20Xsynth-DSSI%20patch
+oscY 1 1 0 0 0 0 0 0 0 0 0 0 0 0.692574 0
+oscY 2 1 0 12 0.0835031 0 0 0 0 0 0 0 0 0.707426 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 2 0 11.9333 19 1 0.919253 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.2108
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.1 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 0 0.0421818 1 3 0.001 1 2 0.0012528 1 0 2.83012 0 0 0 0 0
+egY 1 1 0 0.0421818 1 3 0.1 1 0 0.0012528 1 0 2.83012 0 0 0 0 0
+egY 2 1 0 0.0188414 1 3 0.1 1 0 5.44696 0 0 9.7875 0 0 0 0 0
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name X2:%20reso_sweep
+comment Imported%20Xsynth-DSSI%20patch
+oscY 1 1 0 0 -0.03 0 0 0 0 0 0 0 0 0.692575 0
+oscY 2 1 0 12 0.0935031 0 0 0 0 0 0 0 0 0.707426 0
+oscY 3 1 0 0 -0.01 0 0 0 0 0 0 0 0 0 0.692575
+oscY 4 1 0 12 0.113503 0 0 0 0 0 0 0 0 0 0.707426
+vcfY 1 2 0 11.9948 19 1 0.844403 0
+vcfY 2 2 1 11.9333 19 1 0.919253 0
+mix 0 0.5 0 0.5 0.71 0.25 0.71 0.624778
+volume 0.2108
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.1 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 0 0.0421818 1 3 0.001 1 0 0.0012528 1 0 2.83012 0 0 0 0 0
+egY 1 1 0 0.0421818 1 3 0.1 1 0 0.0012528 1 0 2.83012 0 0 0 0 0
+egY 2 1 0 0.0188414 1 3 0.1 1 0 5.44696 0 0 9.7875 0 0 0 0 0
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name X:%20theremin
+comment Imported%20Xsynth-DSSI%20patch
+oscY 1 2 0 0 0 0 0 0 0 0 0 0 0 0 0
+oscY 2 2 0 24 0 7 0.050261 0 0 0 0 0 0 1.4 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 50 0 0 0 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5146
+effects 0 0 0 0 0 0 0 0
+glide 0.009709
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 10 0 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 0 2.26957 1 3 0.001 1 2 0.0012528 1 0 23.49 0 0 0 0 0
+egY 1 1 0 2.26957 1 3 0.1 1 0 0.0012528 1 0 23.49 0 0 0 0 0
+egY 2 1 0 0.001044 1 3 0.1 1 0 0.0012528 1 0 0.002349 0 0 0 0 0
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name X:%20Twub
+comment Imported%20Xsynth-DSSI%20patch
+oscY 1 1 1 0 0 0 0 0 0 0 0 0 0 0.715621 0
+oscY 2 1 2 7 0.43645 7 0.193056 1 0.255417 0 0 0 0 0.684379 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 2 0 0.623417 19 0.140278 0.752586 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.289927
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.247489 0 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 0 0.001044 1 3 0.001 1 2 2.45647 0 0 1.65423 0 0 0 0 0
+egY 1 1 0 0.001044 1 3 0.1 1 0 2.45647 0 0 1.65423 0 0 0 0 0
+egY 2 1 0 0.0170449 1 3 0.1 1 0 0.00310053 0.610166 0 1.305 0 0 0 0 0
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name X:%20Wavey
+comment Imported%20Xsynth-DSSI%20patch
+oscY 1 1 0 0 0 0 0 0 0 0 0 0 0 0.7 0
+oscY 2 1 2 10 0.361363 19 1 1 0.5 0 0 0 0 0.7 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 2 0 10.6535 18 0.349624 0.757198 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.339089
+effects 0 0 0 0 0 0 0 0
+glide 0.087247
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.256842 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 0 0.0085658 1 3 0.001 1 2 0.0012528 1 0 5.8725 0 0 0 0 0
+egY 1 1 0 0.0085658 1 3 0.1 1 0 0.0012528 1 0 5.8725 0 0 0 8 0.76999
+egY 2 1 0 4.97143 1 3 0.1 1 0 1.71616 0.631621 0 9.7875 0 0 0 0 0
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name X2:%20Wavey
+comment Imported%20Xsynth-DSSI%20patch
+oscY 1 1 0 0 0 0 0 0 0 0 0 0 0 0.7 0
+oscY 2 1 2 10 0.361363 19 1 1 0.5 0 0 0 0 0.7 0
+oscY 3 1 0 0 0 0 0 0 0 0 0 0 0 0 0.7
+oscY 4 1 2 11 0.361363 19 0.745537 1 0.5 0 0 0 0 0 0.7
+vcfY 1 2 0 10.6535 18 0.299527 0.772198 0
+vcfY 2 2 1 10.6535 18 0.424178 0.727198 0
+mix 0 0.5 0 0.5 0.71 0.291445 0.71 0.723167
+volume 0.339089
+effects 0 0 0 0 0 0 0 0
+glide 0.087247
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.256842 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 0 0.0085658 1 3 0.001 1 0 0.0012528 1 0 5.8725 0 0 0 0 0
+egY 1 1 0 0.0085658 1 3 0.1 1 0 0.0012528 1 0 5.8725 0 0 0 8 0.76999
+egY 2 1 0 4.97143 1 3 0.1 1 0 1.71616 0.631621 0 9.7875 0 0 0 0 0
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name X:%20heart_beat
+comment Imported%20Xsynth-DSSI%20patch
+oscY 1 2 0 0 0 0 0 0 0 0 0 0 0 0 0
+oscY 2 2 0 12 0.149708 7 0.923867 0 0 0 0 0 0 1.4 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 2 0 0.539044 0 0 0.852571 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.18
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.932825 0 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 0 0.001044 1 3 0.001 1 2 0.0012528 1 0 10.213 0 0 0 0 0
+egY 1 1 0 0.001044 1 3 0.1 1 0 0.0012528 1 0 10.213 0 0 0 0 0
+egY 2 1 0 0.001044 1 3 0.1 1 0 0.0012528 1 0 0.002349 0 0 0 0 0
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name X:%20voice
+comment Imported%20Xsynth-DSSI%20patch
+oscY 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0
+oscY 2 1 2 8 0.483617 19 0.225724 0 0.931722 0 0 0 0 1.4 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 2 0 15.3472 0 0 0.679133 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.291445
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.1 0 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 0 0.329338 1 3 0.001 1 2 0.366316 0.973377 0 0.741009 0 0 0 0 0
+egY 1 1 0 0.329338 1 3 0.1 1 0 0.366316 0.794001 0 0.741009 0 0 0 0 0
+egY 2 1 0 0.442373 1 3 0.1 1 0 0.0012528 1 0 23.49 0 0 0 0 0
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name X:%20VS%20Bass%201
+comment Imported%20Xsynth-DSSI%20patch
+oscY 1 1 0 0 -0.0480042 0 0 0 0 0 0 0 0 0.7 0
+oscY 2 1 0 0 0.0456445 0 0 0 0 0 0 0 0 0.7 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 2 0 5.38461 19 0.825128 0.369231 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.586264
+effects 0 0 0 0 0 0 0 0
+glide 1
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.1 0 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 0 0.00228972 1 3 0.001 1 2 0.27 0.950487 0 0.00978872 0.166255 0 0 0 0
+egY 1 1 0 0.00228972 1 3 0.1 1 0 0.27 0.651163 0 0.00978872 0.166255 0 0 0 0
+egY 2 1 0 0.00214546 1 3 0.1 1 0 0.436516 0.226667 0 0.191599 0.758072 0 0 0 0
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name X:%20VS%20Bass%202
+comment Imported%20Xsynth-DSSI%20patch
+oscY 1 1 3 -12 0 0 0 0 0.5 0 0 0 0 0.975489 0
+oscY 2 1 2 8 -1.18668e-05 0 0 1 0.856816 0 0 0 0 0.424511 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 3 0 8.33333 19 0.752588 0.281347 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.80025
+effects 0 0 0 0 0 0 0 0
+glide 1
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.215443 0 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 0 0.00316049 1 3 0.001 1 2 12.528 0 0 0.494159 0.276833 0 0 0 0
+egY 1 1 0 0.00316049 1 3 0.1 1 0 12.528 0 0 0.494159 0.276833 0 0 0 0
+egY 2 1 0 0.00300209 1 3 0.1 1 0 0.221451 0 0 1.26682 0.614681 0 0 0 0
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name X:%20Klaxon
+comment Imported%20Xsynth-DSSI%20patch
+oscY 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0
+oscY 2 1 0 24 0 7 -0.89239 1 0 0 0 0 0 1.4 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 50 0 0 0.02 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5082
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 1.97177 141 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 0 0.001044 1 3 0.001 1 2 0.0012528 1 0 0.002349 0 0 0 0 0
+egY 1 1 0 0.001044 1 3 0.1 1 0 0.0012528 1 0 0.002349 0 0 0 0 0
+egY 2 1 0 0.001044 1 3 0.1 1 0 0.0012528 1 0 0.002349 0 0 0 0 0
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name X2:%20Klaxon
+comment Imported%20Xsynth-DSSI%20patch
+oscY 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0
+oscY 2 1 0 24 -0.347185 7 -0.89239 1 0 0 0 0 0 1.4 0
+oscY 3 1 0 0 0 0 0 0 0 0 0 0 0 0 0
+oscY 4 1 0 24 0.340163 7 -0.9216 1 0 0 0 0 0 0 1.4
+vcfY 1 0 0 50 0 0 0.02 0
+vcfY 2 0 1 50 0 0 0.02 0
+mix 0.70248 0 0.700359 1 0 0 0 1
+volume 0.5082
+effects 0 0 0 0 0.806944 0.373275 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 1.97177 141 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 0 0.001044 1 3 0.001 1 0 0.0012528 1 0 0.002349 0 0 0 0 0
+egY 1 1 0 0.001044 1 3 0.1 1 0 0.0012528 1 0 0.002349 0 0 0 0 0
+egY 2 1 0 0.001044 1 3 0.1 1 0 0.0012528 1 0 0.002349 0 0 0 0 0
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name X:%20Hammond%20pedals
+comment Xsynth-DSSI%20patch%20contributed%20by%20Silvan
+oscY 1 1 2 0 0 0 0 0 0.49 0 0 0 0 1.4 0
+oscY 2 2 0 0 0 0 0 0 0 0 0 0 0 0 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 2 0 8.5 0 0 0 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.51
+effects 0 0 0 0 0 0 0 0
+glide 1
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 6.139 0 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 0 0.00347919 1 3 0.001 1 2 12.528 0.468492 0 0.00602215 0 0 0 0 0
+egY 1 1 0 0.00347919 1 3 0.1 1 0 12.528 0.01 0 0.00602215 0 0 0 0 0
+egY 2 1 0 0.001044 1 3 0.1 1 0 12.528 0.01 0 0.00252578 0 0 0 0 0
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name X:%20space%20race
+comment Xsynth-DSSI%20patch%20contributed%20by%20Silvan
+oscY 1 1 2 12 0 0 0 0 0.64 0 0 0 0 0.336 0
+oscY 2 1 0 24 0 19 1 1 0 0 0 0 0 1.064 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 2 0 15.5 19 0.33 0.6 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.53
+effects 0 0 0 0 0 0 0 0
+glide 0.28144
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 2.575 144 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 0 0.00329827 1 3 0.001 1 2 0.00782609 0.952043 0 0.00865544 0 0 0 0 0
+egY 1 1 0 0.00329827 1 3 0.1 1 0 0.00782609 0.66 0 0.00865544 0 0 0 0 0
+egY 2 1 0 0.00613829 1 3 0.1 1 0 2.84727 0.28 0 0.00978424 0 0 0 8 0.703096
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name X:%20Night%20Sweats%202
+comment Xsynth-DSSI%20patch%20contributed%20by%20Silvan
+oscY 1 2 0 0 0 0 0 0 0 0 0 0 0 1.162 0
+oscY 2 1 0 0 0 19 0.29 0 0 0 0 0 0 0.238 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 2 0 3.5 19 0.99 0.955499 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.302555
+effects 0 0 0 0 0 0 0 0
+glide 1
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 10 141 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 2 0 0.180169 1 3 3.32028 1 2 0.00314687 0 0 0.0135171 0 0 0 0 0
+egY 1 1 0 3.16364 1 3 0.1 1 0 0.00314687 0 0 0.0135171 0 0 0 0 0
+egY 2 1 0 3.18244 1 3 0.1 1 0 0.0198542 1 0 1.35 0 0 0 8 0.306546
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name X:%20Tweetie
+comment Xsynth-DSSI%20patch%20contributed%20by%20Silvan
+oscY 1 2 0 0 0 0 0 0 0 0 0 0 0 1.162 0
+oscY 2 1 0 0 0 19 0.29 0 0 0 0 0 0 0.238 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 2 0 3.5 19 0.77 1 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.080246
+effects 0 0 0 0 0 0 0 0
+glide 1
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 10 141 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 0 0.001044 1 3 0.001 1 2 0.137368 0 0 0.0135171 0 0 0 0 0
+egY 1 1 0 0.001044 1 3 0.1 1 0 0.137368 0 0 0.0135171 0 0 0 0 0
+egY 2 1 0 0.001044 1 3 0.1 1 0 0.00345048 0.22 0 1.35 0 0 0 8 0.08
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name X:%20Vitreous%20Humor
+comment Xsynth-DSSI%20patch%20contributed%20by%20Silvan
+oscY 1 2 0 0 0 0 0 0 0 0 0 0 0 0.98 0
+oscY 2 2 0 24 0 18 1 1 0 0 0 0 0 0.42 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 2 0 27 19 0.38 0 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.535501
+effects 0 0 0 0 0 0 0 0
+glide 1
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.158489 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 0 0.274861 1 3 0.001 1 2 0.0012528 1 0 6.525 0 0 0 0 0
+egY 1 1 0 1.37368 1 3 0.1 1 0 0.0012528 1 0 6.525 0 0 0 8 0.384031
+egY 2 1 0 0.0315313 1 3 0.1 1 0 1.81565 0.81 0 5.33864 0 0 0 8 0.75
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name X:%20Vibrothingie
+comment Xsynth-DSSI%20patch%20contributed%20by%20Silvan
+oscY 1 1 0 0 0 0 0 0 0 0 0 0 0 0.28 0
+oscY 2 2 0 0 0 7 0.74 1 0 0 0 0 0 1.12 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 2 0 33.5 19 0.48 0.8 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.414116
+effects 0 0 0 0 0 0 0 0
+glide 0.002
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.630957 0 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 0 0.001044 1 3 0.001 1 2 12.528 0.950281 0 0.0257563 0.5 0 0 0 0
+egY 1 1 0 0.001044 1 3 0.1 1 0 12.528 0.65 0 0.0257563 1 0 0 0 0
+egY 2 1 0 0.0181426 1 3 0.1 1 0 12.528 0 0 1.95382 0.66 0 0 8 0.36
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name X:%20Vibrato%20Hammond
+comment Xsynth-DSSI%20patch%20contributed%20by%20Silvan
+oscY 1 1 3 24 0 0 0 0 0.5 0 0 0 0 0.98 0
+oscY 2 1 2 12 0 19 1 1 0.5 0 0 0 0 0.42 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 2 0 10 18 0.37 0.01 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.615634
+effects 0 0 0 0 0 0 0 0
+glide 1
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 7.58578 0 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 0 0.00218123 1 3 0.001 1 2 0.0012528 1 0 0.0178184 0.6 0 0 0 0
+egY 1 1 0 0.00218123 1 3 0.1 1 0 0.0012528 1 0 0.0178184 0.6 0 0 8 0.6
+egY 2 1 0 0.00165462 1 3 0.1 1 0 0.0012528 1 0 0.0148211 1 0 0 8 0.02
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name X2:%20Music%20Box
+comment Xsynth-DSSI%20patch%20contributed%20by%20Silvan
+oscY 1 2 0 24 -0.03 0 0 0 0 0 0 0 0 1.4 0
+oscY 2 1 2 0 0.01 18 0.69 0 0 0 0 0 0 0 0
+oscY 3 2 0 24 -0.01 0 0 0 0 0 0 0 0 0 1.4
+oscY 4 1 2 0 0.03 18 0.69 0 0 0 0 0 0 0 0
+vcfY 1 2 0 50 18 0.79 0.934 0
+vcfY 2 2 1 50 18 0.79 0.959 0
+mix 0 0.5 0 0.5 0.71 0 0.71 1
+volume 0.541889
+effects 0 0 0 0 0 0 0 0
+glide 1
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.288403 0 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 0 0.001044 1 3 0.001 1 0 0.657479 0.802086 0 5.38125 0.76 0 0 0 0
+egY 1 1 0 0.001044 1 3 0.1 1 0 0.657479 0.18 0 5.38125 0.76 0 0 8 0.02
+egY 2 1 0 0.001044 1 3 0.1 1 0 0.0012528 0 0 0.002349 0.2 0 0 0 0
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name X:%20Ploink%20Box
+comment Xsynth-DSSI%20patch%20contributed%20by%20Silvan
+oscY 1 1 3 24 0 0 0 0 0.5 0 0 0 0 0.854 0
+oscY 2 2 0 12 0 18 1 1 0 0 0 0 0 0.546 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 30 18 0.79 0.9 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.504388
+effects 0 0 0 0 0 0 0 0
+glide 1
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.275423 0 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 0 0.001044 1 3 0.001 1 2 0.287 0.802086 0 5.38125 0.5 0 0 0 0
+egY 1 1 0 0.001044 1 3 0.1 1 0 0.287 0.18 0 5.38125 0.72 0 0 0 0
+egY 2 1 0 0.0218123 1 3 0.1 1 0 1.2528 0.67 0 0.408209 0.4 0 0 0 0
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name X2:%20Polkenstein
+comment Xsynth-DSSI%20patch%20contributed%20by%20Silvan
+oscY 1 2 0 0 0 0 0 0 0 0 0 0 0 1.176 0
+oscY 2 2 0 12 0 18 0.56 1 0 0 0 0 0 0.224 0
+oscY 3 2 0 0 0 0 0 0 0 0 0 0 0 0 1.176
+oscY 4 2 0 12 0 18 0.56 1 0 0 0 0 0 0 0.224
+vcfY 1 1 0 4.5 19 0.81 0.53 0
+vcfY 2 1 1 4.5 19 0.81 0.53 0
+mix 0 0.5 0 0.5 0.71 0.25 0.71 0.75
+volume 0.580002
+effects 0 0 0 0 0 0 0 0
+glide 1
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 6.60694 141 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 0 0.114472 1 3 0.001 1 0 0.0261747 0.955489 0 5.90042 0.508 0 0 0 0
+egY 1 1 0 0.114472 1 3 0.1 1 0 0.0261747 0.68 0 5.90042 0.508 0 0 0 0
+egY 2 1 0 9.52138 1 3 0.1 1 0 0.498748 1 0 23.49 0.652 0 0 8 0.09
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end

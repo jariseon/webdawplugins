@@ -1,0 +1,9 @@
+{ "name": "whysynth", "root": "", "items":
+[
+	"factory.WhySynth",
+	"xsynth.WhySynth",
+	"kawaiK4.WhySynth",
+	"test.WhySynth",
+	"development.WhySynth"
+]
+}

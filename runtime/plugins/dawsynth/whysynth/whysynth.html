@@ -1,0 +1,88 @@
+<polymer-element name="dawsynth-whysynth" attributes="host">
+<template>
+	<flip-card id="flipper" axis="y">
+		<div class="front">
+			<img src="tools.svg">
+			<p>ui under construction</p>
+		</div>
+		<div class="back">
+			<dawplug-specs id="specs"></dawplug-specs>
+		</div>
+	</flip-card>
+	<style>
+		:host { display:inline-block; transform-origin:top left; height:531px; }
+		#flipper { position:relative; }
+		.front { background:#444; display:inline-block; height:531px; }
+		.back { position:absolute; top:0; background:#444; width:100%; }
+		img { display:block; margin: 0 auto; transform:scale(0.2); margin-top:-270px; }
+		p { color:#777; font-size:24px; text-align:center; margin:0; margin-top:-400px; }
+		#specs { width:242px; }
+	</style>
+	<!-- this gives 404, but need it for path extraction -->
+	<script id="getpath" src="dummy.js"></script>
+</template>
+
+<script src="whysynth.js"></script>
+<script>
+(function () {
+	Polymer("dawsynth-whysynth",
+	{
+		domReady: function ()
+		{
+			this.$.specs.model = this.specs;
+		},
+		
+		// -- implementation
+		init: function(host)
+		{
+			this.path = this.$.getpath.src;
+			this.path = this.path.slice(0, this.path.lastIndexOf("dummy.js"));
+			this.synth = new Whysynth(host, this.path);
+			this.synth.gui = this;
+		},
+		exit: function ()
+		{
+			this.synth.disconnect();
+			this.synth.host.disposePlugin(this.synth, this.path + "whysynth.nmf");
+		},
+		
+		setPatch: function(i) { },
+		flip: function () { this.$.flipper.flip(); },
+		
+		specs: {
+			name: "Whysynth",
+			description: "hybrid softsynth",
+			type: "hybrid (subtractive, wavecycle, granular, FM, waveshaping, \
+					phase distortion, bandwidth-enhanced additive)",
+			oscs: "4: sin,tri,pulse,clipsaw,noise,168 wavecycles,",
+			mod: "pm, hardsync",
+			alias: "minBLEP",
+			filters: "2: LPF (12/24 dB), BP (24), Notch (24), HP (12/24), can be cascaded",
+			egs: "5: each can be set to ADSR, AAASR, AASRR, ASRRR, or oneshot",
+			lfos: "2 per voice (normal + multiphase), 1 global",
+			fx: "2 reverbs, stereo delay",
+			orig: {
+				format: "DSSI",
+				version: "20120903",
+				author: "Sean Bolton",
+				date: "2005-12",
+				website: "http://smbolton.com/whysynth.html",
+				sources: "https://github.com/smbolton/whysynth",
+				license: "GPL2"
+				},
+			web: {
+				format: "PNaCl",
+				version: "0.2",
+				author: "Jari Kleimola",
+				date: "2014",
+				weight: "2.5 MB",
+				// website: "https://mediatech.aalto.fi/publications/webservices/dawplugins/",
+				sources: "https://github.com/jariseon/webdawplugins",
+				},
+			patches: [
+				"https://github.com/smbolton/whysynth/tree/master/extra"],
+		}
+ 	});
+})();
+</script>
+</polymer-element>

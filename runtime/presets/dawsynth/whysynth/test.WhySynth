@@ -1,0 +1,453 @@
+# These patches are in the public domain.  See the included file
+# COPYING-patches for more information.
+#
+# WhySynth patch
+WhySynth patch format 0 begin
+name sweep%20alias%20test%20(key=100)
+oscY 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0
+oscY 2 1 3 13 -0.158873 7 0.863445 0 0.5 0 0 0 0 1.4 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 0 0 50 0 0 0.02 0
+vcfY 2 0 0 50 0 0 0 0
+mix 1 0.5 0 0.5 0 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.424805 0 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 0 0.001044 1 3 0.001 1 2 0.0012528 1 0 0.002349 0 0 0 0 0
+egY 1 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 2 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name sweep%20alias%20test%202%20(key=108)
+oscY 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0
+oscY 2 1 3 0 0 7 0.57 0 0.5 0 0 0 0 1.4 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 0 0 50 0 0 0.02 0
+vcfY 2 0 0 50 0 0 0 0
+mix 1 0.5 0 0.5 0 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.1 0 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 0 0.001044 1 3 0.001 1 2 0.0012528 1 0 0.002349 0 0 0 0 0
+egY 1 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 2 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name sync%20alias%20test%20(key=108)
+oscY 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0
+oscY 2 1 3 13 -0.158873 7 0.863445 1 0.5 0 0 0 0 1.4 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 0 0 50 0 0 0.02 0
+vcfY 2 0 0 50 0 0 0 0
+mix 1 0.5 0 0.5 0 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.424805 0 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 0 0.001044 1 3 0.001 1 2 0.0012528 1 0 0.002349 0 0 0 0 0
+egY 1 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 2 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name mod%20discontinuity%20test
+oscY 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0
+oscY 2 1 3 13 -0.158873 7 -0.8634 0 0.5 0 0 0 0 1.4 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 0 0 50 0 0 0.02 0
+vcfY 2 0 0 50 0 0 0 0
+mix 1 0.5 0 0.5 0 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 2.73719 141 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 0 0.001044 1 3 0.001 1 2 0.0012528 1 0 0.002349 0 0 0 0 0
+egY 1 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 2 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name subsample%20alias%20test%20(key=94)
+oscY 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0
+oscY 2 1 3 12 0.124202 7 0.431722 1 0.5 0 0 0 0 1.4 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 0 0 50 0 0 0.02 0
+vcfY 2 0 0 50 0 0 0 0
+mix 1 0.5 0 0.5 0 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.136948 0 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 0 0.001044 1 3 0.001 1 2 0.0012528 1 0 0.002349 0 0 0 0 0
+egY 1 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 2 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name subsample%20alias%202%20(key=60)
+oscY 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0
+oscY 2 1 3 12 0.0120278 7 0.166667 1 0.5 0 0 0 0 1.4 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 0 0 50 0 0 0.02 0
+vcfY 2 0 0 50 0 0 0 0
+mix 1 0.5 0 0.5 0 0.5 0 0.5
+volume 0.5185
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.247489 0 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 0 0.001044 1 3 0.001 1 2 0.0012528 1 0 0.002349 0 0 0 0 0
+egY 1 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 2 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name subsample%20alias%203%20(key=96)
+oscY 1 1 0 0 0.391136 0 0 0 0 0 0 0 0 0 0
+oscY 2 1 3 0 0.108381 7 0.791445 1 0.0682776 0 0 0 0 1.4 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 0 0 50 0 0 0.051986 0
+vcfY 2 0 0 50 0 0 0 0
+mix 1 0.5 0 0.5 0 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.164142 0 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 0 0.001044 1 3 0.001 1 2 0.0012528 1 0 0.002349 0 0 0 0 0
+egY 1 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 2 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name clipsaw%20sync%20test
+oscY 1 1 0 0 0 5 0 0 1 22 1 0 0 0 0
+oscY 2 1 5 34 0 22 0.718651 1 0.102393 0 0 0 0 0.5 0.5
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0.5
+vcfY 1 1 0 50 0 0 0 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0.517111 0.506629 0 0.8 0 0.5 0 0.5
+volume 0.861998
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.554607 0 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.004 1 3 0.001 1 3 0.001 1 3 0.2 0 0 0 0 0
+egY 1 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 2 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 0 8 -0.984334 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name clipsaw%20sync%20test%202,%20key=72
+oscY 1 1 0 0 0 5 0 0 1 22 1 0 0 0 0
+oscY 2 1 5 28 0 22 0.111111 1 0.181799 0 0 0 0 0.5 0.5
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0.5
+vcfY 1 1 0 50 0 0 0 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0.517111 0.506629 0 0.8 0 0.5 0 0.5
+volume 0.872665
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.554607 0 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.004 1 3 0.001 1 3 0.001 1 3 0.2 0 0 0 0 0
+egY 1 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 2 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 0 8 -0.984334 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name startup%20thump%20test%20(key=108)
+oscY 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0
+oscY 2 1 2 7 -0.279991 0 0 1 0.06 0 0 0 0 1.4 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 0 0 50 0 0 0.02 0
+vcfY 2 0 0 50 0 0 0 0
+mix 1 0.5 0 0.5 0 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.1 0 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 0 0.001044 1 3 0.001 1 2 0.0012528 1 0 0.002349 0 0 0 0 0
+egY 1 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 2 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name tri%20sync%20thump%20test%20(key=77)
+oscY 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0
+oscY 2 1 3 14 -0.320002 7 0.57 1 0.08 0 0 0 0 1.4 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 0 0 50 0 0 0.02 0
+vcfY 2 0 0 50 0 0 0 0
+mix 1 0.5 0 0.5 0 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.416869 0 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 0 0.001044 1 3 0.001 1 2 0.0012528 1 0 0.002349 0 0 0 0 0
+egY 1 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 2 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name pulse%20click!%20(key=106)
+oscY 1 1 2 0 0 0 0 0 0.5 0 0 0 0 0 0
+oscY 2 1 2 13 -0.158873 7 0.863445 0 0.21 0 0 0 0 1.4 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 0 0 50 0 0 0.02 0
+vcfY 2 0 0 50 0 0 0 0
+mix 1 0.5 0 0.5 0 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.424805 0 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 0 0.001044 1 3 0.001 1 2 0.0012528 1 0 0.002349 0 0 0 0 0
+egY 1 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 2 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name pulse%20click!%20(key=103)
+oscY 1 1 2 0 0 0 0 0 0.5 0 0 0 0 0 0
+oscY 2 1 2 13 -0.158873 7 0.863445 0 0.21 0 0 0 0 1.4 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 0 0 50 0 0 0.02 0
+vcfY 2 0 0 50 0 0 0 0
+mix 1 0.5 0 0.5 0 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.424805 0 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 0 0.001044 1 3 0.001 1 2 0.0012528 1 0 0.002349 0 0 0 0 0
+egY 1 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 2 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name osc%20amp%20mod%20test
+oscY 1 2 83 0 0 0 0 0 0 0 0 9 0.0573404 1 0
+oscY 2 2 95 0 0 0 0 0 0 0 0 11 0.0739899 0 1
+oscY 3 2 85 0 0 0 0 0 0 0 0 13 0.081342 0.69201 0.318201
+oscY 4 2 87 0 0 0 0 0 0 0 0 15 0.061213 0.319207 0.728516
+vcfY 1 0 0 50 0 0 0 0
+vcfY 2 0 0 50 0 0 0 0
+mix 1 0 1 1 0 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0.1 0 0
+lfoY v 1 0 0.1 0 0
+lfoY m 1.97177 0 0.1 0 0
+mlfo 77.14 0.397608
+egY o 2 3 0.0250322 1 3 0.00168268 1 3 0.0025336 1 3 0.2 0 0 0 0 0
+egY 1 2 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 2 2 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 3 2 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 2 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name amp%20mod%20test%202
+oscY 1 2 71 0 0 0 0 0 0 0 0 9 1 1 0
+oscY 2 2 83 0 0 0 0 0 0 0 0 11 1 0.989903 0
+oscY 3 2 92 0 0 0 0 0 0 0 0 9 1 0 1
+oscY 4 2 95 0 0 0 0 0 0 0 0 11 1 0 1
+vcfY 1 3 0 4.91945 13 0.0387217 0.734944 0
+vcfY 2 3 1 4.52666 15 0.0526065 0.749556 0
+mix 0 0.2 0 0.8 0.640278 0.401611 0.576133 0.604818
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0.1 0 0
+lfoY v 1 0 0.1 0 0
+lfoY m 1 0 0.1 0 0
+mlfo 90 0
+egY o 2 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 1 2 3 0.0183131 1 3 0.20162 0.666667 3 8.05511 0 3 0.2 0 0 0 0 0
+egY 2 2 3 0.0173542 1 3 0.275845 0.145516 3 3.80829 0 3 0.2 0 0 0 0 0
+egY 3 2 3 0.001 1 3 0.001 1 3 3.56251 0 3 0.2 0 0 0 0 0
+egY 4 2 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name new%20filter%20test
+oscY 1 1 0 0 0 0 0 0 0.5 0 0 0 0 0.0147647 0
+oscY 2 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0.5
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0.5
+vcfY 1 5 0 44.7018 7 1 1 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.2 0 0.8 2 0.5 0.5 0.5
+volume 1
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.135721 0 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 2 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 1 2 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 2 2 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 3 2 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 2 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name eg%20amp%20mod%20test
+oscY 1 1 0 0 0 18 1 0 0 0 0 0 0 0.5 0.5
+oscY 2 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0.5
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0.5
+vcfY 1 1 0 50 0 0 0 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.2 0 0.8 0.5 0.5 0.5 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 1 0 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 3 3 0.004 1 3 0.001 1 11 2.54087 1 3 0.2 0 0 0 0 0
+egY 1 1 3 2.16405 1 3 0.1 1 3 2.86044 0 3 3.6847 0 0 0 8 1
+egY 2 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 3 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 0 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name wave%20comparer%20(LFO)
+oscY 1 2 18 0 0 0 0 0 0 0 0 9 0.433205 0.674532 0.5
+oscY 2 2 19 0 0 0 0 0 0 0 0 11 0.461224 0.674532 0.5
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0.5
+vcfY 1 0 0 50 0 0 0 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0.674532 0.507856 0 0.8 0 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 1 0 0 0 0
+lfoY m 1 147 0 0 0
+mlfo 180 0
+egY o 2 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 1 2 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 2 2 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 3 2 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+egY 4 2 3 0.1 1 3 0.1 1 3 0.1 1 3 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end

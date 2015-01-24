@@ -1,0 +1,12 @@
+{
+  "program": {
+    "portable": {
+      "pnacl-translate": {
+        "url": "obxd.pexe"
+      },
+      "pnacl-debug": {
+        "url": "obxd_unstripped.bc"
+      }
+    }
+  }
+}

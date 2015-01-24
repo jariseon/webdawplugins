@@ -1,0 +1,162 @@
+<polymer-element name="daw-knob" attributes="x y min max states value">
+<template>
+	<div id="elem" style="overflow:hidden;">
+		<img id="image" draggable="false">
+	</div>
+</template>
+<script>
+/*
+** alternatively, could use a static background image (knoblsd_b.png or knobssd_b.png)
+** and a rotating foreground image for the indicator (knoblsd_f.png or knobssd_f.png)
+** to do this, content attribute below should be replaced with (option b for tiny)
+**	a) content:'foreground-image:gui/knoblsd_f.png; min-angle:-155; max-angle:155;';
+**	b) content:'foreground-image:gui/knobssd_f.png; min-angle:-145; max-angle:145;';
+*/
+	(function () {
+
+	var prevx = 0;
+	var prevy = 0;	
+	var dragging = false;
+		
+	Polymer("daw-knob", {
+		// -- public attributes
+		x: 0, xChanged: function () { this.style.left = this.x + "px"; },
+		y: 0, yChanged: function () { this.style.top = this.y + "px"; },
+		min: 0,
+		max: 1,
+		states: 1,
+		stepsize: 0.01,
+		value: 0, valueChanged: function ()
+		{ 
+			if (this.min <= this.value && this.value <= this.max)
+			{
+				if (!dragging)
+				{
+					var range = Math.abs(this.min) + Math.abs(this.max);
+					var posvalue = this.value + Math.abs(this.min);
+					this._value = parseFloat((posvalue / range).toFixed(2));
+				}
+				this.updateKnob();
+			}
+		},
+		
+		// -- CSS attributes (see attached())
+		minAngle: -90,
+		maxAngle: 90,
+
+		// -- lifecycle
+		created: function ()
+		{
+			this.style.position = "absolute";
+			this.addEventListener("mousedown", this, true);
+		},
+		attached: function ()
+		{
+			var style = getComputedStyle(this);
+			this.$.elem.style.height = style.getPropertyValue("height");
+
+			// -- CSS attributes using the "content" trick
+			var s = style.getPropertyValue("content").trim();
+			s = s.slice(1,-1);						// strip string delimiters
+			s = s.replace(/( |\\|\n|\r)/g,'');	// strip whitespace and linebreaks
+			var tokens = s.split(";");
+			for (var i=0; i<tokens.length; i++)
+			{
+				var keyvalue = tokens[i].split(":");
+				if (keyvalue.length == 2)
+				{
+					var key = keyvalue[0];
+					var val = keyvalue[1];
+					if (val.indexOf(";") == (val.length-1))
+						val = val.slice(0,-1);
+					if (!this.hasAttribute(key)) switch (key)
+					{
+						case "min": this.min = val; break;
+						case "max": this.max = val; break;
+						case "states": this.states = val; break;
+						case "stepsize": this.stepsize = val; break;
+						case "foreground-image": this.$.image.src = val; break;
+						case "min-angle": this.minAngle = parseInt(val); break;
+						case "max-angle": this.maxAngle = parseInt(val); break;
+					}
+				}
+			}
+			
+			// -- use image strip instead of rotating indicator
+			if (this.states > 1)
+			{
+				var img = style.getPropertyValue("background-image");
+				if (img.indexOf("url(") == 0) img = img.slice(4,-1);
+				this.$.image.src = img;
+				this.style.backgroundImage = "none";
+			}
+		},
+
+		// -- implementation
+		_value: 0,
+		handleEvent: function (e)
+		{
+			if (e.type == "mousedown")
+			{
+				dragging = true;
+				prevx = e.clientX;
+				prevy = e.clientY;
+				window.addEventListener("mousemove", this, false);
+				window.addEventListener("mouseup", this, false);
+				e.preventDefault();
+			}
+			else if (e.type == "mousemove")
+			{
+				var dx = prevx - e.clientX;
+				var dy = prevy - e.clientY;
+				this.updateValue(this._value + dy/100);
+				prevx = e.clientX;
+				prevy = e.clientY;
+			}
+			else
+			{
+				window.removeEventListener("mousemove", this, false);
+				window.removeEventListener("mouseup", this, false);
+				this.updateValue(this._value, true);
+				dragging = false;
+			}
+		},
+		updateValue: function (value, finish)
+		{
+			if (!finish)
+			{
+				if (value < 0) value = 0;
+				else if (value > 1) value = 1;
+				value = parseFloat(value.toFixed(2));
+				if (value == this._value) return;
+				this._value = value;
+				var range = Math.abs(this.min) + Math.abs(this.max);
+				value = this.min + value * range;
+				if (Math.floor(this.stepsize) == this.stepsize)
+					value = Math.round(value);
+				this.value = value;
+			}
+			var etype = finish ? "endchange" : "change";
+			this.fire(etype, { key:this.id, value:this.value, norm:this._value });
+		},
+		updateKnob: function ()
+		{
+			if (this.states > 1)	// image strip
+			{
+				var range = Math.abs(this.min) + Math.abs(this.max);
+				var posvalue = this.value + Math.abs(this.min);
+				var delta = posvalue / range;
+				var index = Math.round(delta * (this.states-1));
+				var dy = -index * parseInt(this.$.elem.style.height);
+				this.$.image.style.transform = "translateY(" + dy + "px)";
+			}
+			else // rotating indicator
+			{
+				var deg = this._value * (this.maxAngle - this.minAngle) + this.minAngle;
+				this.$.image.style.transform = "rotate(" + deg + "deg)";
+			}
+		}
+	});
+	})();
+</script>
+</polymer-element>

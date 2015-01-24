@@ -1,0 +1,49 @@
+<!-- link rel="import" href="../polymer/polymer.html" -->
+
+<!--
+Flip Card provides drop-in support for CSS 3D cards that flip over. Your browser
+must support CSS 3D Transforms in order for it to work properly. Useful for
+bios, service listings, and other situations where you might want to rely on
+user interest/interaction before showing more content.
+#### Example
+    <flip-card axis="x">
+      <front>Front of card</front>
+      <back>Back of card</back>
+    </flip-card>
+#### Options
+An `axis` attribute can be added directly to the `<flip-card>` element. At this
+time there are only two options:
+* `y` axis is default. It's what you typically see. The card flips left to right.
+* `x` axis means it turns upside-down while it flips.
+@element flip-card
+@blurb Provides a two-sided card that flips over in 3D space.
+@status alpha
+@homepage http://rupl.github.io/flip-card
+-->
+<polymer-element name="flip-card" attributes="notitle">
+
+	<template>
+		<link rel="stylesheet" href="flip-card.css">
+		<content id="c1" select=".front"></content>
+		<content id="c2" select=".back"></content>
+	</template>
+
+  <script>
+    Polymer('flip-card', 
+	 {
+		 flip: function ()
+		 {
+			 var front = this.$.c1.getDistributedNodes()[0];
+			 var back  = this.$.c2.getDistributedNodes()[0];
+			 front.classList.toggle("flipped");
+			 back.classList.toggle("flipped");
+		 },
+		 ready: function ()
+		 {
+			 var back = this.$.c2.getDistributedNodes()[0];
+			 back.style.top = "0px";
+		 }
+	 });
+  </script>
+
+</polymer-element>

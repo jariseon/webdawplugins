@@ -1,0 +1,213 @@
+<polymer-element name="dawsynth-xsynth" attributes="host">
+<template>
+	<link rel="stylesheet" href="gui/datgui.css">
+	<div id="synthpanel" class="front">
+		<div id="controls" class="dg"></div>
+		<dawplug-specs id="specs"></dawplug-specs>
+	</div>
+	<style>
+		:host { display:block; }
+		* { margin:0; padding:0; }
+		#controls { float:left; display:inline-block; border:1px solid #444; }
+		#specs { float:left; width:242px; margin-left:20px; }		
+		.front { background:transparent; display:block; }
+	</style>
+	<!-- this gives 404, but need it for path extraction -->
+	<script id="getpath" src="dummy.js"></script>
+</template>
+
+<script src="xsynth.js"></script>
+<script>
+(function () {
+	var egrates = [13,14,16,20,21,23];
+	var freqmods = [19,26,27];
+
+	Polymer("dawsynth-xsynth",
+	{
+		model:
+		{
+			oscA: { pitch: 1, detune:0, wave: 2, pulsewidth: 0.5, },
+			oscB: { pitch: 1, detune:0, wave: 2, pulsewidth: 0.5, },
+			oscSync: false,
+			oscMix: 0,
+			portamento: 0,
+			lfo: { freq: 1, wave: 1, pmod: 0, fmod: 0 },
+			egA: { A:0.1, D:0.1, S:0.5, R:0.1, velo:0, pmod:0, fmod:0 },
+			egB: { A:0.1, D:0.1, S:0.5, R:0.1, velo:0, pmod:0, fmod:0 },
+			filter: { cutoff:0.5, resonance:0, mode:1 },
+			tune: 440,
+			volume: 0.5
+		},
+		map: [],
+		ready: function ()
+		{
+			var waveforms = {"sine":0,"triangle":1,"saw up":2,"saw down":3,"square":4,"pulse":5};
+			var fmodes = {"12dB":0,"24dB":1,"moog":2};
+			
+			var gui = new dat.GUI({ autoPlace: false });
+			var c = [];
+
+			// -- OSC
+			var f1 = gui.addFolder("OSC");
+			for (var i=0; i<2; i++)
+			{
+				var osc = i == 0 ? "oscA" : "oscB";
+				var pre = i == 0 ? "OSCA - " : "OSCB - ";
+				c[1+i*3] = f1.add(this.model[osc], "pitch", 0.25,4, 0.25).name(pre + "pitch");
+				c[33+i]  = f1.add(this.model[osc], "detune", -50,50, 1).name(pre + "detune");
+				c[2+i*3] = f1.add(this.model[osc], "wave", waveforms).name(pre + "wave");
+				c[3+i*3] = f1.add(this.model[osc], "pulsewidth", 0,1, 0.01).name(pre + "pw");
+			}
+			c[7] = f1.add(this.model, "oscSync", 0,1, 0.01).name("sync");
+			c[8] = f1.add(this.model, "oscMix", 0,1, 0.01).name("mix A-B");
+			c[30] = f1.add(this.model, "portamento", 0,1, 0.01);
+
+			// -- FILTER
+			var f4 = gui.addFolder("DCF");
+			c[27] = f4.add(this.model.filter, "cutoff", 0,1, 0.01);
+			c[28] = f4.add(this.model.filter, "resonance", 0,1, 0.01);
+			c[29] = f4.add(this.model.filter, "mode", fmodes);
+			
+			// -- LFO
+			var f2 = gui.addFolder("LFO");
+			c[9] = f2.add(this.model.lfo, "freq", 0,1, 0.01).name("rate");
+			c[10] = f2.add(this.model.lfo, "wave", waveforms)
+			c[11] = f2.add(this.model.lfo, "pmod", 0,1, 0.01);
+			c[12] = f2.add(this.model.lfo, "fmod", 0,1, 0.01);
+
+			// -- EG
+			var f3 = gui.addFolder("EG");
+			for (var i=0; i<2; i++)
+			{
+				var eg = i == 0 ? "egA" : "egB";
+				var pre = i == 0 ? "EG1 - " : "EG2 - ";
+				c[13+i*7] = f3.add(this.model[eg], "A", 0,1, 0.01).name(pre + "A");
+				c[14+i*7] = f3.add(this.model[eg], "D", 0,1, 0.01).name(pre + "D");
+				c[15+i*7] = f3.add(this.model[eg], "S", 0,1, 0.01).name(pre + "S");
+				c[16+i*7] = f3.add(this.model[eg], "R", 0,1, 0.01).name(pre + "R");
+				c[17+i*7] = f3.add(this.model[eg], "velo", 0,1, 0.01).name(pre + "vsens");
+				c[18+i*7] = f3.add(this.model[eg], "pmod", 0,1, 0.01).name(pre + "pmod");
+				c[19+i*7] = f3.add(this.model[eg], "fmod", 0,1, 0.01).name(pre + "fmod");
+			}
+			
+			// -- GLOBAL
+			c[32] = gui.add(this.model, "tune", 416,466, 0.5);
+			c[31] = gui.add(this.model, "volume", 0,1, 0.01);
+			this.$.controls.appendChild(gui.domElement);
+	
+			for (var i=1; i<=34; i++) c[i].onChange(this.onControl.bind(this));
+			this.map = c;
+			this.$.specs.model = this.specs;
+		},
+		
+		// -- implementation
+		init: function(host)
+		{
+			this.path = this.$.getpath.src;
+			this.path = this.path.slice(0, this.path.lastIndexOf("dummy.js"));
+			this.synth = new XSynth(host, this.path);
+			this.synth.gui = this;
+		},
+		exit: function ()
+		{
+			this.synth.disconnect();
+			this.synth.host.disposePlugin(this.synth, this.path + "xsynth.nmf");
+		},
+		
+		setPatch: function(i)
+		{
+			var patch = this.synth.bank[i];
+			for (var i=1; i<patch.length; i++)
+			{
+				var value = patch[i];
+				if (egrates.indexOf(i) >= 0) value = 1 - log2lin(value, egRange, egMin);
+				else if (freqmods.indexOf(i) >= 0) value = log2lin(value, log50);
+				else if (i == 9) value = log2lin(value, lfoRange, log01);
+				else if (i == 28) value = value / 2;
+				this.map[i].setValue(value, false);
+			}
+			
+			// -- detune (currently works only for unscaled pitch)
+			this.map[33].setValue(ratio2cents(patch[1]));
+			this.map[34].setValue(ratio2cents(patch[4]));
+			this.patch = patch;
+		},
+		onControl: function(value, sender)
+		{
+			if (!this.patch) return;
+			value = parseFloat(value);
+			if (value.toFixed)
+				value = parseFloat(value.toFixed(2));
+			
+			var i = this.map.indexOf(sender);
+			if (egrates.indexOf(i) >= 0) value = lin2log(1-value, egRange, egMin);
+			else if (freqmods.indexOf(i) >= 0) value = lin2log(value, log50);
+			else if (i == 9) value = lin2log(value, lfoRange, log01);
+			else if (i == 28) { value = value * 2; if (value > 1.995) value = 1.995; }
+			else if (i == 30) { value = lin2log(value, glideRange); console.log(value); return; }
+			else if (i == 33 || i == 34)	// currently works only for unscaled pitch
+			{
+				i = (i == 33) ? 1 : 4;
+				value = cents2ratio(value);
+			}
+			this.synth.setParam(i, value);
+		},
+		
+		specs: {
+			name: "Xsynth",
+			description: "basic virtual analog synth",
+			type: "subtractive",
+			oscs: "2: sin,tri,squ,pulse,saw",
+			mod: "hardsync",
+			alias: "BLEP",
+			filters: "1 (12/24dB)",
+			egs: "2 (ADSR -> pitch + cutoff)",
+			lfos: "1 (sin,tri,squ,saw,rand -> pitch + cutoff)",
+			fx: null,
+			orig: {
+				format: "DSSI",
+				version: "0.9.4",
+				author: "Sean Bolton + Steve Brooke",
+				date: "2004-2010",
+				website: "http://dssi.sourceforge.net/download.html#Xsynth-DSSI",
+				sources: "http://sourceforge.net/projects/dssi/files/xsynth-dssi/",
+				license: "GPL2"
+				},
+			web: {
+				format: "PNaCl",
+				version: "0.2",
+				author: "Jari Kleimola",
+				date: "2014",
+				weight: "409 kB",
+				// website: "https://mediatech.aalto.fi/publications/webservices/dawplugins/",
+				sources: "https://github.com/jariseon/webdawplugins",
+				},
+			patches: null
+		}
+	});
+
+	var prec = 1000000;
+	function ratio2cents(ratio) { return Math.round(prec * 1200*Math.log(ratio) / Math.log(2)) / prec; }
+	function cents2ratio(cents) { return Math.round(prec * Math.pow( 2, (cents/100/12) )) / prec; }
+
+	var log01 = Math.log(0.1);
+	var log50 = Math.log(50);
+	var egMin = Math.log(0.00001);
+	var egRange = log01 - egMin;
+	var lfoRange = Math.log(10) - log01;
+	
+	function lin2log(v, logrange, minlog)
+	{
+		minlog = minlog || 0;
+		v = Math.exp(minlog + v * logrange);
+		if (v < 0) v = 0;	// numerical errors in EG lower bound
+		return v;
+	}
+	function log2lin(v, logrange, minlog)
+	{
+		minlog = minlog || 0;
+		return (Math.log(v) - minlog) / logrange;
+	}
+})();
+</script>
+</polymer-element>

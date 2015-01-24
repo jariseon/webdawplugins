@@ -1,0 +1,151 @@
+<link rel="import" href="midiarp-slider.html">
+
+<polymer-element name="midiarp-grid" attributes="pattern">
+<template>
+	<div id="seq">
+		<template repeat="{{x in _steps}}">
+			<div class="strip" id="strip-{{x}}" style="background:{{_stripFill(x)}};">
+				<div class="steppos"></div>
+				<div class="slidervalue">0</div>
+				<midiarp-slider class="slider"></midiarp-slider>
+				<div class="stepind" style="background:{{_toggleFill(x)}};"
+					  on-click="{{toggleStep}}">{{(x+1)%4==0 ? (x+1) : ''}}</div>
+			</div>
+		</template>
+	</div>
+	<style>
+		:host { font-family:sans-serif; font-size:11px; color:white; clear:both; display:block; }
+		#seq { width:430px; height:245px; background:#24364f; padding:5px; }
+		.strip { width:25px; height:242px; margin-right:2px; float:left; }
+		.steppos { height:5px; background:#7ea3d1; }
+		.stepind { border-top:2px solid #24364f; height:20px; line-height:20px; text-align:center; cursor:default; }
+		.slidervalue { height:18px; line-height:18px; font-size:10px; text-align:center;
+			pointer-events:none; cursor:default; color:#3a536e; background:#24364f; }
+	</style>
+</template>
+
+<script>
+(function () {
+	var orders = ["","prev","tie","rand","first","last","chrd"];
+	var prevstep = 0;
+	
+	Polymer("midiarp-grid",
+	{
+		pattern: {},
+		maxsteps: 16,
+		mode: "",
+		modeChanged: function ()
+		{
+			switch (this.mode)
+			{
+				case "order": this.setupSliders(0,6, this.pattern.pitch.order); break;
+				case "voices": this.setupSliders(0,10, this.pattern.pitch.voices); break;
+				case "transpose": this.setupSliders(-24,24, this.pattern.pitch.transpose); break;
+				case "duration": this.setupSliders(0,7, this.pattern.time.duration); break;
+				case "velocity": this.setupSliders(-100,100, this.pattern.dynamics.velocity); break;
+			}
+		},
+		
+		ready: function ()
+		{
+			for (var i=0; i<this.pattern.length; i++)
+				this._steps[i] = i;
+		},
+		domReady: function ()
+		{
+			this.strips = this.$.seq.querySelectorAll(".strip");
+			var stepind = this.$.seq.querySelectorAll(".stepind");
+			var sliders = this.$.seq.querySelectorAll("midiarp-slider");
+			for (var i=0; i<sliders.length; i++)
+			{				
+				var slider = sliders[i];
+				slider.setRange(-24,24);
+				slider.value = 0;
+				slider.step = i;
+				slider.onchange = this.onslider.bind(this);
+				stepind[i].step = i;
+			}
+			this.strips[this.strips.length-1].style.marginRight = 0;
+		},
+		
+		toggleStep: function (e)
+		{
+			var step = e.target.step;
+			if (this.pattern.time.active[step])
+			{
+				this.pattern.time.active[step] = 0;
+				var fill = (step % 8) >= 4 ? "#3a536e" : "#405c7b";
+			}
+			else
+			{
+				this.pattern.time.active[step] = 1;
+				var fill = "#7ea3d1";
+			}
+			e.target.style.backgroundColor = fill;
+		},
+		onslider: function (slider)
+		{
+			var i = slider.step;
+			var v = slider.value;
+			switch (this.mode)
+			{
+				case "order":		this.pattern.pitch.order[i] = v; break;
+				case "voices":		this.pattern.pitch.voices[i] = v; return;
+				case "transpose":	this.pattern.pitch.transpose[i] = v; break;
+				case "duration":	this.pattern.time.duration[i] = v; break;
+				case "velocity":	this.pattern.dynamics.velocity[i] = v; break;
+			}
+			this.setSliderText(i, slider.value);
+		},
+		setSliderText: function (i,value)
+		{
+			var label = value;
+			switch (this.mode)
+			{
+				case "order":		label = orders[value]; break;
+				case "voices":		label = ""; value = 0; break;
+				case "duration":	label = value+1; break;
+			}
+			var strip = this.strips[i];
+			if (!strip) return;
+			strip.children[1].innerText = label;
+			strip.children[1].style.color = value ? "#ddd" : "#3a536e";
+		},
+		setupSliders: function (min,max,values)
+		{
+			var slidermode;
+			if (this.mode == "order") slidermode = "radio";
+			else if (this.mode == "voices") slidermode = "check";
+			var sliders = this.$.seq.querySelectorAll("midiarp-slider");
+			for (var i=0; i<sliders.length; i++)
+			{
+				var slider = sliders[i];
+				slider.value = values[i];
+				slider.setRange(min,max, slidermode);
+				this.setSliderText(i, values[i]);
+			}
+		},
+		update: function(step)
+		{
+			var pos1 = this.strips[prevstep].children[0];
+			var pos2 = this.strips[step].children[0];
+			pos1.style.backgroundColor = "#7ea3d1";
+			pos2.style.backgroundColor = "gold";
+			prevstep = step;
+		},
+		updateLength: function (final)	// todo
+		{
+			if (final) { this.modeChanged(); return; }
+			this._steps = [];
+			for (var i=0; i<this.pattern.length; i++)
+				this._steps[i] = i;
+			var self = this;
+		},
+		
+		_steps: [],
+		_stripFill: function(i) { return (i % 8) >= 4 ? "#3a536e" : "#405c7b"; },
+		_toggleFill: function(i) { if (this.pattern.time.active[i]) return "#7ea3d1"; else return this.stripFill(i); }
+	});	
+})();
+</script>
+</polymer-element>

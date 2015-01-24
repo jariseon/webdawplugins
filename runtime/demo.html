@@ -1,0 +1,649 @@
+<html>
+<head>
+<title>DAW Plugins for Web Browsers</title>
+
+<!-- 
+ --- Web Components GUI
+ -->
+<link rel="import" href="libs/polymer/polymer.html">
+<link rel="import" href="gui/daw-knob.html">
+<link rel="import" href="gui/daw-knob2.html">
+<link rel="import" href="gui/daw-toggle.html">
+<link rel="import" href="gui/daw-toggle2.html">
+<link rel="import" href="gui/daw-drawbar.html">
+<link rel="import" href="gui/daw-slider.html">
+<link rel="import" href="gui/flip-card.html">
+<link rel="import" href="gui/dawplug-specs.html">
+<script src="libs/dat.gui-fork.js"></script>
+<script src="libs/qwerty-hancock-fork.js"></script>
+
+<!-- 
+ --- Synths and Effects
+ -->
+<script src="dawpluginhost.js"></script>
+<script src="dawplugin.js"></script>
+
+<link rel="import" href="plugins/dawsynth/hexter/hexter.html">
+<link rel="import" href="plugins/dawsynth/xsynth/xsynth.html">
+<link rel="import" href="plugins/dawsynth/whysynth/whysynth.html">
+<link rel="import" href="plugins/dawsynth/mdajx10/mdajx10.html">
+<link rel="import" href="plugins/dawsynth/azr3/azr3.html">
+<link rel="import" href="plugins/dawsynth/obxd/obxd.html">
+<link rel="import" href="plugins/dawsynth/dexed/dexed.html">
+<link rel="import" href="plugins/midiarp/midi-arp.html">
+
+<script src="plugins/daweffect/waa/convolver.js"></script>
+<script src="plugins/daweffect/swh/swhfx.js"></script>
+<script src="plugins/daweffect/mda/mdafx.js"></script>
+
+<script>
+	var actx,dry,wet;
+	var host,synth,effect;
+	var midiOut,midiIn;
+	var presetPathS = "presets/dawsynth/";
+	var presetPathE = "presets/daweffect/";
+	var restoreArp = false;
+	var compkeysActive = true;
+	
+	function initAudio()
+	{		
+		// -- init web audio api graph
+		actx = new AudioContext();
+		dry = actx.createGain();
+		wet = actx.createGain();
+		dry.gain.value = 1;
+		wet.gain.value = 0;
+		dry.connect(actx.destination);
+		wet.connect(actx.destination);
+
+		host = new DAWPluginHost(actx);
+		host.onpluginready = function (plug)
+		{
+			if (plug.type == "synth") onsynthReady(plug);
+			else oneffectReady(plug);
+		}
+		onsynth("dawsynth-obxd");
+	}
+	
+	// -------------------------------------------------------------------------
+	// synth
+	// -------------------------------------------------------------------------
+	
+	function onsynth(tagname)
+	{
+		restoreArp = arp.playing;
+		if (restoreArp) arp.toggleplay();
+		if (synth)
+		{
+			synth.disconnect();
+			synth.gui.exit();
+		}
+		flipper.children[0].className = "";
+		banks.innerHTML = patches.innerHTML = "";
+		
+		var scale = 0.9;
+		if (tagname.indexOf("jx10") > 0 || tagname.indexOf("azr3") > 0) scale = 0.75;
+		var gui = document.createElement(tagname);
+		gui.style.marginTop = "110px";
+		gui.init(host, pagewidth, scale);
+		gui.className = "fadein";
+		if (gui.synth.name != "xsynth")
+		{
+			gui.classList.add("reflect");
+			flipper.style.display = "block";
+			flipper.children[0].classList.toggle("fadein");
+		} else flipper.style.display = "none";
+		syntharea.innerHTML = "";
+		syntharea.appendChild(gui);
+		
+		if (gui.synth.name != "xsynth")
+		setTimeout(function ()
+		{
+			var offset = pagewidth * (1-scale) / 2;
+			syntharea.style.padding = "0 " + offset + "px";
+			var coeff = pagewidth / gui.scrollWidth * scale;
+			gui.style.transform = "scale(" + coeff + ")";			
+			flipper.style.left = 2*pagewidth - offset - 20;
+		}, 50);
+	}
+	
+	function onsynthReady(plug)
+	{
+		var path = presetPathS + plug.name;
+		host.presets.loadDB(path + "/000.presets").then(function (db)
+		{
+			fillBanks(db);
+			var bankpath = path + host.presets.getPath(db.items[0]);
+			plug.loadBank(bankpath).then(function (bank) { fillPatches(); });
+		});
+		synth = plug;
+		synth.connect(dry);
+		synth.connect(wet);
+		if(restoreArp){arp.toggleplay();restoreArp=false;}
+	}
+		
+	function onbank(combo)
+	{
+		var bank = combo.options[combo.selectedIndex].bank;
+		if (curpage < 2) {
+			var bankpath = presetPathS + synth.name + host.presets.getPath(bank);
+			synth.loadBank(bankpath).then(function (bank) { fillPatches(); });}
+	}
+	
+	function onpatch(combo)
+	{
+		var i = combo.selectedIndex;
+		if (curpage < 2) {
+			synth.sendMidi(0xC0, i, 0);
+			if (synth.gui) synth.gui.setPatch(i); }
+		else {
+			console.log(i);	// todo
+			}
+	}
+
+	function onflip()
+	{
+		synth.gui.flip();
+	}
+
+	function fillBanks(db)
+	{
+		banks.innerHTML = "";
+		for (var i=0; i<db.items.length; i++)
+		{
+			var id = (i < 9) ? "0" + (i+1) : "" + (i+1);
+			var option = new Option(id + " " + db.items[i].name);
+			option.bank = db.items[i];
+			banks.appendChild(option);
+		}
+		banks.selectedIndex = 0;
+	}
+	
+	function fillPatches()
+	{
+		patches.innerHTML = "";
+		for (var i=0; i<synth.patchNames.length; i++)
+		{
+			var id = (i < 10) ? "0" + i : "" + i;
+			var option = new Option(id + " " + synth.patchNames[i]);
+			patches.appendChild(option);
+		}
+		synth.sendMidi(0xC0, 0, 0);
+		if (synth.gui) synth.gui.setPatch(0);
+		patches.selectedIndex = 0;
+	}
+		
+	// -------------------------------------------------------------------------
+	// effect
+	// -------------------------------------------------------------------------
+
+	function oneffect(fx)
+	{
+		if (effect)
+		{
+			effect.disconnect();
+			wet.disconnect();
+			effect.host.disposePlugin(effect, effect.fullName);
+		}
+		
+		switch (fx)
+		{
+		case "none":
+			wet.connect(actx.destination);
+			effect = null;
+			fxbanks.innerHTML = fxpatches.innerHTML = "";
+			fxpanel.style.opacity = 0;
+			fxpanel.innerHTML = "";
+			break;
+		case "convolver":
+			effect = new WAA.Convolver(host);
+			oneffectReady(effect);
+			break;
+		case "swhphaser":	effect = new SWH.Phaser(host); break;
+		case "swhbode": 	effect = new SWH.BodeShifter(host); break;
+		case "mdaleslie": effect = new MDA.Leslie(host); break;
+		}
+
+		var combo = fxselector.querySelector("li select");
+		combo.blur();
+	}
+
+	function oneffectReady(plug)
+	{
+		var path = presetPathE + plug.name;
+		fxbanks.innerHTML = fxpatches.innerHTML = "";
+		if (plug.name == "waa-convolver")
+		host.presets.loadDB(path + "/000.presets").then(function (db)
+		{
+			for (var i=0; i<db.items.length; i++)
+			{
+				var id = (i < 10) ? "0" + i : "" + i;
+				var option = new Option(id + " " + db.items[i].name);
+				option.patch = db.item;
+				fxpatches.appendChild(option);
+			}
+			fxpatches.selectedIndex = 0;
+			var ir = path + host.presets.getPath(db.items[0]);
+			plug.loadIR(ir);
+		});
+		wet.connect(plug.input);
+		plug.connect(actx.destination);
+		createGenericUI(plug);
+	}
+
+	function createGenericUI(plug)
+	{
+		var ui = document.getElementById("fxpanel");
+		ui.style.opacity = 0;
+		ui.innerHTML = "";
+		if (plug.descriptor)
+		{
+			plug.descriptor.params.forEach(function(param)
+			{
+				var widget = plug.createControl(param, onParam);
+				ui.appendChild(widget);
+			});
+			ui.style.opacity = 1;
+		}
+	}
+	
+	function onParam(e)
+	{
+		var slider = e.target;
+		var value = slider.value / slider.param.scaler;
+		slider.plug.setParam(slider.param.id, value);
+	}
+	
+	function oneffectmix(slider)
+	{
+		var wetness = slider.value / 100;
+		var slider2 = (slider == fxmixA) ? fxmixB : fxmixA;
+		slider2.value = slider.value;
+		wet.gain.value = wetness;
+		dry.gain.value = 1-wetness;
+	}
+
+	// -------------------------------------------------------------------------
+	// midi
+	// -------------------------------------------------------------------------
+
+	function initMidi()
+	{
+		if (navigator.requestMIDIAccess)
+		navigator.requestMIDIAccess().then( function (midi)
+		{
+			var i = 0;
+			var io = [midi.inputs.values(), midi.outputs.values()];
+			io.forEach( function (it) {
+				for (var itport = it.next(); !itport.done; itport = it.next())
+				{
+					var port = itport.value;
+					var option = new Option(port.name);
+					option.midiport = port;
+					if (i++ == 0) midiport_in.appendChild(option);
+					else midiport_out.appendChild(option);
+				}
+			});
+		});
+		
+		// -- midi event from arpeggiator
+		arp.onmidi = function (msg)
+		{
+			if (midiOut) midiOut.send(msg);
+			else if (synth) synth.sendMidi(msg[0], msg[1], msg[2]);
+		}
+	}
+	
+	function onInputChecked(box)
+	{
+		if (box.id == "arpeggiator") arp.toggleplay();
+		else if (box.id == "compkeys") compkeysActive = !compkeysActive;
+	}
+	
+	function initKeys()
+	{
+		midikeyboard = new QwertyHancock({
+				  id: 'keys',
+				  width: 805,
+				  height: 60,
+				  octaves: 5,
+				  startNote: 'C2',
+				  whiteNotesColour: 'white',
+				  blackNotesColour: 'black',
+				  hoverColour: '#f3e939'
+			});
+		midikeyboard.keyDown = function (number) { if (compkeysActive) onNote(number, true); }
+		midikeyboard.keyUp = function (number) { if (compkeysActive) onNote(number, false); }
+		midikeyboard.oct = 4;
+
+		/* var octave = document.getElementById("octave");
+		for (var i=2; i<7; i++)
+			octave.appendChild(new Option(i + ""));
+		octave.selectedIndex = 2;
+		octave.onchange = function () { midikeyboard.oct = octave.selectedIndex + 2; } */
+	}
+
+	function onNote(key, noteon)
+	{
+		if (arp.playing)
+		{
+			if (noteon) arp.add(key, 100);
+			else arp.remove(key);
+		}
+		else if (synth) synth.sendMidi(noteon ? 0x90 : 0x80, key, 100);
+	}
+
+	// -------------------------------------------------------------------------
+	// layout
+	// -------------------------------------------------------------------------
+	
+	var pagewidth;
+	function layout()
+	{
+		var w = pagewidth = document.body.offsetWidth - sidepanel.offsetWidth;
+		var h = document.body.offsetHeight;
+		var p = pages.querySelectorAll(".page");
+		for (var i=0; i<p.length; i++)
+		{
+			p[i].style.width  = w + "px";
+			p[i].style.height = h + "px";
+		}
+		pages.style.width = 3 * w;
+		pages.style.setProperty("-webkit-transition-duration", 0);
+		pages.style.transform = "translateX(" + (-curpage * w) + "px)";
+		
+		if (!synth) return;
+		setTimeout(function ()
+		{
+			var scale = 0.9;
+			var offset = pagewidth * (1-scale) / 2;
+			syntharea.style.padding = "0 " + offset + "px";
+			var coeff = pagewidth / synth.gui.scrollWidth * scale;
+			synth.gui.style.transform = "scale(" + coeff + ")";
+			flipper.style.left = 2*pagewidth - offset - 20;
+		}, 50);	// let dom do its thing in peace
+	}
+	
+	// -------------------------------------------------------------------------
+	// app
+	// -------------------------------------------------------------------------
+	var pageids = ["midi","synths","fx"];
+	var curpage = 1;
+	function setPage(pageid)
+	{
+		if (!pageid) return;
+		else if (pageid == "info") { infoscreen.style.display = "block"; return; }
+		var menuitems = pagemenu.querySelectorAll("li div");
+		menuitems[curpage].classList.toggle("selected");
+		curpage = pageids.indexOf(pageid);
+		pages.style.setProperty("-webkit-transition-duration", "1s");
+		pages.style.transform = "translateX(" + (-curpage * pagewidth) + "px)";
+		menuitems[curpage].classList.toggle("selected");
+		
+		if (pageid == "fx")
+		{
+			synthselector.style.display = "none";
+			fxselector.style.display = "block";
+		}
+		else
+		{
+			synthselector.style.display = "block";
+			fxselector.style.display = "none";
+		}
+	}
+
+	window.addEventListener("polymer-ready", function ()
+	{
+		layout();
+		initMidi();
+		initAudio();
+		initKeys();
+		
+		infoscreen.onclick = function () { infoscreen.style.display = "none"; }
+		
+		// terrible hack (there's no endresize event)
+		var doit;
+		window.onresize = function() {
+			clearTimeout(doit);
+			doit = setTimeout(function() { layout(); flipper.style.display = "block"; }, 500);
+			flipper.style.display = "none";
+			};
+		document.body.onselectstart = function (e) { e.target.style.cursor = "default"; return false; }
+	});
+
+	var is_chrome = true;
+	function checkChrome()
+	{
+		is_chrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
+		if (!is_chrome)
+		{
+			infoscreen.style.display = "block";
+			dismiss.style.display = "none";
+			pages.style.display = "none";
+		}
+	}
+	
+</script>
+<style>
+	* { margin:0; padding:0; }
+	body { background-color:222; color:#eee; overflow:hidden; -webkit-user-select:none;
+		font-family:"gill sans",sans-serif; font-size:10pt; font-weight:100; }
+	.left { float:left; }
+	.right { float:right; }
+	
+	/* -- header -- */
+	h1 { margin:0 10px 8px 0; font-weight:100; display:inline-block; }
+	#header { font-family:"gill sans",sans-serif; position:fixed; top:10px; left:10px; background:transparent;}
+	#header a, #infocontent p a { color:lightgreen; text-decoration:none; }
+	#header a:hover, #infocontent p a:hover { text-decoration:underline; }
+	ul.menu { list-style:none; font-size:12pt; }
+	ul.menu li { display:block; float:left; padding-right:10px; }
+	ul.menu li div { cursor:pointer; height:20px; }
+	ul.menu li div.selected { border-bottom:1px solid white; }
+	ul.menu li div:hover { border-bottom:1px solid lightgreen; color:lightgreen; }
+	
+	#info { margin-left:10px; }
+	#info:hover { border:none; }
+	#infoscreen { position:absolute; top:0; left:0; width:100%; height:100%; 
+		background:rgba(0,0,0,0.8); display:none; color:white; cursor:default; }
+	#infocontent { width:75%; max-width:686px; margin: 50px auto; font-size:14pt; }
+	#infocontent ul { list-style:none; margin-top:20px; }
+	#infocontent ul li { margin-bottom:10px; }
+	#infocontent p { margin-top:15px; }
+	em { font-style:normal; color:orange; }
+	#chromeEmph { color:lightgreen; }
+	
+	/* -- sidepanel -- */
+	#sidepanel { background:#333; width:250px; height:100%; padding:10px; float:left;  position:absolute; top:0; }
+	ul.combo { list-style:none; margin-top:100px; }
+	ul.combo li { width:100%; padding-bottom:8px; }
+	ul.combo li label { float:left; }
+	ul.combo li select { width:100%; }
+	.filler { margin-left:50px; }
+	#fxselector { display:none; }
+	#mixrow { margin-top:5px; }
+	#fxmixA,#fxmixB { margin:0 9px 0 9px; width:140px; }
+	.drywet { color:lightblue; width:200px; }
+
+	/* -- pages -- */
+	#pages { -webkit-transition:transform 1s ease-out; transform:translateX(0); margin-left:270px; }
+	.page { float:left; background:#222; }
+	#keys { display:none; }
+	
+	/* -- midipage -- */
+	#midiarea { width:462px; height:100%; margin:auto; }
+	#midisetup { background:#eee; width:462px; height:65px; margin:110px 0 5px 0; padding:5px; }
+	#midisetup { font-family:sans-serif; font-size:10px; color:#222; box-sizing:border-box; padding-left:8px; }
+	#midisetup ul.clist { float:left; width:150px; height:100%; }
+	#midiportlist { border-left:1px solid #222; padding-left:5px; }
+	ul.clist { list-style:none; font-size: 9pt; padding:0; margin:0; }
+	ul.clist.hor li { display:block; float:left; padding-right:10px; }
+	ul.clist li { clear:both; padding-top:3px; }
+	ul.clist li div.label  { vertical-align: middle; line-height:19px; margin-left:3px; float:left; }
+	ul.clist li div.right { float:none; line-height:15px; margin-left:17px; }
+	ul.clist li div.left  { width:45px; }
+	ul.clist li input { float:left; }
+	ul.clist li select { margin-left:10px; }
+	midi-arp { width:100%; }
+	#virtkeyslabel { color:#aaa; }
+	
+	/* -- synthpage -- */
+	#syntharea { width:100%; height:100%; float:left; }	
+	#frontpanel, .front { margin-top:110px; width:100%; }
+	#flipper { position:absolute; top:80px; width:50px; cursor:default; color:#aaa; }
+	
+	/* -- fxpage -- */
+	#fxpatches { height:265px; }
+	#fxpanel { background:#eee; width:80%; padding:10px; margin-top:110px; 
+		margin-left:auto; margin-right:auto; color:#222; opacity:0; }
+	.paramLabel { font-size:9pt; margin-left:3px; display:inline; }
+
+	/* -- transitions -- */
+	.reflect {
+		-webkit-box-reflect: below 10px
+		-webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(80%, transparent), to(rgba(250, 250, 250, 0.3))); }
+	.back { width:1087px; height:442px; background:#eee; position:absolute;
+		-webkit-box-reflect: below 10px
+		-webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(50%, transparent), to(rgba(250, 250, 250, 0.3)));
+		}
+	.fadein { opacity:0; -webkit-animation:fadeIn ease-in 1;
+		-webkit-animation-duration:1.5s; -webkit-animation-delay: 0.1s;
+		-webkit-animation-fill-mode:forwards; }
+	@-webkit-keyframes fadeIn  { from { opacity:0; } to { opacity:1; } }	
+</style>
+	
+</head>
+<body unresolved onload="checkChrome()">
+
+	<div id="pages">
+		<section id="page1" class="page">
+		<div id="midiarea">
+			<div id="midisetup">
+				<ul class="clist">
+					<li><input id="compkeys" type="checkbox" checked onchange="onInputChecked(this)">
+						 <div class="label right">computer keyboard</div></li>
+					<li><input id="virtkeys" type="checkbox" disabled onchange="onInputChecked(this)">
+						 <div id="virtkeyslabel" class="label right">virtual keyboard</div></li>
+					<li><input id="arpeggiator" type="checkbox" onchange="onInputChecked(this)">
+						 <div class="label right">arpeggiator</div></li>
+				</ul>
+				<ul id="midiportlist" class="clist">
+					<li><div class="label left">midi in</div>
+						 <select id="midiport_in" onchange="onmidiport(this)">
+							<option>none</option>
+						 </select></li>
+					<li><div class="label left">midi out</div>
+						 <select id="midiport_out" onchange="onmidiport(this)">
+							<option>internal</option>
+						 </select></li>
+				</ul>
+			</div>
+			<midi-arp id="arp"></midi-arp>
+		</div>
+		</section>
+		
+		<section id="page2" class="page">
+			<div id="flipper" onclick="onflip()">
+				<img src="gui/flip.svg" width="20">
+			</div>
+			<div id="syntharea"></div>
+		</section>
+
+		<section id="page3" class="page">
+			<div id="fxarea">
+				<div id="fxpanel"></div>
+			</div>
+		</section>		
+	</div>
+	
+	<div id="sidepanel">		
+		<ul id="synthselector" class="combo">
+			<li><label>Synth</label><div class="filler">
+				<select onchange="onsynth(this.value)">
+					<option value="dawsynth-hexter">dssi : Hexter</option>
+					<option value="dawsynth-whysynth">dssi : Whysynth</option>
+					<option value="dawsynth-xsynth">dssi : Xsynth</option>
+					<option value="dawsynth-mdajx10">vst  : JX10</option>
+					<option value="dawsynth-azr3">vst  : AZR3</option>
+					<option value="dawsynth-obxd" selected>juce : OBxd</option>
+					<option value="dawsynth-dexed">juce : Dexed</option>
+				</select></div></li>
+			<li><label>Bank</label><div class="filler">
+				<select id="banks" onchange="onbank(this)">
+				</select></div></li>
+			<li><label>Patch</label><div class="filler">
+				<select id="patches" onchange="onpatch(this)" size="20">
+				</select></div></li>
+			<li><label>FX mix</label><div class="filler">
+				<div class="left drywet"><div class="left">dry</div>
+					<input id="fxmixA" class="left" type="range" oninput="oneffectmix(this)" value="0">
+					<div class="right">wet</div>
+				</div></div></li>
+		</ul>
+		<ul id="fxselector" class="combo">
+			<li><label>Effect</label><div class="filler">
+				<select onchange="oneffect(this.value)">
+					<option value="none">bypass</option>
+					<option value="bypass">bypass SPN</option>
+					<option value="convolver">Convolver (eg. reverb)</option>
+					<option value="swhphaser">Phaser</option>
+					<option value="swhbode">Bode Shifter</option>
+					<option value="mdaleslie">Leslie</option>
+				</select></div></li>
+			<li><label>Bank</label><div class="filler">
+				<select id="fxbanks" onchange="onbank(this)">
+				</select></div></li>
+			<li><label>Patch</label><div class="filler">
+				<select id="fxpatches" onchange="onpatch(this)" size="20">
+				</select></div></li>
+			<li id="mixrow"><label>FX mix</label><div class="filler">
+				<div class="left drywet"><div class="left">dry</div>
+					<input id="fxmixB" class="left" type="range" oninput="oneffectmix(this)" value="0">
+					<div class="right">wet</div>
+				</div></div></li>
+		</ul>
+	</div>
+
+	<div id="header">
+		<h1>DAW Plugins for Web Browsers</h1>
+		demo page for <a href="http://wac.ircam.fr/" target="_blank">WAC-2015 paper</a>
+			-- sources at <a href="https://github.com/jariseon/webdawplugins" target="_blank">github</a>
+			-- <a href="https://mediatech.aalto.fi/~jkleimol/" target="_blank">Jari Kleimola</a> 2014-15
+		<ul id="pagemenu" class="menu" onclick="setPage(event.target.id)">
+			<li><div id="midi">MIDI</div></li>
+			<li style="cursor:default;">&rarr;</li>
+			<li><div id="synths" class="selected">SYNTHS</div></li>
+			<li style="cursor:default;">&rarr;</li>
+			<li><div id="fx">FX</div></li>
+			<li><div id="info">what is this?</div></li>
+		</ul>
+	</div>
+	
+	<div id="keys"></div>
+	
+	<div id="infoscreen">
+		<div id="infocontent">
+		<h1>DAW Plugins for Web Browsers</h1>
+		<p>This page demonstrates the fusion of Web Audio API, PNaCl, Emscripten,
+			and Web Midi API. Because it requires PNaCl support, please open it in <em>Chrome</em> browser.
+			The page has three subpages:</p>
+		<ul>
+			<li><em>Midi</em> -- select control inputs (computer keyboard, virtual keyboard, midi)
+			and operate the embedded arpeggiator.</li>
+			<li><em>Synths</em> -- select synthesizer plugin, bank and patch from the sidepanel
+			and tweak the synth parameters using the mouse. Flip between front and back synth panels
+			by clicking the button at top right.</li>
+			<li><em>FX</em> -- select effect plugin from the sidepanel or bypass it. "Bypass SPN"
+			routes the synth output directly into the audio rendering pipeline of the browser
+			for reduced latency. Most effects expose generic UI sliders for parameter
+			adjustment. Sidepanel "FX mix" adjusts the send level.</li>
+		</ul>
+		<p>The synths and effects were ported from native C++ DAW plugin formats to PNaCl or
+			Emscripten. More info in the <a href="http://wac.ircam.fr/program.html" target="_blank">WAC paper</a>. Finally, please be careful with the sound levels:
+			although the synths and effects have been tested, some parameter combinations in the
+			third party plugins may produce unexpected sonic artifacts.</p>
+		<p id="dismiss"><em>click anywhere to dismiss this info screen</em></p>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!--
+ Web Component to bundle webaudio-knob with label and value indicators
+ Jari Kleimola 2015
+ https://github.com/jariseon
+ 
+ webaudio-knob by Eiji Kitamura and g200kg
+ (https://github.com/g200kg/webaudio-controls)
+ knob_64_white1.png by az
+ (http://www.g200kg.com/en/webknobman/gallery.php?m=p&p=47)
+ -->
+<link rel="import" href="webaudio-controls.html">
+
+<polymer-element name="wak-bundle" attributes="label min max value">
+<template>
+	<ul>
+		<li><div>{{label}}</div></li>
+		<li id="knobholder">
+			<webaudio-knob id="knob" diameter="64" sprites="126"
+				min="{{min}}" max="{{max}}" value="{{value}}"
+				src="knob_64_white1.png" valuetip="0"></webaudio-knob>
+		</li>
+		<li id="value"><div>{{value}}</div></li>
+	</ul>
+	<style>
+		ul { list-style:none; font-size: 9pt; padding:0; margin:0; width:74px; }
+		li div { width:100%; text-align:center; }
+		li div { font-family:gill sans;sans-serif; }
+		#knobholder { position:relative; height:58px; padding-left:5px; }
+		#value { font-size:8pt; background:#24364f; color:#eee; border-radius:3px; margin:auto; width:73%; }
+	</style>
+</template>
+<script>
+	Polymer("wak-bundle",
+	{
+		label: "",
+		min: 0,
+		max: 100, 
+		value: 0,
+		ready: function ()
+		{
+			var self = this;
+			this.$.knob.addEventListener("change", function (e)
+			{
+				self.value = e.target.value;
+				self.fire("change", { senderID:self.id, value:self.value });
+			});
+		},
+		handleEvent: function (e)
+		{
+			this.value = e.target.value;
+			this.fire("change", { senderID:this.id, value:this.value });
+		}
+	});
+</script>
+</polymer-element>

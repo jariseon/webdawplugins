@@ -1,0 +1,198 @@
+<polymer-element name="midiarp-slider" attributes="min max value">
+<template>
+	<svg id="svg" width="25" height="200">
+		<rect id="back" width="25" height="200" x="0" y="0" cursor="default" fill="transparent"></rect>
+		<rect id="fill" width="25" height="1" x="0" y="100" class="sliderfill"></rect>
+		<g></g>
+	</svg>
+	<style>
+		.sliderfill { pointer-events:none; }
+	</style>
+</template>
+
+<script>
+(function () {
+	var bipolar = false;
+	var zeropos = 0;
+	var oy = 0;
+	var scaler = 1;
+	var bounds;
+	var svgNS = "http://www.w3.org/2000/svg";
+
+	Polymer("midiarp-slider",
+	{
+		mode: "slider",
+		curcell: undefined,
+		min: 0,
+		max: 100,
+		value: 50,
+		valueChanged: function ()
+		{
+			if (this.mode == "slider")
+			{
+				var v = this.value * scaler;
+				var y = zeropos+1 + bounds.y;
+				var h = Math.abs(v) || 1;
+				if (v < 0) { h++; y--; }
+				else if (v == 0) y--;
+				else y -= Math.abs(v);
+				this.$.fill.setAttribute("height", h);
+				this.$.fill.setAttribute("y", y);
+			}
+			else if (this.value > 0 || this.mode == "check")
+			{
+				return;
+				var value = Array.isArray(this.value) ? this.value : [this.value];
+				var rects = this.g.querySelectorAll("rect");
+				for (var i=0; i<rects.length; i++)
+				{
+					if (value.indexOf(rects[i].value) >= 0)
+					{
+						rects[i].setAttribute("fill","orange");
+						if (this.mode == "radio") break;
+					}
+				}
+			}
+		},
+		attached: function ()
+		{
+			this.$.back.addEventListener("mousedown", this);
+			bounds = this.$.back.getBBox();
+			oy = bounds.y + 3;
+			this.g = this.$.svg.children[2];
+		},
+		setRange: function (min,max,mode_)
+		{
+			this.min = min;
+			this.max = max;
+			
+			if (this.mode != "slider")
+			{
+				var grid = this.g; // $.gridlines;
+				while (grid.lastChild) grid.removeChild(grid.lastChild);
+			}
+			this.mode = mode_ || "slider";
+			if (this.mode == "slider") this.updateSliderRange();
+			else this.updateButtonRange();
+		},
+		updateSliderRange: function ()
+		{
+			bipolar = (this.min * this.max) < 0;
+			zeropos = bipolar ? 100 : 200;
+			var biscale = bipolar ? 2 : 1;
+			scaler = bounds.height / biscale / this.max;
+			this.$.fill.setAttribute("fill", "orange");
+		},
+		updateButtonRange: function ()
+		{
+			scaler = bounds.height / this.max;
+			var y = scaler;
+			var N = this.max - this.min;
+			for (var i=0; i<N; i++)
+			{
+				if (i < N-1)
+				{
+					var line = document.createElementNS(svgNS, "line");
+					line.setAttribute("x1", 0);
+					line.setAttribute("x2", bounds.width);
+					line.setAttribute("y1", y);
+					line.setAttribute("y2", y);
+					line.setAttribute("stroke", "#24364f");
+					line.setAttribute("stroke-width", 1);
+					this.g.appendChild(line);
+				}
+				
+				var rect = document.createElementNS(svgNS, "rect");
+				rect.setAttribute("x", 0);
+				rect.setAttribute("y", y - scaler + 1);
+				rect.setAttribute("width", bounds.width);
+				rect.setAttribute("height", scaler - 1);
+				rect.setAttribute("fill", "transparent");
+				rect.value = this.max - i;
+				rect.addEventListener("click", this, true);
+				this.g.appendChild(rect);
+				if (this.value == rect.value || (this.mode == "check" && this.value.indexOf(rect.value) >= 0))
+				{
+					rect.setAttribute("fill", "orange");
+					if (this.mode == "check")
+					{
+						rect.selected = true;
+						// if (!Array.isArray(this.value)) this.value = [];
+						// this.value.push(rect.value);						
+					}
+					else if (this.mode == "radio")
+						this.curcell = rect;
+				}
+				y += scaler;
+			}
+			this.$.fill.setAttribute("fill", "transparent");
+		},
+		updateValue: function (v)
+		{
+			v += zeropos + oy;
+			var value = ((v + scaler/2) / scaler) | 0;
+			if (value < this.min) value = this.min;
+			if (value > this.max) value = this.max;
+			if (value != this.value)
+			{
+				this.value = value;
+				if (this.onchange) this.onchange(this);
+			}
+		},
+		handleEvent: function (e)
+		{
+			// -- slider
+			if (this.mode == "slider" && e.type == "mousedown")
+			{
+				this.updateValue(this.offsetTop - e.clientY);
+				window.addEventListener("mousemove", this, false);
+				window.addEventListener("mouseup", this, false);
+			}
+			else if (e.type == "mousemove")
+			{
+				this.updateValue(this.offsetTop - e.clientY);
+			}
+			else if (e.type == "mouseup")
+			{
+				window.removeEventListener("mousemove", this, false);
+				window.removeEventListener("mouseup", this, false);
+			}
+
+			// -- check and radio
+			else if (e.type == "click")
+			{
+				if (this.mode == "radio")
+				{
+					if (this.curcell != undefined) this.curcell.setAttribute("fill", "transparent");
+					if (this.curcell == e.target) { this.value = 0; this.curcell = null; }
+					else
+					{
+						this.curcell = e.target;
+						this.curcell.setAttribute("fill", "orange");
+						this.value = this.curcell.value;
+					}
+					if (this.onchange) this.onchange(this);
+				}
+				else if (this.mode == "check")
+				{
+					var cell = e.target;
+					if (cell.selected)
+					{
+						cell.selected = false;
+						this.value.splice(this.value.indexOf(cell.value),1);
+					}
+					else
+					{
+						cell.selected = true;
+						if (!Array.isArray(this.value)) this.value = [];
+						this.value.push(cell.value);
+					}
+					cell.setAttribute("fill", cell.selected ? "orange" : "transparent");
+					if (this.onchange) this.onchange(this);
+				}
+			}
+		}
+	});
+})();
+</script>
+</polymer-element>

@@ -1,0 +1,12 @@
+{
+  "program": {
+    "portable": {
+      "pnacl-translate": {
+        "url": "mdajx10.pexe"
+      },
+      "pnacl-debug": {
+        "url": "mdajx10_unstripped.bc"
+      }
+    }
+  }
+}

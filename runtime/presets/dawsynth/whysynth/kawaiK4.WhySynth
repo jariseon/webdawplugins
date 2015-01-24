@@ -1,0 +1,3435 @@
+# These patches are in the public domain.  See the included file
+# COPYING-patches for more information.
+#
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Lue
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 80 19 0.05 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 116 -12 0.04 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 2 80 19 -0.03 7 0 0 0 0 0 18 1 0 0.5
+oscY 4 2 116 -12 -0.04 7 0 0 0 0 0 19 1 0 0.5
+vcfY 1 1 0 0 20 0.78 0.545455 0
+vcfY 2 1 1 0 20 0.78 0.545455 0
+mix 0 0.5 0 0.5 0.71 0.25 0.71 0.75
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 4.24504 142 0.45 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.236831 0 0 0 0 0
+egY 1 1 1 0.0195312 1 1 0.1 1 1 1.76777 0.95 1 0.192366 0 0 0 0 0
+egY 2 1 1 0.0634572 1 1 0.1 1 1 0.0195312 1 1 0.236831 0 0 0 0 0
+egY 3 1 1 0.473661 1 1 0.1 1 1 0.769465 0.65 1 1.25 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Monocultur
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 101 0 0 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 18 0 0.09 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 2.7436 20 0.32 0.454545 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 1.8404 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.078125 0 0 0 0 0
+egY 1 1 1 0.044871 1 1 0.1 1 1 1.76777 0.62 1 0.078125 0 0 0 0 0
+egY 2 1 1 0.0195312 1 1 0.1 1 1 0.0195312 1 1 0.0592077 0 0 0 0 0
+egY 3 1 1 0.253829 1 1 0.1 1 1 0.883883 0.61 1 12.3114 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20BreezeGame
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 62 0 -0.01 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 99 0 0.01 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 10.8 20 0.46 0 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 1 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.947323 0 0 0 0 0
+egY 1 1 1 0.078125 1 1 0.1 1 1 1.33972 0.32 1 0.947323 0 0 0 0 0
+egY 2 1 1 0.110485 1 1 0.1 1 1 1.33972 0.49 1 0.078125 0 0 0 0 0
+egY 3 1 1 4.66517 1 1 0.1 1 1 3.78929 0.63 1 20 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20E.Piano%20S1
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 61 0 0 0 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 60 0 0.01 0 0 0 0 0 0 19 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 28.5893 20 -0.36 0 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 1.45176 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.236831 0 0 0 0 0
+egY 1 1 1 0.0209331 1 1 0.1 1 1 2.67943 0.7 1 0.220971 0 0 0 0 0
+egY 2 1 1 0.0224355 1 1 0.1 1 1 0.583146 0.7 1 0.236831 0 0 0 0 0
+egY 3 1 1 5.35887 1 1 0.1 1 1 0.0195312 1 1 3.78929 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20FletchLead
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 19 -24 -0.05 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 22 -12 0.05 0 0 0 0 0 0 18 1 0.5 0
+oscY 3 2 24 -24 0 7 0 0 0 0 0 19 1 0 0.5
+oscY 4 2 61 -24 0.1 0 0 0 0 0 0 20 1 0 0.5
+vcfY 1 1 0 30.7063 0 0 0 0
+vcfY 2 1 1 25.6 21 0.26 0.636364 0
+mix 0 0.5 0 0.5 0.71 0.25 0.71 0.75
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 3.67492 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.3125 0 0 0 0 0
+egY 1 1 1 0.0552427 1 1 0.1 1 1 5 0 1 0.3125 0 0 0 0 0
+egY 2 1 1 0.0390625 1 1 0.1 1 1 2.5 0 1 0.3125 0 0 0 0 0
+egY 3 2 1 0.0240458 0 1 0.0390625 1 1 5 0 1 0.3125 0 0 0 0 0
+egY 4 1 1 8.12252 1 1 0.1 1 1 7.07107 0 1 20 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20jaBBazyntx
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 23 -12 -0.05 0 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 24 -12 0.05 7 0 0 0 0 0 18 1 0.5 0
+oscY 3 2 23 -12 0 7 0 0 0 0 0 18 1 0.5 0
+oscY 4 2 24 -12 -0.11 7 0 0 0 0 0 18 1 0.5 0
+vcfY 1 1 0 23.7276 19 0.3 0 0
+vcfY 2 1 2 23.7276 19 0.3 0 0
+mix 0 0.5 0 0.5 0 0.5 1 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 2.10318 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.110485 0 0 0 0 0
+egY 1 1 1 0.0195312 1 1 0.1 1 1 0.0195312 1 1 0.110485 0 0 0 0 0
+egY 2 1 1 0.0195312 1 1 0.1 1 1 1.53893 0.51 1 20 0 0 0 0 0
+egY 3 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20MICROwave
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 18 -12 -0.03 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 122 -24 0.03 0 0 0 0 0 0 19 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 4.55625 0 0 0.727273 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 3.16228 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.883883 0 0 0 0 0
+egY 1 1 1 0.0195312 1 1 0.1 1 1 0.441942 0.8 1 0.883883 0 0 0 0 0
+egY 2 1 1 0.0195312 1 1 0.1 1 1 0.441942 0.4 1 0.883883 0 0 0 0 0
+egY 3 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20OBIErezPAD
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 18 -12 -0.07 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 21 -12 0.07 0 0 0 0 0 0 18 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 1.35 19 0.4 0.818182 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 3.16228 142 0.5 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.883883 0 0 0 0 0
+egY 1 1 1 0.220971 1 1 0.1 1 1 7.07107 0.5 1 0.883883 0 0 0 0 0
+egY 2 1 1 5 1 1 0.1 1 1 7.07107 0.55 1 10 0 0 0 0 0
+egY 3 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20van%20halen
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 19 -12 -0.09 0 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 19 -12 0.05 7 0 0 0 0 0 18 1 0.5 0
+oscY 3 2 19 -12 -0.03 0 0 0 0 0 0 19 1 0 0.5
+oscY 4 2 19 -12 0.03 7 0 0 0 0 0 19 1 0 0.5
+vcfY 1 1 0 11.3491 20 0.16 0 0
+vcfY 2 1 1 15.0382 21 0.16 0 0
+mix 0 0.5 0 0.5 0.71 0.25 0.71 0.75
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 1.24579 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.358968 0 0 0 0 0
+egY 1 2 1 0.0224355 0 1 0.0340059 1 1 0.625 0.84 1 0.358968 0 0 0 0 0
+egY 2 2 1 0.0209331 0 1 0.0340059 1 1 0.669858 0.87 1 0.358968 0 0 0 0 0
+egY 3 1 1 1.25 1 1 0.1 1 1 1.76777 0.5 1 1.76777 0 0 0 0 0
+egY 4 1 1 1.89465 1 1 0.1 1 1 1.76777 0.5 1 1.76777 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Glaschords
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 102 -12 -0.02 0 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 102 -12 0.02 0 0 0 0 0 0 18 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 31.8028 19 0.44 0 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 4.87747 142 1.5 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.625 0 0 0 0 0
+egY 1 1 1 0.220971 1 1 0.1 1 1 5 0.57 1 0.625 0 0 0 0 0
+egY 2 1 1 0.0552427 1 1 0.1 1 1 0.441942 0.55 1 0.236831 0 0 0 0 0
+egY 3 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Harmonics
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 6 16 -0.11 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 42 -12 -0.03 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 2 6 16 -0.05 7 0 0 0 0 0 18 1 0 0.5
+oscY 4 2 42 -12 0.03 7 0 0 0 0 0 19 1 0 0.5
+vcfY 1 1 0 12.5023 20 0.32 0 0
+vcfY 2 1 1 12.5023 20 0.32 0 0
+mix 0 0.5 0 0.5 0.71 0.25 0.71 0.75
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 1.8404 142 0.7 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.0634572 0 0 0 0 0
+egY 1 1 1 0.0195312 1 1 0.1 1 1 0.291573 0.12 1 0.0552427 0 0 0 0 0
+egY 2 1 1 0.0364466 1 1 0.1 1 1 3.29877 0 1 0.0634572 0 0 0 0 0
+egY 3 1 1 0.0897421 1 1 0.1 1 1 4.35275 0.5 1 2.17638 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Polysynth
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 15 -12 0 0 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 15 -12 -0.04 7 0 0 0 0 0 18 1 0.5 0
+oscY 3 2 30 0 0.04 0 0 0 0 0 0 19 1 0.5 0
+oscY 4 2 30 0 -0.01 7 0 0 0 0 0 19 1 0.5 0
+vcfY 1 1 0 0.6912 20 0.36 0.363636 0
+vcfY 2 1 2 0.6912 20 0.36 0.363636 0
+mix 0 0.5 0 0.5 0 0.5 1 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.595109 142 0.65 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.3125 0 0 0 0 0
+egY 1 1 1 0.126914 1 1 0.1 1 1 4.66517 0 1 0.3125 0 0 0 0 0
+egY 2 1 1 0.126914 1 1 0.1 1 1 1.89465 0 1 0.3125 0 0 0 0 0
+egY 3 1 1 0.358968 1 1 0.1 1 1 6.15572 0.57 1 1.53893 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Pyeipzz
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 96 -24 0.03 0 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 96 -24 -0.03 0 0 0 0 0 0 19 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 5.19115 20 0.36 0.636364 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 1.60015 142 1.5 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.947323 0 0 0 0 0
+egY 1 1 1 0.0195312 1 1 0.1 1 1 0.0195312 1 1 0.947323 0 0 0 0 0
+egY 2 1 1 1.01532 1 1 0.1 1 1 0.0195312 1 1 0.947323 0 0 0 0 0
+egY 3 1 1 0.118415 1 1 0.1 1 1 4.66517 0.44 1 1.53893 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Reedy%20Synt
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 98 0 -0.04 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 24.652 0 0 0 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.943364 142 0.55 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.0634572 0 0 0 0 0
+egY 1 1 1 0.044871 1 1 0.1 1 1 16.245 0.82 1 0.0634572 0 0 0 0 0
+egY 2 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+egY 3 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Return
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 74 -12 -0.03 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 101 -12 0.03 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0
+vcfY 1 1 0 8.31875 20 0.7 0.363636 0
+vcfY 2 1 2 8.31875 20 0.7 0.363636 0
+mix 0 0.5 0 0.5 0 0.5 1 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 1.8404 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.044871 0 0 0 0 0
+egY 1 1 1 0.044871 1 1 0.1 1 1 2.33258 0.68 1 0.044871 0 0 0 0 0
+egY 2 1 1 0.0634572 1 1 0.1 1 1 2.33258 0.77 1 0.0390625 0 0 0 0 0
+egY 3 1 1 0.0837323 1 1 0.1 1 1 1.43587 0.46 1 0.103087 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20TechnoTube
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 87 19 0 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 98 -12 0.01 0 0 0 0 0 0 19 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 1.9652 20 0.58 0 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 4.24504 142 0.45 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.236831 0 0 0 0 0
+egY 1 1 1 0.0224355 1 1 0.1 1 1 1.53893 0 1 0.192366 0 0 0 0 0
+egY 2 1 1 0.145786 1 1 0.1 1 1 1.16629 0 1 0.236831 0 0 0 0 0
+egY 3 1 1 0.220971 1 1 0.1 1 1 0.769465 0.5 1 1.25 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Thin%20Keys
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 92 24 -0.01 0 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 105 -12 -0.03 0 0 0 0 0 0 19 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 31.8028 20 -0.36 0.363636 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 1 142 0.75 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.220971 0 0 0 0 0
+egY 1 2 1 0.0224355 0 1 0.0195312 1 1 0.441942 0.69 1 0.220971 0 0 0 0 0
+egY 2 1 1 0.0195312 1 1 0.1 1 1 2.67943 0.52 1 0.136024 0 0 0 0 0
+egY 3 1 1 1.64938 1 1 0.1 1 1 2.67943 0.86 1 4.66517 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Vectory%20!
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 114 19 0.04 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 118 -12 0.05 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 2 114 19 -0.04 7 0 0 0 0 0 18 1 0 0.5
+oscY 4 2 118 -12 -0.05 7 0 0 0 0 0 19 1 0 0.5
+vcfY 1 1 0 50 20 0.4 0.454545 0
+vcfY 2 1 1 50 21 0.4 0.545455 0
+mix 0 0.5 0 0.5 0.71 0.25 0.71 0.75
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 3.16228 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.236831 0 0 0 0 0
+egY 1 1 1 0.0224355 1 1 0.1 1 1 1.64938 0.79 1 0.192366 0 0 0 0 0
+egY 2 1 1 0.126914 1 1 0.1 1 1 6.15572 0 1 0.236831 0 0 0 0 0
+egY 3 1 1 0.824692 1 1 0.1 1 1 4.35275 0.5 1 1.25 0 0 0 0 0
+egY 4 1 1 0.0552427 1 1 0.1 1 1 1.64938 0.5 1 1.25 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Warm%20Synpi
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 110 -12 -0.02 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 115 -12 0.02 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 11.3491 20 0.12 0.545455 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 1.11895 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.384733 0 0 0 0 0
+egY 1 1 1 0.044871 1 1 0.1 1 1 1.43587 0.19 1 0.384733 0 0 0 0 0
+egY 2 1 1 0.0680118 1 1 0.1 1 1 1.43587 0.19 1 0.384733 0 0 0 0 0
+egY 3 1 1 1.08819 1 1 0.1 1 1 8.12252 0.65 1 0.291573 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Woodpecker
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 54 -12 0 0 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 100 0 0 0 0 0 0 0 0 19 1 0.5 0
+oscY 3 2 80 0 0.02 0 0 0 0 0 0 20 1 0 0.5
+oscY 4 2 76 12 -0.12 0 0 0 0 0 0 20 1 0 0.5
+vcfY 1 1 0 50 0 0 0.727273 0
+vcfY 2 1 1 13.7312 0 0 0 0
+mix 0 0.5 0 0.5 0.71 0.25 0.71 0.75
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 1.11895 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.883883 0 0 0 0 0
+egY 1 1 1 0.236831 1 1 0.1 1 1 4.35275 0.65 1 0.883883 0 0 0 0 0
+egY 2 1 1 0.0680118 1 1 0.1 1 1 2.5 0.44 1 0.384733 0 0 0 0 0
+egY 3 1 1 0.0224355 1 1 0.1 1 1 0.473661 0.03 1 0.078125 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Zippoline
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 22 0 0.03 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 29 0 -0.03 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 9.25965 20 0.16 0 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 1.52481 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.3125 0 0 0 0 0
+egY 1 1 1 0.0195312 1 1 0.1 1 1 2.87175 0 1 0.272047 0 0 0 0 0
+egY 2 2 1 0.0340059 0 1 0.0240458 1 1 2.33258 0 1 0.3125 0 0 0 0 0
+egY 3 1 1 0.110485 1 1 0.1 1 1 1.33972 0.53 1 0.291573 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Double%20Wha
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 19 0 -0.02 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 26 0 0.02 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 2 19 0 -0.02 7 0 0 0 0 0 18 1 0 0.5
+oscY 4 2 26 0 0.02 7 0 0 0 0 0 19 1 0 0.5
+vcfY 1 1 0 1.79685 20 0.26 0.909091 0
+vcfY 2 1 1 4.55625 21 0.26 0.636364 0
+mix 0 0.5 0 0.5 0.71 0.25 0.71 0.75
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 1.8404 147 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.0364466 0 0 0 0 0
+egY 1 1 1 0.220971 1 1 0.1 1 1 2.33258 0.68 1 0.0364466 0 0 0 0 0
+egY 2 1 1 0.220971 1 1 0.1 1 1 2.33258 0.77 1 0.0364466 0 0 0 0 0
+egY 3 1 1 6.15572 1 1 0.1 1 1 1.33972 0.88 1 0.625 0 0 0 0 0
+egY 4 1 1 1.43587 1 1 0.1 1 1 1.33972 0.88 1 0.625 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Lurkerer
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 41 0 0 0 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 12 0 0 0 0 0 0 0 0 19 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 2 92 0 0 0 0 0 0 0 0 20 1 0 0.5
+vcfY 1 1 0 22.8266 0 0 0 0
+vcfY 2 1 1 50 0 0 0.818182 0
+mix 0 0.5 0 0.5 0.71 0.25 0.71 0.75
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.1 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 3.29877 0 0 0 0 0
+egY 1 1 1 0.291573 1 1 0.1 1 1 1.89465 0.48 1 2.67943 0 0 0 0 0
+egY 2 1 1 0.0552427 1 1 0.1 1 1 0.0195312 1 1 0.078125 0 0 0 0 0
+egY 3 1 1 0.0296039 1 1 0.1 1 1 2.87175 0.56 1 3.29877 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Remember?
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 19 -12 0 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 92 -12 0.01 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 5.88245 20 0.04 0.909091 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.595109 142 2.1 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 3.07786 0 0 0 0 0
+egY 1 1 1 0.0680118 1 1 0.1 1 1 0.583146 0.17 1 3.07786 0 0 0 0 0
+egY 2 1 1 0.0296039 1 1 0.1 1 1 1.89465 0.07 1 2.67943 0 0 0 0 0
+egY 3 1 1 0.441942 1 1 0.1 1 1 1.43587 0.91 1 1.76777 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Talkochord
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 113 12 -0.01 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 105 -12 -0.03 0 0 0 0 0 0 19 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 28.5893 20 -0.26 0 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.468619 142 0.4 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.136024 0 0 0 0 0
+egY 1 2 1 0.0224355 0 1 0.0257716 1 1 0.441942 0.83 1 0.136024 0 0 0 0 0
+egY 2 1 1 0.0592077 1 1 0.1 1 1 1.16629 0.3 1 0.0592077 0 0 0 0 0
+egY 3 1 1 2.67943 1 1 0.1 1 1 0.0195312 1 1 1.43587 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Cla%20Bell
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 0 -24 -0.04 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 81 0 0.04 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 2 0 -12 -0.04 7 0 0 0 0 0 18 1 0 0.5
+oscY 4 2 81 -12 -0.04 7 0 0 0 0 0 19 1 0 0.5
+vcfY 1 1 0 15.7216 20 0.08 0.909091 0
+vcfY 2 1 1 15.7216 20 0.08 0.909091 0
+mix 0 0.5 0 0.5 0.71 0.25 0.71 0.75
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 1.52481 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 2.17638 0 0 0 0 0
+egY 1 1 1 0.0195312 1 1 0.1 1 1 0.883883 0 1 0.583146 0 0 0 0 0
+egY 2 1 1 0.0195312 1 1 0.1 1 1 0.883883 0 1 2.17638 0 0 0 0 0
+egY 3 1 1 0.384733 1 1 0.1 1 1 0.717936 0.6 1 20 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Euro*Dig
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 59 -12 0 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 59 -12 0.06 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 2 71 0 0 0 0 0 0 0 0 20 1 0 0.5
+oscY 4 2 71 0 0.03 0 0 0 0 0 0 20 1 0 0.5
+vcfY 1 1 0 50 0 0 0 0
+vcfY 2 1 1 13.1072 0 0 0 0
+mix 0 0.5 0 0.5 0.71 0.25 0.71 0.75
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 1.52481 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 2.17638 0 0 0 0 0
+egY 1 1 1 0.0195312 1 1 0.1 1 1 3.29877 0 1 0.769465 0 0 0 0 0
+egY 2 1 1 0.0195312 1 1 0.1 1 1 3.29877 0 1 1.33972 0 0 0 0 0
+egY 3 2 1 0.0224355 0 1 0.0195312 1 1 2.5 0 1 2.17638 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20FINE%20FINE
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 60 0 -0.02 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 75 0 0.02 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 17.8955 20 -0.4 0 0
+vcfY 2 1 1 17.8955 21 -0.6 0.454545 0
+mix 0 0.5 0 0.5 0.71 0.25 0.71 0.75
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.943364 142 1 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 1.43587 0 0 0 0 0
+egY 1 1 1 0.0195312 1 1 0.1 1 1 1.33972 0 1 1.43587 0 0 0 0 0
+egY 2 2 1 0.0240458 0 1 0.0195312 1 1 1.33972 0 1 1.43587 0 0 0 0 0
+egY 3 1 1 10 1 1 0.1 1 1 6.59754 0.58 1 3.29877 0 0 0 0 0
+egY 4 1 1 10 1 1 0.1 1 1 16.245 0.58 1 3.29877 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Spring%20Sky
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 75 12 0 0 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 63 0 0 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 19.4509 0 0 0.545455 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.595109 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 3.07786 0 0 0 0 0
+egY 1 1 1 0.0680118 1 1 0.1 1 1 0.583146 0.17 1 3.07786 0 0 0 0 0
+egY 2 1 1 0.0296039 1 1 0.1 1 1 1.89465 0.07 1 2.67943 0 0 0 0 0
+egY 3 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20AmbientHrp
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 18 -12 0 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 66 0 0 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 11.9164 20 0.12 0.363636 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.595109 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 3.07786 0 0 0 0 0
+egY 1 1 1 0.0680118 1 1 0.1 1 1 0.583146 0.17 1 3.07786 0 0 0 0 0
+egY 2 1 1 0.0296039 1 1 0.1 1 1 1.89465 0.07 1 2.67943 0 0 0 0 0
+egY 3 1 1 0.044871 1 1 0.1 1 1 1.01532 0.32 1 0.291573 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20BitterStrg
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 60 0 0 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 115 0 0 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 3.7044 20 0.3 0 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.595109 142 1.35 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 3.07786 0 0 0 0 0
+egY 1 2 1 0.0296039 0 1 0.0680118 1 1 0.583146 0.17 1 3.07786 0 0 0 0 0
+egY 2 1 1 0.0296039 1 1 0.1 1 1 1.89465 0.07 1 2.67943 0 0 0 0 0
+egY 3 1 1 0.272047 1 1 0.1 1 1 1.53893 0.52 1 1.89465 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20LylesStrng
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 19 0 -0.02 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 19 0 0.03 7 0 0 0 0 0 18 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 7.8732 0 0 0 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 1 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 2.87175 0 0 0 0 0
+egY 1 1 1 5 1 1 0.1 1 1 2.87175 0.62 1 2.87175 0 0 0 0 0
+egY 2 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+egY 3 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20OB%20Strings
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 18 0 -0.02 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 18 0 0.02 7 0 0 0 0 0 18 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 21.0938 0 0 0 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.888553 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.769465 0 0 0 0 0
+egY 1 1 1 2.33258 1 1 0.1 1 1 1.16629 0.78 1 0.769465 0 0 0 0 0
+egY 2 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+egY 3 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20EnglishHrn
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0
+oscY 2 2 47 0 0.01 7 0 0 0 0 0 18 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 0.16875 19 0.48 0 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 1.18136 142 0.25 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.15625 0 0 0 0 0
+egY 1 1 1 0.0592077 1 1 0.1 1 1 15.1572 0.35 1 0.15625 0 0 0 0 0
+egY 2 1 1 2.03063 1 1 0.1 1 1 3.29877 0.66 1 20 0 0 0 0 0
+egY 3 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20emphasizer
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 26 -12 0 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 24 -12 0.13 7 0 0 0 0 0 18 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 1.35 0 0 0.727273 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 5.39574 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.441942 0 0 0 0 0
+egY 1 1 1 0.0680118 1 1 0.1 1 1 0.0195312 1 1 0.441942 0 0 0 0 0
+egY 2 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+egY 3 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20UnderAtack
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 23 -12 -0.02 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 19 -12 0.02 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 1.35 20 0.1 0.454545 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 2.01298 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.441942 0 0 0 0 0
+egY 1 1 1 0.0837323 1 1 0.1 1 1 0.0195312 1 1 0.441942 0 0 0 0 0
+egY 2 1 1 0.0515433 1 1 0.1 1 1 0.0195312 1 1 0.441942 0 0 0 0 0
+egY 3 1 1 0.0195312 1 1 0.1 1 1 0.883883 0 1 20 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Soundtrack
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 18 -12 -0.02 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 18 -5 0.04 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 2 18 7 -0.02 7 0 0 0 0 0 19 1 0 0.5
+oscY 4 2 18 2 0.02 7 0 0 0 0 0 19 1 0 0.5
+vcfY 1 1 0 1.35 20 0.3 0 0
+vcfY 2 1 1 1.35 20 0.3 0 0
+mix 0 0.5 0 0.5 0.71 0.25 0.71 0.75
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 3.81188 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 2.5 0 0 0 0 0
+egY 1 1 1 0.883883 1 1 0.1 1 1 0.625 0.6 1 2.5 0 0 0 0 0
+egY 2 1 1 0.883883 1 1 0.1 1 1 0.625 0.3 1 2.5 0 0 0 0 0
+egY 3 1 1 0.3125 1 1 0.1 1 1 1.25 0.8 1 10 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Sync%20Wail
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 73 0 -0.01 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 103 0 0 7 0 0 0 0 0 18 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 0 19 0.5 0.727273 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 1.52481 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.220971 0 0 0 0 0
+egY 1 1 1 0.078125 1 1 0.1 1 1 20 0 1 0.220971 0 0 0 0 0
+egY 2 1 1 0.15625 1 1 0.1 1 1 10 0.55 1 20 0 0 0 0 0
+egY 3 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20VeryHiVocs
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 80 0 0 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 80 0 -0.02 0 0 0 0 0 0 18 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 10.8 19 0.2 0.363636 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 2.10318 142 0.9 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 1.76777 0 0 0 0 0
+egY 1 1 1 0.883883 1 1 0.1 1 1 0.0195312 1 1 1.76777 0 0 0 0 0
+egY 2 1 1 0.3125 1 1 0.1 1 1 0.717936 0.4 1 20 0 0 0 0 0
+egY 3 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20CleanOrgn1
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 87 -12 -0.03 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 83 -12 0.03 7 0 0 0 0 0 18 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 50 19 -0.02 0 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 3.81188 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.220971 0 0 0 0 0
+egY 1 1 1 0.0418662 1 1 0.1 1 1 0.0195312 1 1 0.220971 0 0 0 0 0
+egY 2 1 1 0.625 1 1 0.1 1 1 2.5 0.55 1 20 0 0 0 0 0
+egY 3 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20IndoProOne
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 23 -12 0 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 0 -12 0.21 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 17.15 20 0.4 0.818182 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 2.29164 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 1.08819 0 0 0 0 0
+egY 1 1 1 0.0195312 1 1 0.1 1 1 1.89465 0 1 1.01532 0 0 0 0 0
+egY 2 1 1 0.0195312 1 1 0.1 1 1 3.07786 0 1 1.08819 0 0 0 0 0
+egY 3 1 1 0.3125 1 1 0.1 1 1 0.441942 0.45 1 2.67943 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Moog+ChDly
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 116 0 0 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 116 12 0 7 0 0 0 0 0 18 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 3.2 19 0.8 0 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 1.3123 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.15625 0 0 0 0 0
+egY 1 1 1 0.078125 1 1 0.1 1 1 0.625 0.83 1 0.15625 0 0 0 0 0
+egY 2 1 1 0.110485 1 1 0.1 1 1 0.625 0.5 1 0.883883 0 0 0 0 0
+egY 3 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20PPG/VelRes
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 18 0 -0.06 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 122 0 0.06 7 0 0 0 0 0 18 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 0.78125 0 0 0.727273 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 1.52481 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.078125 0 0 0 0 0
+egY 1 1 1 0.0195312 1 1 0.1 1 1 0.220971 0 1 0.078125 0 0 0 0 0
+egY 2 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+egY 3 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20RememberMe
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 27 -12 0.06 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 12 -12 0 7 0 0 0 0 0 18 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 3.2 19 0.2 0.818182 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 5.21863 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.15625 0 0 0 0 0
+egY 1 1 1 0.0552427 1 1 0.1 1 1 0.0195312 1 1 0.15625 0 0 0 0 0
+egY 2 1 1 0.3125 1 1 0.1 1 1 0.0961832 0.4 1 20 0 0 0 0 0
+egY 3 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20RichRhodes
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 63 -12 -0.02 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 63 -12 0.02 7 0 0 0 0 0 18 1 0.5 0
+oscY 3 2 58 -12 0.05 7 0 0 0 0 0 19 1 0 0.5
+oscY 4 2 58 -12 -0.05 7 0 0 0 0 0 19 1 0 0.5
+vcfY 1 1 0 0.78125 20 0.4 0 0
+vcfY 2 1 1 8.31875 20 0.4 0 0
+mix 0 0.5 0 0.5 0.71 0.25 0.71 0.75
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 1.52481 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.3125 0 0 0 0 0
+egY 1 1 1 0.0195312 1 1 0.1 1 1 2.87175 0 1 0.3125 0 0 0 0 0
+egY 2 1 1 0.118415 1 1 0.1 1 1 2.87175 0 1 0.3125 0 0 0 0 0
+egY 3 1 1 0.236831 1 1 0.1 1 1 4.06126 0.6 1 20 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20CleanOrgn3
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 96 -12 -0.05 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 88 -12 0.04 7 0 0 0 0 0 18 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 50 19 -0.02 0 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 3.81188 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.220971 0 0 0 0 0
+egY 1 1 1 0.0418662 1 1 0.1 1 1 0.0195312 1 1 0.220971 0 0 0 0 0
+egY 2 1 1 0.625 1 1 0.1 1 1 2.5 0.55 1 20 0 0 0 0 0
+egY 3 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Bob'sBass
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 0 -24 0 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 24 -12 0 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 0.4 20 0.24 0.545455 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 2.10318 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.078125 0 0 0 0 0
+egY 1 1 1 0.0195312 1 1 0.1 1 1 0.0195312 1 1 0.078125 0 0 0 0 0
+egY 2 1 1 0.0195312 1 1 0.1 1 1 1.76777 0.8 1 0.078125 0 0 0 0 0
+egY 3 1 1 0.0195312 1 1 0.1 1 1 0.3125 0.43 1 20 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20digitaSYNT
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 93 -24 0 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 88 0 0.01 7 0 0 0 0 0 18 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 50 0 0 0 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 8.38568 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.441942 0 0 0 0 0
+egY 1 1 1 0.0195312 1 1 0.1 1 1 1.25 0 1 0.441942 0 0 0 0 0
+egY 2 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+egY 3 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20elektrik%201
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 77 -12 0 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 77 0 0 7 0 0 0 0 0 18 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 25.6 19 0.18 0 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 2.59546 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 1.08819 0 0 0 0 0
+egY 1 1 1 0.0552427 1 1 0.1 1 1 2.5 0 1 1.08819 0 0 0 0 0
+egY 2 1 1 0.3125 1 1 0.1 1 1 0.625 0.25 1 20 0 0 0 0 0
+egY 3 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20PropaQ%20PaD
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 18 -12 0.02 0 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 18 -12 -0.02 7 0 0 0 0 0 18 1 0.5 0
+oscY 3 2 18 -12 0.06 7 0 0 0 0 0 18 1 0 0.5
+oscY 4 2 18 -12 0.04 0 0 0 0 0 0 18 1 0 0.5
+vcfY 1 1 0 0.78125 19 0.6 0.545455 0
+vcfY 2 1 1 6.25 19 0.6 0.545455 0
+mix 0 0.5 0 0.5 0.71 0.25 0.71 0.75
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.835515 147 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.078125 0 0 0 0 0
+egY 1 1 1 3.78929 1 1 0.1 1 1 0.0195312 1 1 0.078125 0 0 0 0 0
+egY 2 1 1 0.0195312 1 1 0.1 1 1 10 0.5 1 10 0 0 0 0 0
+egY 3 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Vibraphon
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 75 0 -0.04 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 75 0 0 7 0 0 0 0 0 18 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 4.2592 19 0.18 0 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.943364 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.236831 0 0 0 0 0
+egY 1 1 1 0.044871 1 1 0.1 1 1 2.17638 0 1 0.236831 0 0 0 0 0
+egY 2 1 1 0.0552427 1 1 0.1 1 1 2.5 0.5 1 20 0 0 0 0 0
+egY 3 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Sierra
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 106 -12 0.04 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 106 0 -0.04 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 2 106 -24 0.04 7 0 0 0 0 0 18 1 0 0.5
+oscY 4 2 12 12 -0.04 0 0 0 0 0 0 20 1 0 0.5
+vcfY 1 1 0 6.25 21 0.06 0.545455 0
+vcfY 2 1 1 17.15 21 0.06 0.545455 0
+mix 0 0.5 0 0.5 0.71 0.25 0.71 0.75
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 1.52481 142 0.2 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.167465 0 0 0 0 0
+egY 1 1 1 0.0680118 1 1 0.1 1 1 0.0195312 1 1 0.0480916 0 0 0 0 0
+egY 2 1 1 0.136024 1 1 0.1 1 1 0.103087 0.88 1 0.0480916 0 0 0 0 0
+egY 3 1 1 0.0552427 1 1 0.1 1 1 0.717936 0.17 1 0.167465 0 0 0 0 0
+egY 4 1 1 1.76777 1 1 0.1 1 1 3.53553 0.5 1 1.33972 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Spinn%20Solo
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 75 7 0.01 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 96 -12 0 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 1.35 20 0.72 0.909091 0
+vcfY 2 1 1 0.2916 21 0.76 0 0
+mix 0 0.5 0 0.5 0.71 0.25 0.71 0.75
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 1.75788 142 0.7 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.384733 0 0 0 0 0
+egY 1 1 1 0.0195312 1 1 0.1 1 1 0.0195312 1 1 0.236831 0 0 0 0 0
+egY 2 1 1 0.0195312 1 1 0.1 1 1 0.0195312 1 1 0.384733 0 0 0 0 0
+egY 3 1 1 0.0195312 1 1 0.1 1 1 0.441942 0.63 1 0.883883 0 0 0 0 0
+egY 4 1 1 0.412346 1 1 0.1 1 1 1.64938 0.7 1 13.1951 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Seventy
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 109 -12 0 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 77 -12 0 7 0 0 0 0 0 18 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 37.6786 19 0.48 0 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 2.10318 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 1.64938 0 0 0 0 0
+egY 1 1 1 0.0195312 1 1 0.1 1 1 1.64938 0 1 1.64938 0 0 0 0 0
+egY 2 1 1 0.0634572 1 1 0.1 1 1 0.384733 0.5 1 0.0195312 0 0 0 0 0
+egY 3 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20OhhBe%20Ex-A
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 18 -12 -0.04 0 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 19 -12 0.07 7 0 0 0 0 0 18 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 9.25965 19 0.1 0 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 1.18136 142 0.3 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.583146 0 0 0 0 0
+egY 1 1 1 0.0317286 1 1 0.1 1 1 0.0195312 1 1 0.583146 0 0 0 0 0
+egY 2 1 1 2.5 1 1 0.1 1 1 1.53893 0.5 1 0.544094 0 0 0 0 0
+egY 3 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20OldSutCase
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 61 -12 -0.02 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 8 -10 -0.1 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 1.21945 20 0.06 0.454545 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 17.2214 142 0.05 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.253829 0 0 0 0 0
+egY 1 1 1 0.103087 1 1 0.1 1 1 8.12252 0 1 0.253829 0 0 0 0 0
+egY 2 2 1 0.0276214 0 1 0.0296039 1 1 0.947323 0 1 0.253829 0 0 0 0 0
+egY 3 1 1 0.0897421 1 1 0.1 1 1 20 0.5 1 2.5 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Lead%20Me
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 111 0 -0.02 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 18 0 0.02 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 0 20 1 0.454545 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 2.10318 142 0.2 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.0634572 0 0 0 0 0
+egY 1 1 1 0.0592077 1 1 0.1 1 1 0.358968 0.74 1 0.0634572 0 0 0 0 0
+egY 2 1 1 0.0592077 1 1 0.1 1 1 0.236831 0.74 1 0.0480916 0 0 0 0 0
+egY 3 1 1 0.334929 1 1 0.1 1 1 1.64938 0.66 1 0.669858 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Memory
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 24 -12 0.03 0 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 26 -12 -0.03 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 0.98415 20 0.16 0.545455 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 1 142 0.85 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.0515433 0 0 0 0 0
+egY 1 1 1 0.044871 1 1 0.1 1 1 0.625 0.75 1 0.0515433 0 0 0 0 0
+egY 2 1 1 0.044871 1 1 0.1 1 1 2.33258 0.75 1 0.0515433 0 0 0 0 0
+egY 3 1 1 0.118415 1 1 0.1 1 1 4.66517 0.55 1 8.70551 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Glass%20EP
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 108 -12 0 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 72 4 0.34 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 2.7436 20 0.42 0 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.888553 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.3125 0 0 0 0 0
+egY 1 1 1 0.0634572 1 1 0.1 1 1 6.15572 0 1 0.3125 0 0 0 0 0
+egY 2 1 1 0.0240458 1 1 0.1 1 1 3.78929 0 1 0.236831 0 0 0 0 0
+egY 3 1 1 0.3125 1 1 0.1 1 1 2.5 0.56 1 2.67943 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Super%20KX
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 18 -12 0.03 0 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 21 -12 -0.03 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 0.46305 20 0.36 0 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 2.39004 142 1.5 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.220971 0 0 0 0 0
+egY 1 1 1 0.0390625 1 1 0.1 1 1 1.33972 0.64 1 0.192366 0 0 0 0 0
+egY 2 1 1 0.0728932 1 1 0.1 1 1 1.33972 0.75 1 0.220971 0 0 0 0 0
+egY 3 1 1 0.507658 1 1 0.1 1 1 1.76777 0.65 1 0.272047 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20SquareLead
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 53 0 0.02 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 12 0 -0.03 0 0 0 0 0 0 19 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 0.5324 20 0.02 0.727273 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 1.60015 142 0.8 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.0634572 0 0 0 0 0
+egY 1 1 1 0.0364466 1 1 0.1 1 1 0.358968 0.78 1 0.0634572 0 0 0 0 0
+egY 2 1 1 0.0364466 1 1 0.1 1 1 0.412346 0.81 1 0.0480916 0 0 0 0 0
+egY 3 1 1 0.883883 1 1 0.1 1 1 1.76777 0.5 1 1.01532 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Rock%20Organ
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 85 -12 -0.03 0 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 85 -12 0.02 7 0 0 0 0 0 18 1 0.5 0
+oscY 3 2 86 0 0 0 0 0 0 0 0 19 1 0 0.5
+oscY 4 2 95 0 0 0 0 0 0 0 0 19 1 0 0.5
+vcfY 1 1 0 11.3491 20 0.3 0 0
+vcfY 2 1 1 44.2368 0 0 0.454545 0
+mix 0 0.5 0 0.5 0.71 0.25 0.71 0.75
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 1.52481 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.118415 0 0 0 0 0
+egY 1 1 1 0.0276214 1 1 0.1 1 1 0.0195312 1 1 0.0897421 0 0 0 0 0
+egY 2 1 1 0.0195312 1 1 0.1 1 1 0.0195312 1 1 0.118415 0 0 0 0 0
+egY 3 1 1 0.145786 1 1 0.1 1 1 0.3125 0.62 1 1.01532 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Warmth
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 18 -12 -0.04 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 18 -12 0.05 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 6.25 0 0 0 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 1.52481 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 2.33258 0 0 0 0 0
+egY 1 2 1 0.0224355 0 1 1.76777 1 1 8.70551 0 1 2.33258 0 0 0 0 0
+egY 2 2 1 0.0240458 0 1 1.43587 1 1 8.70551 0 1 2.17638 0 0 0 0 0
+egY 3 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Miniapolis
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 24 -12 0.04 0 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 26 -12 -0.04 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 0.98415 20 0.16 0.727273 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 2.29164 142 0.85 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.0515433 0 0 0 0 0
+egY 1 1 1 0.044871 1 1 0.1 1 1 0.625 0.75 1 0.0515433 0 0 0 0 0
+egY 2 1 1 0.044871 1 1 0.1 1 1 2.33258 0.75 1 0.0515433 0 0 0 0 0
+egY 3 1 1 0.384733 1 1 0.1 1 1 4.66517 0.55 1 8.70551 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Reso%20Syn
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 19 0 -0.02 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 19 7 0.02 7 0 0 0 0 0 18 1 0.5 0
+oscY 3 2 19 7 0.04 7 0 0 0 0 0 18 1 0 0.5
+oscY 4 2 19 7 -0.04 7 0 0 0 0 0 18 1 0 0.5
+vcfY 1 1 0 17.8955 19 -0.6 0.727273 0
+vcfY 2 1 1 17.8955 20 -0.6 0.454545 0
+mix 0 0.5 0 0.5 0.71 0.25 0.71 0.75
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.943364 142 0.5 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 1.43587 0 0 0 0 0
+egY 1 1 1 0.0195312 1 1 0.1 1 1 6.59754 0 1 1.43587 0 0 0 0 0
+egY 2 1 1 10 1 1 0.1 1 1 6.59754 0.58 1 3.29877 0 0 0 0 0
+egY 3 1 1 10 1 1 0.1 1 1 16.245 0.58 1 3.29877 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Oboe
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0
+oscY 2 2 47 -12 0 7 0 0 0 0 0 18 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 9.25965 19 0.12 0.363636 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 1.18136 142 2.7 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.206173 0 0 0 0 0
+egY 1 1 1 0.206173 1 1 0.1 1 1 8.70551 0.4 1 0.206173 0 0 0 0 0
+egY 2 1 1 0.669858 1 1 0.1 1 1 11.487 0.71 1 0.769465 0 0 0 0 0
+egY 3 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Mini%20Bass
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 31 -12 0.03 0 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 26 -12 -0.03 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 0.10985 20 0.42 0.545455 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 1.11895 142 1.5 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.0515433 0 0 0 0 0
+egY 1 1 1 0.0276214 1 1 0.1 1 1 0.625 0.75 1 0.0515433 0 0 0 0 0
+egY 2 1 1 0.0728932 1 1 0.1 1 1 2.33258 0.75 1 0.0515433 0 0 0 0 0
+egY 3 1 1 0.179484 1 1 0.1 1 1 2.17638 0.64 1 8.70551 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Melo%20Vox%201
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 12 -12 -0.06 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 12 -12 0.05 7 0 0 0 0 0 18 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 5.88245 19 0.08 0.454545 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 1.52481 142 2.85 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 1.64938 0 0 0 0 0
+egY 1 1 1 0.824692 1 1 0.1 1 1 2.87175 0.9 1 1.64938 0 0 0 0 0
+egY 2 1 1 7.57858 1 1 0.1 1 1 20 0.5 1 7.57858 0 0 0 0 0
+egY 3 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Melo%20Waves
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 71 0 -0.04 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 71 0 0.04 7 0 0 0 0 0 18 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 7.8732 19 0.3 0 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 2.19604 142 2.85 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 1.64938 0 0 0 0 0
+egY 1 1 1 0.824692 1 1 0.1 1 1 2.87175 0.9 1 1.64938 0 0 0 0 0
+egY 2 1 1 2.17638 1 1 0.1 1 1 20 0.5 1 7.57858 0 0 0 0 0
+egY 3 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20MelSqrSwep
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 24 0 -0.03 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 53 0 0.03 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 0 20 0.58 0 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.943364 142 2.95 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 1.64938 0 0 0 0 0
+egY 1 1 1 1.01532 1 1 0.1 1 1 2.87175 0.9 1 1.64938 0 0 0 0 0
+egY 2 1 1 0.824692 1 1 0.1 1 1 2.87175 0.9 1 1.64938 0 0 0 0 0
+egY 3 1 1 0.384733 1 1 0.1 1 1 8.70551 0.63 1 20 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Sqr%20Sweep1
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 24 -12 -0.05 0 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 24 -12 0.05 0 0 0 0 0 0 18 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 18.6624 19 0.28 0 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 17.2214 142 3.6 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 1.64938 0 0 0 0 0
+egY 1 1 1 0.0418662 1 1 0.1 1 1 2.87175 0.9 1 1.64938 0 0 0 0 0
+egY 2 1 1 10.7177 1 1 0.1 1 1 17.411 0.44 1 7.57858 0 0 0 0 0
+egY 3 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20SqrMel%20Ld1
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 24 24 0 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 24 0 0.01 7 0 0 0 0 0 18 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 0.2916 19 0.36 0 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 4.24504 142 1.15 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.3125 0 0 0 0 0
+egY 1 1 1 0.0515433 1 1 0.1 1 1 2.87175 0.9 1 0.3125 0 0 0 0 0
+egY 2 1 1 0.473661 1 1 0.1 1 1 1.64938 0.68 1 1.43587 0 0 0 0 0
+egY 3 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20SqrMel%20Ld2
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 24 -12 -0.03 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 24 -12 0.03 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 0 20 0.32 0.363636 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 4.09686 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.3125 0 0 0 0 0
+egY 1 1 1 0.0418662 1 1 0.1 1 1 5 0 1 0.3125 0 0 0 0 0
+egY 2 1 1 0.0418662 1 1 0.1 1 1 5 0 1 0.078125 0 0 0 0 0
+egY 3 1 1 0.0364466 1 1 0.1 1 1 2.17638 0.77 1 1.89465 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Slow%20Swell
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 18 -12 -0.06 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 18 -12 0.06 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 2.3328 20 0.26 0 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 2.01298 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 5 0 0 0 0 0
+egY 1 1 1 1.76777 1 1 0.1 1 1 8.70551 0.91 1 5 0 0 0 0 0
+egY 2 1 1 1.43587 1 1 0.1 1 1 8.70551 0.91 1 5 0 0 0 0 0
+egY 3 1 1 20 1 1 0.1 1 1 16.245 0.72 1 13.1951 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Eeeevil%201
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 122 -24 0.03 0 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 122 -24 -0.03 0 0 0 0 0 0 19 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 5.19115 20 0.36 0.636364 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 1.60015 142 1.5 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 1.01532 0 0 0 0 0
+egY 1 1 1 0.0195312 1 1 0.1 1 1 0.0195312 1 1 1.01532 0 0 0 0 0
+egY 2 1 1 1.01532 1 1 0.1 1 1 0.0195312 1 1 1.01532 0 0 0 0 0
+egY 3 1 1 0.118415 1 1 0.1 1 1 4.66517 0.44 1 8.70551 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Matheim
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 16 -12 -0.09 0 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 16 -12 0.09 7 0 0 0 0 0 18 1 0.5 0
+oscY 3 2 19 -12 -0.03 0 0 0 0 0 0 19 1 0 0.5
+oscY 4 2 19 -12 0.03 7 0 0 0 0 0 19 1 0 0.5
+vcfY 1 1 0 1.6384 20 0.22 0 0
+vcfY 2 1 1 9.25965 21 0.2 0 0
+mix 0 0.5 0 0.5 0.71 0.25 0.71 0.75
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 1.24579 142 0.1 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 1.01532 0 0 0 0 0
+egY 1 2 1 0.0224355 0 1 0.358968 1 1 0.625 0.84 1 1.01532 0 0 0 0 0
+egY 2 2 1 0.0209331 0 1 0.3125 1 1 0.669858 0.87 1 1.01532 0 0 0 0 0
+egY 3 1 1 0.145786 1 1 0.1 1 1 4.66517 0.49 1 1.76777 0 0 0 0 0
+egY 4 1 1 0.192366 1 1 0.1 1 1 1.76777 0.5 1 1.76777 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Celest
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 80 0 0 0 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 8 0 -0.25 0 0 0 0 0 0 19 1 0.5 0
+oscY 3 2 76 0 0 0 0 0 0 0 0 18 1 0 0.5
+oscY 4 2 0 0 0.03 0 0 0 0 0 0 20 1 0 0.5
+vcfY 1 1 0 50 0 0 0.909091 0
+vcfY 2 1 1 50 0 0 0.727273 0
+mix 0 0.5 0 0.5 0.71 0.25 0.71 0.75
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 17.2214 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.824692 0 0 0 0 0
+egY 1 1 1 0.0515433 1 1 0.1 1 1 1.53893 0 1 0.824692 0 0 0 0 0
+egY 2 1 1 0.0257716 1 1 0.1 1 1 0.0897421 0 1 0.118415 0 0 0 0 0
+egY 3 1 1 0.0390625 1 1 0.1 1 1 0.118415 0 1 0.078125 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Xylophone
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 81 2 0 0 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 12 12 0 0 0 0 0 0 0 19 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 1.79685 20 0.08 0.363636 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 17.2214 142 0.2 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.384733 0 0 0 0 0
+egY 1 1 1 0.0515433 1 1 0.1 1 1 0.126914 0 1 0.192366 0 0 0 0 0
+egY 2 1 1 0.078125 1 1 0.1 1 1 0.717936 0 1 0.384733 0 0 0 0 0
+egY 3 1 1 0.0195312 1 1 0.1 1 1 3.29877 0.5 1 2.5 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20WaterBells
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 76 0 0.43 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 75 -12 0.03 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 0.24565 20 0.36 0.545455 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.835515 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 1.76777 0 0 0 0 0
+egY 1 1 1 0.0552427 1 1 0.1 1 1 3.29877 0 1 1.43587 0 0 0 0 0
+egY 2 1 1 0.044871 1 1 0.1 1 1 1.76777 0 1 1.76777 0 0 0 0 0
+egY 3 1 1 0.291573 1 1 0.1 1 1 11.487 0.57 1 20 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Oh%20Bo!%20Mel
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 103 12 -0.01 0 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 47 -12 0 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 7.8732 20 0.08 0.454545 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 1 142 0.2 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.220971 0 0 0 0 0
+egY 1 1 1 0.103087 1 1 0.1 1 1 7.57858 0.4 1 0.220971 0 0 0 0 0
+egY 2 1 1 0.15625 1 1 0.1 1 1 8.70551 0.4 1 0.0897421 0 0 0 0 0
+egY 3 1 1 0.625 1 1 0.1 1 1 14.1421 0.5 1 0.824692 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Sunday%201
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 40 -12 -0.02 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 71 -12 0.04 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 10.2689 20 0.2 0 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.167343 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.0634572 0 0 0 0 0
+egY 1 1 1 0.0296039 1 1 0.1 1 1 0.0195312 1 1 0.0634572 0 0 0 0 0
+egY 2 1 1 0.0515433 1 1 0.1 1 1 0.0195312 1 1 0.0634572 0 0 0 0 0
+egY 3 1 1 0.583146 1 1 0.1 1 1 0.769465 0.75 1 0.824692 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Sunday%20%202
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 83 -12 -0.02 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 92 -12 0.04 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 4.2592 20 0.52 0 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.167343 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.0634572 0 0 0 0 0
+egY 1 1 1 0.0296039 1 1 0.1 1 1 0.0195312 1 1 0.0634572 0 0 0 0 0
+egY 2 1 1 0.0515433 1 1 0.1 1 1 0.0195312 1 1 0.0634572 0 0 0 0 0
+egY 3 1 1 0.824692 1 1 0.1 1 1 0.824692 0.75 1 0.824692 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Sunday%20%203
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 96 -12 0 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 92 -12 0.04 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 3.7044 20 0.52 0 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.167343 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.0634572 0 0 0 0 0
+egY 1 1 1 0.0296039 1 1 0.1 1 1 0.0195312 1 1 0.0634572 0 0 0 0 0
+egY 2 1 1 0.0515433 1 1 0.1 1 1 0.0195312 1 1 0.0634572 0 0 0 0 0
+egY 3 1 1 0.824692 1 1 0.1 1 1 0.824692 0.75 1 0.824692 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Rezysyn
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 18 -12 0 0 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 15 -12 -0.04 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 0.6912 20 0.36 0.909091 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.595109 142 0.65 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 1.08819 0 0 0 0 0
+egY 1 1 1 0.15625 1 1 0.1 1 1 4.66517 0 1 1.08819 0 0 0 0 0
+egY 2 2 1 0.0209331 0 1 0.126914 1 1 4.66517 0 1 0.3125 0 0 0 0 0
+egY 3 1 1 0.0961832 1 1 0.1 1 1 20 0.48 1 10 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Reso.Syn%200
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 22 0 -0.02 0 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 22 7 0.02 0 0 0 0 0 0 18 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 50 19 -0.98 0.727273 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 17.2214 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 1.43587 0 0 0 0 0
+egY 1 1 1 0.0195312 1 1 0.1 1 1 0.0195312 1 1 1.43587 0 0 0 0 0
+egY 2 1 1 1.33972 1 1 0.1 1 1 10 0 1 2.5 0 0 0 0 0
+egY 3 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%204osc.%20Juno
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 24 12 -0.05 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 22 0 0.05 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 2 27 -12 0 7 0 0 0 0 0 19 1 0.5 0
+oscY 4 2 12 -12 -0.1 7 0 0 0 0 0 19 1 0.5 0
+vcfY 1 1 0 0.10985 20 0.4 0.363636 0
+vcfY 2 1 2 0.10985 20 0.4 0.363636 0
+mix 0 0.5 0 0.5 0 0.5 1 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 1.52481 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.883883 0 0 0 0 0
+egY 1 1 1 0.15625 1 1 0.1 1 1 0.883883 0 1 0.883883 0 0 0 0 0
+egY 2 1 1 0.15625 1 1 0.1 1 1 5 0 1 0.883883 0 0 0 0 0
+egY 3 1 1 0.110485 1 1 0.1 1 1 0.717936 0.6 1 20 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20MooG%20InvsN
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 12 0 -0.05 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 12 0 0.05 0 0 0 0 0 0 19 1 0.5 0
+oscY 3 2 23 0 0 7 0 0 0 0 0 20 1 0.5 0
+oscY 4 2 24 0 0.08 0 0 0 0 0 0 21 1 0.5 0
+vcfY 1 1 0 0.78125 0 0 0 0
+vcfY 2 1 2 0.78125 0 0 0 0
+mix 0 0.5 0 0.5 0 0.5 1 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 1 142 1.2 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 2.17638 0 0 0 0 0
+egY 1 1 1 0.441942 1 1 0.1 1 1 1.25 0.84 1 1.76777 0 0 0 0 0
+egY 2 1 1 0.507658 1 1 0.1 1 1 0.824692 0.85 1 2.03063 0 0 0 0 0
+egY 3 1 1 0.507658 1 1 0.1 1 1 0.883883 0.84 1 1.64938 0 0 0 0 0
+egY 4 1 1 0.0592077 1 1 0.1 1 1 1.89465 0.46 1 2.17638 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20MooG%20InvsN%20(edited)
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 12 0 -0.05 7 0.0219108 0 0 0 0 18 1 0.5 0
+oscY 2 2 12 0 0.05 0 0 0 0 0 0 19 1 0.5 0
+oscY 3 2 23 0 0 7 0.0102835 0 0 0 0 20 1 0.5 0
+oscY 4 2 24 0 0.08 0 0 0 0 0 0 21 1 0.5 0
+vcfY 1 1 0 1.8179 0 0 0 0
+vcfY 2 1 2 2.67051 0 0 0 0
+mix 0 0.5 0 0.5 0 0.5 1 0.5
+volume 0.89239
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 4.28974 142 1.2 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 2.17638 0 0 0 0 0
+egY 1 1 1 0.441942 1 1 0.1 1 1 1.25 0.84 1 1.76777 0 0 0 0 0
+egY 2 1 1 0.507658 1 1 0.1 1 1 0.824692 0.85 1 2.03063 0 0 0 0 0
+egY 3 1 1 0.507658 1 1 0.1 1 1 0.883883 0.84 1 1.64938 0 0 0 0 0
+egY 4 1 1 0.0592077 1 1 0.1 1 1 1.89465 0.46 1 2.17638 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20ToyPiano16
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 91 0 -0.09 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 2 0 0.11 7 0 0 0 0 0 18 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 10.8 0 0 0 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 3.16228 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.625 0 0 0 0 0
+egY 1 1 1 0.0390625 1 1 0.1 1 1 1.25 0 1 0.625 0 0 0 0 0
+egY 2 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+egY 3 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%207ender%20EP
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 56 -9 -0.2 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 42 -12 -0.04 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 2 72 0 0 0 0 0 0 0 0 18 1 0 0.5
+oscY 4 2 42 -12 0.04 0 0 0 0 0 0 19 1 0 0.5
+vcfY 1 1 0 36.45 0 0 0 0
+vcfY 2 1 1 5.88245 20 0.12 0 0
+mix 0 0.5 0 0.5 0.71 0.25 0.71 0.75
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.943364 142 0.45 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.0634572 0 0 0 0 0
+egY 1 1 1 0.0195312 1 1 0.1 1 1 0.3125 0 1 0.0552427 0 0 0 0 0
+egY 2 1 1 0.0195312 1 1 0.1 1 1 3.29877 0 1 0.0634572 0 0 0 0 0
+egY 3 1 1 0.145786 1 1 0.1 1 1 3.78929 0.57 1 5.35887 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Apham%20EP
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0
+oscY 2 2 42 0 0.03 7 0 0 0 0 0 18 1 0.5 0
+oscY 3 2 40 12 -0.03 0 0 0 0 0 0 19 1 0 0.5
+oscY 4 2 42 0 -0.03 7 0 0 0 0 0 20 1 0 0.5
+vcfY 1 1 0 10.8 0 0 0 0
+vcfY 2 1 1 7.8732 21 0.04 0.454545 0
+mix 0 0.5 0 0.5 0.71 0.25 0.71 0.75
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 1.52481 142 1.85 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.583146 0 0 0 0 0
+egY 1 1 1 0.0418662 1 1 0.1 1 1 2.5 0 1 0.334929 0 0 0 0 0
+egY 2 1 1 0.0480916 1 1 0.1 1 1 2.03063 0 1 0.334929 0 0 0 0 0
+egY 3 1 1 0.0515433 1 1 0.1 1 1 3.29877 0 1 0.583146 0 0 0 0 0
+egY 4 1 1 0.384733 1 1 0.1 1 1 1.43587 0.57 1 5.35887 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Traum
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 24 -12 0.03 0 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 54 12 -0.03 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 0.6912 20 0.16 0.545455 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 8.13762 141 0.85 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.0515433 0 0 0 0 0
+egY 1 1 1 0.044871 1 1 0.1 1 1 0.625 0.75 1 0.0515433 0 0 0 0 0
+egY 2 1 1 0.044871 1 1 0.1 1 1 2.33258 0.75 1 0.0515433 0 0 0 0 0
+egY 3 1 1 0.118415 1 1 0.1 1 1 4.66517 0.55 1 8.70551 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20EP
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 56 -9 -0.2 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 42 -12 -0.04 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 2 32 0 0 0 0 0 0 0 0 18 1 0 0.5
+oscY 4 2 47 -12 0.04 0 0 0 0 0 0 19 1 0 0.5
+vcfY 1 1 0 36.45 0 0 0 0
+vcfY 2 1 1 5.88245 20 0.12 0 0
+mix 0 0.5 0 0.5 0.71 0.25 0.71 0.75
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.943364 142 0.45 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.0634572 0 0 0 0 0
+egY 1 1 1 0.0195312 1 1 0.1 1 1 0.3125 0 1 0.0552427 0 0 0 0 0
+egY 2 1 1 0.0195312 1 1 0.1 1 1 3.29877 0 1 0.0634572 0 0 0 0 0
+egY 3 1 1 0.145786 1 1 0.1 1 1 3.78929 0.57 1 5.35887 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Blue*G*Org
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 2 0 0.02 0 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 40 -12 0.02 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 2 40 -12 -0.03 0 0 0 0 0 0 19 1 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 12.5023 0 0 0 0
+vcfY 2 1 1 28.5893 0 0 0 0
+mix 0 0.5 0 0.5 0.71 0.25 0.71 0.75
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 1.11895 142 3.1 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.110485 0 0 0 0 0
+egY 1 1 1 0.0364466 1 1 0.1 1 1 0.272047 0.38 1 0.0680118 0 0 0 0 0
+egY 2 1 1 0.0240458 1 1 0.1 1 1 0.507658 0.84 1 0.110485 0 0 0 0 0
+egY 3 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Mild
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 42 -12 0.04 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 15 -12 -0.04 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 2 40 -12 -0.02 7 0 0 0 0 0 20 1 0 0.5
+oscY 4 2 99 -12 0.02 7 0 0 0 0 0 20 1 0 0.5
+vcfY 1 1 0 13.1072 0 0 0.454545 0
+vcfY 2 1 1 15.0382 0 0 0 0
+mix 0 0.5 0 0.5 0.71 0.25 0.71 0.75
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 1.52481 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.272047 0 0 0 0 0
+egY 1 1 1 0.0680118 1 1 0.1 1 1 1.43587 0.94 1 0.236831 0 0 0 0 0
+egY 2 1 1 0.0634572 1 1 0.1 1 1 3.78929 0 1 0.272047 0 0 0 0 0
+egY 3 1 1 0.0195312 1 1 0.1 1 1 0.0195312 1 1 0.0897421 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Peak-A-Bos
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 122 -12 0 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 18 -12 -0.04 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 8.7808 20 1 0.545455 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 1.52481 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.0634572 0 0 0 0 0
+egY 1 1 1 0.0195312 1 1 0.1 1 1 0.3125 0 1 0.0195312 0 0 0 0 0
+egY 2 1 1 0.0195312 1 1 0.1 1 1 3.29877 0 1 0.0634572 0 0 0 0 0
+egY 3 1 1 0.3125 1 1 0.1 1 1 0.883883 0.5 1 2.17638 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Harpsich60
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 69 0 0.01 0 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 68 0 0 0 0 0 0 0 0 19 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 21.0938 20 -0.22 0 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 1.3123 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.358968 0 0 0 0 0
+egY 1 2 1 0.0418662 0 1 0.0195312 1 1 2.5 0 1 0.358968 0 0 0 0 0
+egY 2 1 1 0.0195312 1 1 0.1 1 1 2.87175 0 1 0.136024 0 0 0 0 0
+egY 3 1 1 3.29877 1 1 0.1 1 1 15.1572 0.15 1 2.87175 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Troubles
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 61 0 -0.02 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 60 0 0.02 0 0 0 0 0 0 19 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 28.5893 20 -0.36 0 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.390488 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.236831 0 0 0 0 0
+egY 1 1 1 0.0209331 1 1 0.1 1 1 2.67943 0 1 0.220971 0 0 0 0 0
+egY 2 1 1 0.0224355 1 1 0.1 1 1 0.583146 0 1 0.236831 0 0 0 0 0
+egY 3 1 1 5.35887 1 1 0.1 1 1 0.0195312 1 1 3.78929 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Contempo
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 63 0 0.02 0 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 63 -12 -0.02 0 0 0 0 0 0 19 1 0.5 0
+oscY 3 2 26 -12 0.03 0 0 0 0 0 0 19 1 0 0.5
+oscY 4 2 26 -12 -0.03 0 0 0 0 0 0 19 1 0 0.5
+vcfY 1 1 0 3.7044 20 0.16 0 0
+vcfY 2 1 1 50 0 0 0 0
+mix 0 0.5 0 0.5 0.71 0.25 0.71 0.75
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 1 0 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 1.25 0 0 0 0 0
+egY 1 1 1 0.0317286 1 1 0.1 1 1 2.67943 0 1 0.272047 0 0 0 0 0
+egY 2 2 1 0.0224355 0 1 0.0317286 1 1 2.67943 0 1 0.358968 0 0 0 0 0
+egY 3 1 1 0.253829 1 1 0.1 1 1 1.64938 0.5 1 1.25 0 0 0 0 0
+egY 4 1 1 0.272047 1 1 0.1 1 1 5 0.72 1 0.669858 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20GurglGhost
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0
+oscY 2 2 23 -24 0 7 0 0 0 0 0 18 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0
+vcfY 1 1 0 1.6384 19 0.72 0.818182 0
+vcfY 2 1 2 1.6384 19 0.72 0.818182 0
+mix 0 0.5 0 0.5 0 0.5 1 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 17.2214 146 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.0195312 0 0 0 0 0
+egY 1 1 1 0.0195312 1 1 0.1 1 1 0.0195312 1 1 0.0195312 0 0 0 0 0
+egY 2 1 1 7.07107 1 1 0.1 1 1 1.89465 0.49 1 20 0 0 0 0 0
+egY 3 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20ClavRhods
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 1 24 0 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 101 0 0.01 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 9.7556 20 0.16 0 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 2.59546 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.291573 0 0 0 0 0
+egY 1 1 1 0.0195312 1 1 0.1 1 1 1.25 0 1 0.078125 0 0 0 0 0
+egY 2 1 1 0.0195312 1 1 0.1 1 1 3.29877 0 1 0.291573 0 0 0 0 0
+egY 3 1 1 0.206173 1 1 0.1 1 1 1.25 0.5 1 0.625 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20DX-7%20Piano
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 58 -12 0 0 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 63 -12 0.09 0 0 0 0 0 0 19 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 15.7216 20 -0.12 0 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 1.45176 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.334929 0 0 0 0 0
+egY 1 1 1 0.0209331 1 1 0.1 1 1 2.67943 0 1 0.220971 0 0 0 0 0
+egY 2 1 1 0.0195312 1 1 0.1 1 1 0.883883 0 1 0.334929 0 0 0 0 0
+egY 3 1 1 2.5 1 1 0.1 1 1 0.0195312 1 1 3.78929 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Every
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 63 0 0.02 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 63 -12 -0.02 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 2 26 -12 0.03 0 0 0 0 0 0 19 1 0 0.5
+oscY 4 2 26 -12 -0.03 0 0 0 0 0 0 18 1 0 0.5
+vcfY 1 1 0 3.7044 20 0.16 0 0
+vcfY 2 1 1 0.16875 21 0.2 0.363636 0
+mix 0 0.5 0 0.5 0.71 0.25 0.71 0.75
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.943364 142 2.3 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.358968 0 0 0 0 0
+egY 1 1 1 0.0317286 1 1 0.1 1 1 2.67943 0 1 0.272047 0 0 0 0 0
+egY 2 2 1 0.0224355 0 1 0.0317286 1 1 2.67943 0 1 0.358968 0 0 0 0 0
+egY 3 1 1 0.253829 1 1 0.1 1 1 1.64938 0.5 1 1.25 0 0 0 0 0
+egY 4 1 1 0.272047 1 1 0.1 1 1 5 0.72 1 0.669858 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Iron%20E.P
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 56 -9 -0.2 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 42 -12 -0.04 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 36.45 0 0 0 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 1.52481 142 1.85 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.0634572 0 0 0 0 0
+egY 1 1 1 0.0195312 1 1 0.1 1 1 0.3125 0 1 0.0552427 0 0 0 0 0
+egY 2 1 1 0.0195312 1 1 0.1 1 1 3.29877 0 1 0.0634572 0 0 0 0 0
+egY 3 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20SemiRoads
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 58 -12 0 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 56 -12 -0.09 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 2 14 -12 -0.06 7 0 0 0 0 0 18 1 0 0.5
+oscY 4 2 56 -12 -0.04 7 0 0 0 0 0 19 1 0 0.5
+vcfY 1 1 0 0.16875 20 0.28 0 0
+vcfY 2 1 1 2.3328 21 0.5 0 0
+mix 0 0.5 0 0.5 0.71 0.25 0.71 0.75
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.888553 142 2.3 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.220971 0 0 0 0 0
+egY 1 1 1 0.0364466 1 1 0.1 1 1 2.87175 0 1 0.220971 0 0 0 0 0
+egY 2 1 1 0.0418662 1 1 0.1 1 1 2.17638 0 1 0.220971 0 0 0 0 0
+egY 3 1 1 0.0515433 1 1 0.1 1 1 7.07107 0.8 1 2.87175 0 0 0 0 0
+egY 4 1 1 0.044871 1 1 0.1 1 1 6.15572 0.99 1 2.67943 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Glocklock+
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 91 0 0 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 75 0 0 7 0 0 0 0 0 18 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 20.2612 0 0 0.909091 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 2.10318 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 1.64938 0 0 0 0 0
+egY 1 1 1 0.0195312 1 1 0.1 1 1 1.64938 0 1 1.64938 0 0 0 0 0
+egY 2 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+egY 3 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Wastmnstr+
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 96 0 0 0 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 96 -12 0 0 0 0 0 0 0 18 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 22.8266 0 0 0.454545 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.784201 142 2.25 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.625 0 0 0 0 0
+egY 1 1 1 0.0195312 1 1 0.1 1 1 0.0195312 1 1 0.625 0 0 0 0 0
+egY 2 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+egY 3 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20HouseBass+
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 41 0 0.03 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 18 0 0.09 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 1.35 20 0.3 0.636364 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 1 142 1.5 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.0480916 0 0 0 0 0
+egY 1 2 1 0.0224355 0 1 0.0276214 1 1 0.0195312 1 1 0.0418662 0 0 0 0 0
+egY 2 1 1 0.0837323 1 1 0.1 1 1 0.0195312 1 1 0.0480916 0 0 0 0 0
+egY 3 1 1 0.272047 1 1 0.1 1 1 2.33258 0.53 1 0.272047 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Taurs4Pol+
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 18 0 -0.05 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 18 0 0.05 0 0 0 0 0 0 18 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 50 0 0 0.727273 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 3.16228 142 0.3 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.167465 0 0 0 0 0
+egY 1 1 1 0.0897421 1 1 0.1 1 1 0.0195312 1 1 0.167465 0 0 0 0 0
+egY 2 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+egY 3 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Frogbell
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 75 -12 0.04 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 77 -12 0.02 7 0 0 0 0 0 18 1 0.5 0
+oscY 3 2 75 -12 0 0 0 0 0 0 0 18 1 0.5 0
+oscY 4 2 77 -12 -0.02 0 0 0 0 0 0 18 1 0.5 0
+vcfY 1 1 0 1.79685 19 0.74 0.545455 0
+vcfY 2 1 2 1.79685 19 0.74 0.545455 0
+mix 0 0.5 0 0.5 0 0.5 1 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 1.3123 142 1.4 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.0515433 0 0 0 0 0
+egY 1 1 1 0.0195312 1 1 0.1 1 1 0.206173 0.73 1 0.0515433 0 0 0 0 0
+egY 2 1 1 1.25 1 1 0.1 1 1 2.5 0.6 1 3.07786 0 0 0 0 0
+egY 3 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Raspel
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 96 0 -0.03 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0
+oscY 3 2 7 0 0.03 7 0 0 0 0 0 18 1 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 5.88245 19 0.16 0 0
+vcfY 2 1 1 5.88245 19 0.16 0 0
+mix 0 0.5 0 0.5 0.71 0.25 0.71 0.75
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 1.45176 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.0897421 0 0 0 0 0
+egY 1 1 1 0.0195312 1 1 0.1 1 1 1.89465 0 1 0.0897421 0 0 0 0 0
+egY 2 1 1 0.110485 1 1 0.1 1 1 2.67943 0.5 1 0.0837323 0 0 0 0 0
+egY 3 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Clarinet
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 24 0 0 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 46 0 0 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 14.3748 20 0.08 0.454545 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.943364 142 2.35 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.441942 0 0 0 0 0
+egY 1 1 1 0.145786 1 1 0.1 1 1 2.33258 0.55 1 0.0728932 0 0 0 0 0
+egY 2 1 1 0.126914 1 1 0.1 1 1 0.441942 0.55 1 0.441942 0 0 0 0 0
+egY 3 1 1 0.824692 1 1 0.1 1 1 3.29877 0.99 1 1.43587 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Glass%20Harp
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 102 0 0 0 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 103 0 0.01 0 0 0 0 0 0 19 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 50 0 0 0 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 17.2214 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 1.64938 0 0 0 0 0
+egY 1 1 1 0.179484 1 1 0.1 1 1 0.769465 0 1 0.883883 0 0 0 0 0
+egY 2 2 1 0.0209331 0 1 0.669858 1 1 0.0195312 1 1 1.64938 0 0 0 0 0
+egY 3 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20GlockGlock
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 91 -12 0 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 75 -12 0 7 0 0 0 0 0 18 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 20.2612 0 0 0.909091 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 2.10318 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 1.64938 0 0 0 0 0
+egY 1 1 1 0.0195312 1 1 0.1 1 1 1.64938 0 1 1.64938 0 0 0 0 0
+egY 2 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+egY 3 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Islandbell
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 99 12 0.15 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 76 -12 -0.1 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 12.5023 20 0.42 0.363636 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 1.18136 142 1.2 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.206173 0 0 0 0 0
+egY 1 1 1 0.0480916 1 1 0.1 1 1 1.08819 0 1 0.179484 0 0 0 0 0
+egY 2 1 1 0.044871 1 1 0.1 1 1 0.412346 0 1 0.206173 0 0 0 0 0
+egY 3 1 1 0.220971 1 1 0.1 1 1 1.53893 0.5 1 4.66517 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Drops
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 75 12 0.06 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 75 12 0.06 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 17.15 20 1 0.636364 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 4.55315 147 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 1.89465 0 0 0 0 0
+egY 1 1 1 0.0195312 1 1 0.1 1 1 20 0.5 1 1.89465 0 0 0 0 0
+egY 2 2 1 0.15625 0 1 0.0195312 1 1 20 0.9 1 0.947323 0 0 0 0 0
+egY 3 1 1 20 1 1 0.1 1 1 0.0195312 1 1 20 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20scritti
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 68 -12 0 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 68 0 0.02 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 18.6624 20 0.4 0 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 3.16228 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.441942 0 0 0 0 0
+egY 1 1 1 0.0480916 1 1 0.1 1 1 0.3125 0.8 1 0.441942 0 0 0 0 0
+egY 2 2 1 0.0209331 0 1 0.078125 1 1 0.3125 0.8 1 0.441942 0 0 0 0 0
+egY 3 1 1 0.220971 1 1 0.1 1 1 0.441942 0.38 1 20 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20UnAnalogic
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 113 -12 0 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 113 -12 -0.05 0 0 0 0 0 0 18 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 1.6384 0 0 0.545455 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 1.92541 142 1 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 1.76777 0 0 0 0 0
+egY 1 1 1 0.118415 1 1 0.1 1 1 0.0195312 1 1 1.76777 0 0 0 0 0
+egY 2 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+egY 3 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20dead%20PIANO
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 67 -12 -0.05 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 112 -12 0.04 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 12.5023 20 0.12 0.545455 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 7.42726 142 0.6 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 1.25 0 0 0 0 0
+egY 1 1 1 0.0634572 1 1 0.1 1 1 1.43587 0 1 1.25 0 0 0 0 0
+egY 2 1 1 0.0837323 1 1 0.1 1 1 1.43587 0 1 1.25 0 0 0 0 0
+egY 3 1 1 0.3125 1 1 0.1 1 1 1.25 0.5 1 5 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20digistical
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 102 0 0.01 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 103 0 -0.01 7 0 0 0 0 0 18 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 10.8 19 0.12 0.727273 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 2.59546 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 1.08819 0 0 0 0 0
+egY 1 1 1 0.078125 1 1 0.1 1 1 1.43587 0 1 1.08819 0 0 0 0 0
+egY 2 1 1 0.192366 1 1 0.1 1 1 0.3125 0.42 1 20 0 0 0 0 0
+egY 3 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20modular%201
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 24 -12 -0.01 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 112 0 0.01 7 0 0 0 0 0 18 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 3.2 19 0.48 0.727273 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 2.59546 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 3.53553 0 0 0 0 0
+egY 1 1 1 0.15625 1 1 0.1 1 1 10 0.4 1 3.53553 0 0 0 0 0
+egY 2 1 1 10 1 1 0.1 1 1 5 0.55 1 20 0 0 0 0 0
+egY 3 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20obPAD+dxEP
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 18 -12 0 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 18 -12 -0.05 7 0 0 0 0 0 18 1 0.5 0
+oscY 3 2 58 0 0.04 7 0 0 0 0 0 19 1 0 0.5
+oscY 4 2 63 0 -0.01 7 0 0 0 0 0 19 1 0 0.5
+vcfY 1 1 0 30.7063 0 0 0 0
+vcfY 2 1 1 1.35 20 0.18 0 0
+mix 0 0.5 0 0.5 0.71 0.25 0.71 0.75
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 1.3123 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 1.89465 0 0 0 0 0
+egY 1 1 1 1.25 1 1 0.1 1 1 0.0195312 1 1 1.89465 0 0 0 0 0
+egY 2 1 1 0.0364466 1 1 0.1 1 1 2.17638 0.15 1 0.384733 0 0 0 0 0
+egY 3 1 1 0.3125 1 1 0.1 1 1 1.43587 0.67 1 13.1951 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Candlemass
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 75 12 0 0 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 63 0 0 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 27.5684 20 -0.28 0.363636 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.888553 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 1.25 0 0 0 0 0
+egY 1 2 1 0.0276214 0 1 0.0364466 1 1 1.08819 0.08 1 1.25 0 0 0 0 0
+egY 2 1 1 0.0240458 1 1 0.1 1 1 2.5 0.03 1 1.25 0 0 0 0 0
+egY 3 1 1 0.947323 1 1 0.1 1 1 9.33033 0.25 1 3.07786 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Eno's%20Mini
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 24 0 0.03 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 24 0 -0.03 7 0 0 0 0 0 18 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 0.1372 19 0.42 0.363636 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.734557 142 0.35 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 5.35887 0 0 0 0 0
+egY 1 2 1 0.0276214 0 1 2.67943 1 1 1.89465 0.76 1 5.35887 0 0 0 0 0
+egY 2 1 1 13.1951 1 1 0.1 1 1 8.12252 0.59 1 10.7177 0 0 0 0 0
+egY 3 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20SyntexBass
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 122 -12 0 0 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 111 -12 0 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 0.2916 20 0.78 0.363636 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 1.38094 142 0.35 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.126914 0 0 0 0 0
+egY 1 1 1 0.0897421 1 1 0.1 1 1 3.07786 0.53 1 0.078125 0 0 0 0 0
+egY 2 1 1 0.0390625 1 1 0.1 1 1 2.33258 0 1 0.126914 0 0 0 0 0
+egY 3 1 1 0.272047 1 1 0.1 1 1 1.89465 0.5 1 5.74349 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20OBX%20Brass
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 19 -12 0.05 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 22 -12 -0.05 0 0 0 0 0 0 19 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 0 20 1 0.363636 0
+vcfY 2 0 0 50 0 0 0 0
+mix 0 0.5 0 0.5 1 0.5 0 0.5
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 1.67782 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.544094 0 0 0 0 0
+egY 1 1 1 0.0195312 1 1 0.1 1 1 1.25 0.94 1 0.179484 0 0 0 0 0
+egY 2 1 1 0.0195312 1 1 0.1 1 1 0.0195312 1 1 0.544094 0 0 0 0 0
+egY 3 1 1 0.625 1 1 0.1 1 1 20 0.5 1 0.544094 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20OceanBrass
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 16 -12 -0.09 0 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 16 -12 0.09 7 0 0 0 0 0 18 1 0.5 0
+oscY 3 2 19 -12 -0.03 0 0 0 0 0 0 19 1 0 0.5
+oscY 4 2 19 -12 0.03 7 0 0 0 0 0 19 1 0 0.5
+vcfY 1 1 0 2.14375 20 0.22 0 0
+vcfY 2 1 1 9.25965 21 0.2 0 0
+mix 0 0.5 0 0.5 0.71 0.25 0.71 0.75
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 1.24579 142 0.15 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.625 0 0 0 0 0
+egY 1 2 1 0.0224355 0 1 0.0837323 1 1 0.625 0.84 1 0.625 0 0 0 0 0
+egY 2 2 1 0.0209331 0 1 0.0837323 1 1 0.669858 0.87 1 0.625 0 0 0 0 0
+egY 3 1 1 0.947323 1 1 0.1 1 1 4.66517 0.49 1 1.76777 0 0 0 0 0
+egY 4 1 1 1.89465 1 1 0.1 1 1 1.76777 0.5 1 1.76777 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Alassen
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 103 -24 -0.04 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 117 -5 0.04 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 2 103 -24 0.04 7 0 0 0 0 0 18 1 0 0.5
+oscY 4 2 117 -5 -0.04 7 0 0 0 0 0 19 1 0 0.5
+vcfY 1 1 0 31.8028 20 0.32 0.545455 0
+vcfY 2 1 1 31.8028 20 0.32 0.545455 0
+mix 0 0.5 0 0.5 0.71 0.25 0.71 0.75
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 1.11895 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 1.16629 0 0 0 0 0
+egY 1 1 1 0.0680118 1 1 0.1 1 1 1.64938 0 1 1.16629 0 0 0 0 0
+egY 2 1 1 0.0480916 1 1 0.1 1 1 0.717936 0 1 1.08819 0 0 0 0 0
+egY 3 1 1 0.118415 1 1 0.1 1 1 1.01532 0.5 1 1.76777 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20AnalgClavi
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 29 7 0 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 48 -12 -0.01 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 11.9164 20 0.24 0 0
+vcfY 2 1 1 7.0304 21 0.22 0.363636 0
+mix 0 0.5 0 0.5 0.71 0.25 0.71 0.75
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 2.49129 142 0.35 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.0515433 0 0 0 0 0
+egY 1 2 1 0.0240458 0 1 0.0195312 1 1 1.53893 0 1 0.0390625 0 0 0 0 0
+egY 2 2 1 0.0257716 0 1 0.0195312 1 1 1.64938 0 1 0.0515433 0 0 0 0 0
+egY 3 1 1 0.136024 1 1 0.1 1 1 1.16629 0.53 1 3.29877 0 0 0 0 0
+egY 4 1 1 0.206173 1 1 0.1 1 1 1.64938 0.51 1 5.35887 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Kaliohpann
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 103 -24 -0.04 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 103 -5 0.04 7 0 0 0 0 0 19 1 0.5 0
+oscY 3 2 103 -24 0.04 0 0 0 0 0 0 18 1 0 0.5
+oscY 4 2 103 -5 -0.04 0 0 0 0 0 0 19 1 0 0.5
+vcfY 1 1 0 31.8028 20 0.32 0.545455 0
+vcfY 2 1 1 31.8028 20 0.36 0.545455 0
+mix 0 0.5 0 0.5 0.71 0.25 0.71 0.75
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 0.734557 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.253829 0 0 0 0 0
+egY 1 1 1 0.206173 1 1 0.1 1 1 2.33258 0 1 0.253829 0 0 0 0 0
+egY 2 1 1 0.206173 1 1 0.1 1 1 1.08819 0 1 0.236831 0 0 0 0 0
+egY 3 1 1 0.544094 1 1 0.1 1 1 1.33972 0.5 1 1.76777 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20Pepe,Geh%20!
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 53 19 0.03 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 0 0 0 0 0 0 0 0 0 0 0 0 0.5 0
+oscY 3 2 53 19 -0.03 7 0 0 0 0 0 18 1 0 0.5
+oscY 4 0 0 0 0 0 0 0 0 0 0 0 0 0 0.5
+vcfY 1 1 0 23.7276 19 0.4 0.545455 0
+vcfY 2 1 1 23.7276 19 0.4 0.545455 0
+mix 0 0.5 0 0.5 0.71 0.25 0.71 0.75
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 1.52481 142 0 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 1.16629 0 0 0 0 0
+egY 1 1 1 0.0390625 1 1 0.1 1 1 1.64938 0.42 1 1.16629 0 0 0 0 0
+egY 2 1 1 0.0552427 1 1 0.1 1 1 1.64938 0.5 1 1.25 0 0 0 0 0
+egY 3 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end
+# WhySynth patch
+WhySynth patch format 0 begin
+name K4oid:%20K4-Init
+comment (Mis)Interpreted%20Kawai%20K4%20patch
+oscY 1 2 18 0 0 7 0 0 0 0 0 18 1 0.5 0
+oscY 2 2 18 0 0 7 0 0 0 0 0 18 1 0.5 0
+oscY 3 2 18 0 0 7 0 0 0 0 0 18 1 0 0.5
+oscY 4 2 18 0 0 7 0 0 0 0 0 18 1 0 0.5
+vcfY 1 1 0 50 19 0.4 0 0
+vcfY 2 1 1 50 19 0.4 0 0
+mix 0 0.5 0 0.5 0.71 0.25 0.71 0.75
+volume 0.5
+effects 0 0 0 0 0 0 0 0
+glide 0.984375
+bend 2
+lfoY g 1 0 0 0 0
+lfoY v 2.29164 142 0.5 0 0
+lfoY m 1 0 0 0 0
+mlfo 90 0
+egY o 1 3 0.002 1 3 0.001 1 3 0 1 1 0.0552427 0 0 0 0 0
+egY 1 1 1 0.0195312 1 1 0.1 1 1 0.0195312 1 1 0.0552427 0 0 0 0 0
+egY 2 1 1 0.15625 1 1 0.1 1 1 3.53553 0.5 1 0.625 0 0 0 0 0
+egY 3 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+egY 4 0 1 0.1 1 1 0.1 1 1 0.1 1 1 0.2 0 0 0 0 0
+modmix 1 0 0 0 0
+WhySynth patch end

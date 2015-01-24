@@ -1,0 +1,12 @@
+{
+  "program": {
+    "portable": {
+      "pnacl-translate": {
+        "url": "xsynth.pexe"
+      },
+      "pnacl-debug": {
+        "url": "xsynth_unstripped.bc"
+      }
+    }
+  }
+}
